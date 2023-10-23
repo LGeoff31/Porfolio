@@ -61,6 +61,7 @@ const Project = ({
       <Skills
         skills={["react", "typescript", "css", "html", "hygraphql", "firebase"]}
       />
+
       <Typography color="white" marginTop="1rem" paddingBottom="1rem">
         {description}
       </Typography>
@@ -92,24 +93,24 @@ const ProjectBox = () => {
         link="https://return-pal.vercel.app/"
         src="/images/fitnessApp.png"
         description="Want a website to provide hundreds of distinct workouts targeting all muscle groups! With Rapid API, any workout can be searched and auto-populated in milliseconds with hundreds of pages organized with pagination."
-        hosted="https://return-pal.vercel.app/"
-        code="https://return-pal.vercel.app/"
+        hosted="https://fitness-workouts.vercel.app/"
+        code="https://github.com/LGeoff31/workout_app"
       />
       <Project
         title="Streaming Platform"
         link="https://return-pal.vercel.app/"
         src="/images/youtubeClone.png"
         description="This is a streaming platform utilizing rapid API to generate relevant videos targeted towards your preference! It includes features such as likes, views, and channel icons for you to enjoy your favourite videos online!"
-        hosted="https://return-pal.vercel.app/"
-        code="https://return-pal.vercel.app/"
+        hosted="https://electricochy-youtube.netlify.app/"
+        code="https://github.com/LGeoff31/youtubeWebsite"
       />
       <Project
         title="Memories"
         link="https://return-pal.vercel.app/"
         src="/images/memories.png"
         description="Memories are what make life special so savor each moment! With this website, you can record all your special moments with dates so they'll never be lost!"
-        hosted="https://return-pal.vercel.app/"
-        code="https://return-pal.vercel.app/"
+        hosted="https://electricochy-memories.netlify.app/"
+        code="https://github.com/LGeoff31/memories"
       />
 
       <Project
@@ -117,16 +118,16 @@ const ProjectBox = () => {
         link="https://return-pal.vercel.app/"
         src="/images/rps.jpeg"
         description="This Python program built using Selenium is a online submission automator to enter the Rock Paper Scissors Contest held seasonally by CirclekGames. The Game requires you to enter a phone number, play a simple game of rock paper scissors, then winning will give you a barcode to win a prize at your local CirclekGames to claim."
-        hosted="https://return-pal.vercel.app/"
-        code="https://return-pal.vercel.app/"
+        hosted="https://github.com/LGeoff31/rock-paper-scissors-automater"
+        code="https://github.com/LGeoff31/rock-paper-scissors-automater"
       />
       <Project
         title="Parkway Kitchen"
         link="https://return-pal.vercel.app/"
         src="/images/kitchen.png"
         description="This is an informative website for this local Chinese Restaurant named: Parway Kitchen. On this website, you can see view the menu, location, contact page, and more! Give this restaurant a try!"
-        hosted="https://return-pal.vercel.app/"
-        code="https://return-pal.vercel.app/"
+        hosted="https://parkway-kitchen.vercel.app/"
+        code="https://github.com/LGeoff31/parkway-kitchen"
       />
     </Grid>
   );

@@ -7,6 +7,7 @@ const HostedLinks = ({ hosted, code }: { hosted: string; code: string }) => {
     <Stack direction="row" gap="15px" paddingBottom="1rem">
       <Button
         href={hosted}
+        target="_blank"
         sx={{
           background: "rgba(251, 194, 135, 0.16)",
           color: "#fcb232",
@@ -24,6 +25,7 @@ const HostedLinks = ({ hosted, code }: { hosted: string; code: string }) => {
 
       <Button
         href={code}
+        target="_blank"
         sx={{
           background: "rgba(251, 194, 135, 0.16)",
           color: "#fcb232",
