@@ -40,15 +40,15 @@ export default function Home() {
         <Navbar />
       </section>
 
-      <section id="about" className="snap-center">
+      <section id="homepage" className="snap-center">
         <Homepage />
       </section>
 
-      <section id="experience" className="snap-start">
+      <section id="about" className="snap-start">
         <About />
       </section>
 
-      <section id="experience" className="snap-start">
+      <section id="projects" className="snap-start">
         <Project />
       </section>
 
@@ -56,7 +56,7 @@ export default function Home() {
         <Languages />
       </section>
 
-      <section id="experience" className="snap-start">
+      <section id="contact" className="snap-start">
         <Contact />
       </section>
     </div>

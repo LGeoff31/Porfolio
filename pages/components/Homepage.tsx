@@ -1,6 +1,13 @@
-import { Box, Button, Link, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
 
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
@@ -66,7 +73,16 @@ const Homepage = () => {
               },
             }}
           >
-            <span style={{ fontWeight: "100" }}> about</span>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <span style={{ fontWeight: "100" }}> about</span>
+            </Link>
           </Button>
           <Button
             sx={{
