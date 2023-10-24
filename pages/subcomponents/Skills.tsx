@@ -2,9 +2,17 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const Skills = ({ skills }: { skills: Array<string> }) => {
+  const languages = [
+    "react",
+    "typescript",
+    "css",
+    "html",
+    "hygraphql",
+    "firebase",
+  ];
   return (
     <Grid container display="flex" direction="row" width="400px">
-      {skills.map((skill, idx) => (
+      {languages.map((skill, idx) => (
         <Box
           key={idx}
           sx={{
