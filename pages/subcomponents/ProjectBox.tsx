@@ -12,6 +12,7 @@ const Project = ({
   description,
   hosted,
   code,
+  skills,
 }: {
   title: string;
   link: string;
@@ -19,6 +20,7 @@ const Project = ({
   description: string;
   hosted: string;
   code: string;
+  skills: Array<string>;
 }) => {
   const languages = [
     "react",
@@ -66,7 +68,7 @@ const Project = ({
           />
         </motion.div>
       </Link>
-      <Skills skills={languages} />
+      <Skills skills={skills} />
 
       <Typography color="white" marginTop="1rem" paddingBottom="1rem">
         {description}
@@ -93,6 +95,7 @@ const ProjectBox = () => {
         description="Start up company designed to make returns seamless! Have an item to return (Ex. Amazon) easy! Simply schedule a date and fill in some information and get couriers driven to your door within 48 hours to deliver your item to the post office. We take care of printing return labels, packaging, and driving the not so close post office."
         hosted="https://return-pal.vercel.app/"
         code="https://return-pal.vercel.app/"
+        skills={["react", "typescript", "CSS", "HTML", "Hygraphql", "firebase"]}
       />
       <Project
         title="Fitness API"
@@ -101,6 +104,7 @@ const ProjectBox = () => {
         description="Want a website to provide hundreds of distinct workouts targeting all muscle groups! With Rapid API, any workout can be searched and auto-populated in milliseconds with hundreds of pages organized with pagination."
         hosted="https://fitness-workouts.vercel.app/"
         code="https://github.com/LGeoff31/workout_app"
+        skills={["fuck", "bitch", "CSS", "HTML", "Hygraphql", "firebase"]}
       />
       <Project
         title="Streaming Platform"
@@ -109,6 +113,7 @@ const ProjectBox = () => {
         description="This is a streaming platform utilizing rapid API to generate relevant videos targeted towards your preference! It includes features such as likes, views, and channel icons for you to enjoy your favourite videos online!"
         hosted="https://electricochy-youtube.netlify.app/"
         code="https://github.com/LGeoff31/youtubeWebsite"
+        skills={["react", "typescript", "CSS", "HTML", "Hygraphql", "firebase"]}
       />
       <Project
         title="Memories"
@@ -117,6 +122,7 @@ const ProjectBox = () => {
         description="Memories are what make life special so savor each moment! With this website, you can record all your special moments with dates so they'll never be lost!"
         hosted="https://electricochy-memories.netlify.app/"
         code="https://github.com/LGeoff31/memories"
+        skills={["react", "typescript", "CSS", "HTML", "Hygraphql", "firebase"]}
       />
 
       <Project
@@ -126,6 +132,7 @@ const ProjectBox = () => {
         description="This Python program built using Selenium is a online submission automator to enter the Rock Paper Scissors Contest held seasonally by CirclekGames. The Game requires you to enter a phone number, play a simple game of rock paper scissors, then winning will give you a barcode to win a prize at your local CirclekGames to claim."
         hosted="https://github.com/LGeoff31/rock-paper-scissors-automater"
         code="https://github.com/LGeoff31/rock-paper-scissors-automater"
+        skills={["react", "typescript", "CSS", "HTML", "Hygraphql", "firebase"]}
       />
       <Project
         title="Parkway Kitchen"
@@ -134,6 +141,7 @@ const ProjectBox = () => {
         description="This is an informative website for this local Chinese Restaurant named: Parway Kitchen. On this website, you can see view the menu, location, contact page, and more! Give this restaurant a try!"
         hosted="https://parkway-kitchen.vercel.app/"
         code="https://github.com/LGeoff31/parkway-kitchen"
+        skills={["react", "typescript", "CSS", "HTML", "Hygraphql", "firebase"]}
       />
     </Grid>
   );

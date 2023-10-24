@@ -18,7 +18,7 @@ import Form from "../subcomponents/Form";
 
 const Contact = () => {
   return (
-    <>
+    <Box sx={{ background: "rgb(36,36,36)" }}>
       <Typography
         variant="h4"
         color="rgb(107 114 128/var(--tw-text-opacity))"
@@ -46,7 +46,7 @@ const Contact = () => {
         <ContactInfo />
         <Form />
       </Stack>
-    </>
+    </Box>
   );
 };
 export default Contact;

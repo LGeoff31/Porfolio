@@ -35,28 +35,29 @@ const Languages = () => {
         >
           Skills
         </Typography>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+          whileInView={{ opacity: 1 }}
+          className="  flex flex-col justify-center text-center md:text-left xl:flex-row max-w-[2000] xl:px-10 xl:space-y-0 items-center"
+        >
+          <div className="grid grid-cols-3 gap-5">
+            {/* split skills into two groups for entrance direction */}
+            {skills?.slice(0, skills.length / 2).map((skill) => (
+              <Skill key={skill.name} url={skill.url} name={skill.name} />
+            ))}
+            {skills?.slice(skills.length / 2, skills.length).map((skill) => (
+              <Skill
+                key={skill.name}
+                url={skill.url}
+                name={skill.name}
+                directionLeft
+              />
+            ))}
+          </div>
+        </motion.div>
       </Box>
-      <motion.div
-        initial={{ opacity: 0 }}
-        transition={{ duration: 1.5 }}
-        whileInView={{ opacity: 1 }}
-        className="  flex flex-col justify-center text-center md:text-left xl:flex-row max-w-[2000] xl:px-10 xl:space-y-0 items-center"
-      >
-        <div className="grid grid-cols-3 gap-5">
-          {/* split skills into two groups for entrance direction */}
-          {skills?.slice(0, skills.length / 2).map((skill) => (
-            <Skill key={skill.name} url={skill.url} name={skill.name} />
-          ))}
-          {skills?.slice(skills.length / 2, skills.length).map((skill) => (
-            <Skill
-              key={skill.name}
-              url={skill.url}
-              name={skill.name}
-              directionLeft
-            />
-          ))}
-        </div>
-      </motion.div>
     </>
   );
 };

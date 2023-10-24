@@ -2,11 +2,7 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
+  Link as ScrollLink, // Alias Link as ScrollLink to avoid conflicts with your other Link imports
 } from "react-scroll";
 
 import { Cursor, useTypewriter } from "react-simple-typewriter";
@@ -73,7 +69,28 @@ const Homepage = () => {
               },
             }}
           >
-            <Link
+            <ScrollLink
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100} // Adjust the offset as needed
+              duration={500}
+              style={{
+                textDecoration: "none",
+                color: "grey",
+                fontWeight: "50",
+                borderRadius: "10rem",
+                padding: "0.5rem 2rem",
+                border: "2px solid transparent",
+                // "&:hover": {
+                //   border: "2px solid #F7AB0A",
+                // },
+              }}
+            >
+              <span style={{ fontWeight: "100" }}> About</span>
+            </ScrollLink>
+            {/* <Link
               activeClass="active"
               to="about"
               spy={true}
@@ -82,7 +99,7 @@ const Homepage = () => {
               duration={500}
             >
               <span style={{ fontWeight: "100" }}> about</span>
-            </Link>
+            </Link> */}
           </Button>
           <Button
             sx={{
@@ -99,7 +116,9 @@ const Homepage = () => {
               },
             }}
           >
-            <span style={{ fontWeight: "100" }}> projects</span>
+            <ScrollLink to="projects">
+              <span style={{ fontWeight: "100" }}> projects</span>
+            </ScrollLink>
           </Button>
           <Button
             sx={{
