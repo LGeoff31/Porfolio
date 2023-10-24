@@ -20,6 +20,14 @@ const Project = ({
   hosted: string;
   code: string;
 }) => {
+  const languages = [
+    "react",
+    "typescript",
+    "css",
+    "html",
+    "hygraphql",
+    "firebase",
+  ];
   return (
     <Box
       width="550px"
@@ -58,9 +66,7 @@ const Project = ({
           />
         </motion.div>
       </Link>
-      <Skills
-        skills={["react", "typescript", "css", "html", "hygraphql", "firebase"]}
-      />
+      <Skills skills={languages} />
 
       <Typography color="white" marginTop="1rem" paddingBottom="1rem">
         {description}
