@@ -19,24 +19,25 @@ const Skills = ({ skills }: { skills: Array<string> }) => {
       sx={{ background: "rgb(36,36,36)" }}
       // sx={{ background: "rgb(36,36,36)" }}
     >
-      {skills.map((skill, idx) => (
-        <Box
-          key={idx}
-          sx={{
-            marginTop: "1rem",
-            background: "rgba(251, 194, 135, 0.16)",
-            color: "#fcb232",
-            textTransform: "uppercase",
-            borderRadius: "10rem",
-            paddingLeft: "1rem",
-            paddingRight: "1rem",
-            marginRight: "0.8rem",
-            textAlign: "center",
-          }}
-        >
-          <Typography fontSize="1rem"> {skill}</Typography>
-        </Box>
-      ))}
+      {skills.length > 0 &&
+        skills.map((skill, idx) => (
+          <Box
+            key={idx}
+            sx={{
+              marginTop: "1rem",
+              background: "rgba(251, 194, 135, 0.16)",
+              color: "#fcb232",
+              textTransform: "uppercase",
+              borderRadius: "10rem",
+              paddingLeft: "1rem",
+              paddingRight: "1rem",
+              marginRight: "0.8rem",
+              textAlign: "center",
+            }}
+          >
+            <Typography fontSize="1rem"> {skill}</Typography>
+          </Box>
+        ))}
     </Grid>
   );
 };

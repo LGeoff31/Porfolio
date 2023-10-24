@@ -60,7 +60,7 @@ const Project = ({
           />
         </motion.div>
       </Link>
-      {skills.length > 0 && <Skills skills={skills} />}
+      <Skills skills={skills} />
       {/* <Skills skills={skills} /> */}
       <Typography color="white" marginTop="1rem" paddingBottom="1rem">
         {description}
