@@ -13,7 +13,6 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@heroicons/react": "^2.0.18",
-    "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.14",
     "@mui/styles": "^5.14.14",
@@ -25,12 +24,6 @@
     "react-dom": "^18.2.0",
     "react-simple-typewriter": "^5.0.1",
     "react-social-icons": "^6.4.0"
-  },
-  "overrides": {
-    "@mui/styles": {
-      "react": ">=18.2.0",
-      "react-dom": ">=18.2.0"
-    }
   },
   "devDependencies": {
     "@types/node": "^20",
