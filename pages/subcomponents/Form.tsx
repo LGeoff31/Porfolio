@@ -16,12 +16,7 @@ import emailjs from "@emailjs/browser";
 import ContactInfo from "../subcomponents/ContactInfo";
 
 const Form = () => {
-  const styles = {
-    floatingLabelFocusStyle: {
-      color: "white",
-    },
-  };
-  const form = useRef();
+  const form: any = useRef();
 
   const sendEmail = (e: any) => {
     e.preventDefault();
