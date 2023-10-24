@@ -24,6 +24,12 @@
     "react-simple-typewriter": "^5.0.1",
     "react-social-icons": "^6.4.0"
   },
+  "overrides": {
+    "@mui/styles": {
+      "react": ">=18.2.0",
+      "react-dom": ">=18.2.0"
+    }
+  },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react-dom": "^18",
