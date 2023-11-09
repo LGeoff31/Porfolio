@@ -25,7 +25,6 @@ const Project = ({
   return (
     <Box
       width="550px"
-      borderRadius="1rem"
       paddingLeft="2rem"
       paddingRight="2rem"
       sx={{ background: "#1d1d1f" }}
@@ -81,7 +80,7 @@ const ProjectBox = () => {
       justifyContent={"center"}
     >
       <Project
-        title="ReturnPal (E-Commerce)"
+        title="ReturnPal(E-Commerce)"
         link="https://return-pal.vercel.app/"
         src="/images/returnpal.png"
         description="Start up company designed to make returns seamless! Have an item to return (Ex. Amazon) easy! Simply schedule a date and fill in some information and get couriers driven to your door within 48 hours to deliver your item to the post office. We take care of printing return labels, packaging, and driving the not so close post office."

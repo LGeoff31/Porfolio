@@ -20,7 +20,7 @@ const AboutBox = () => {
         "St. Robert CHS. IB Graduate. Took Grade 11 & 12 Computer Science in Python and Java. Higher Level (Universiy Leveled) Courses:  Math, Physics and Economics. Standard Level courses: Chemistry, English, French. Clubs: President of Magic and Cardistry Club, Varsity Cross Country & Track and Field, Deca, Orchestra band,   ",
     },
     {
-      src: "/images/react.png",
+      src: "/images/Reacter (1).png",
       name: "STEM & Contest Tutor",
       heading: "Companies: Tutorax & Academy for Math and English",
       date: "Sep 2019 - Present",

@@ -20,9 +20,9 @@ const Homepage = () => {
         <BackgroundCircles />
 
         <Image
-          src={"/images/face5.jpg"}
+          src={"/images/cool_logo.png"}
           alt="face"
-          width={100}
+          width={300}
           height={100}
           style={{
             borderRadius: "50%",
@@ -54,7 +54,12 @@ const Homepage = () => {
           {text}
           <Cursor cursorColor="#F7AB0A" />
         </Typography>
-        <Stack direction="row" paddingTop="1rem" gap="2rem" margin="0 auto">
+        <Stack
+          direction="row"
+          paddingTop="1rem"
+          gap={{ md: "2rem", xs: "0.5rem" }}
+          margin="0 auto"
+        >
           <Button
             sx={{
               textTransform: "uppercase",
@@ -81,7 +86,7 @@ const Homepage = () => {
                 color: "grey",
                 fontWeight: "50",
                 borderRadius: "10rem",
-                padding: "0.5rem 2rem",
+                padding: "0.5rem 0rem",
                 border: "2px solid transparent",
                 // "&:hover": {
                 //   border: "2px solid #F7AB0A",

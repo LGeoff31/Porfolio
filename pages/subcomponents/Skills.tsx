@@ -2,14 +2,15 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const Skills = ({ skills }: { skills: Array<string> }) => {
-  // const languages = [
-  //   "react",
-  //   "typescript",
-  //   "css",
-  //   "html",
-  //   "hygraphql",
-  //   "firebase",
+  // const skillDup = [
+  //   ["react", "typescript", "Tailwind", "Typescript", "graphql", "Firebase"],
+  //   ["RapidAPI", "Pagination", "Javascript", "HTML", "Material-UI"],
+  //   ["react", "javascript", "CSS", "HTML", "Material-ui"],
+  //   ["Mongodb", "typescript", "CSS", "HTML", "material-ui", "express"],
+  //   ["Seleinium", "python", "terminal", "excel"],
+  //   ["html", "css", "javascript"],
   // ];
+
   return (
     <Grid
       container
@@ -19,25 +20,24 @@ const Skills = ({ skills }: { skills: Array<string> }) => {
       sx={{ background: "rgb(36,36,36)" }}
       // sx={{ background: "rgb(36,36,36)" }}
     >
-      {skills.length > 0 &&
-        skills.map((skill, idx) => (
-          <Box
-            key={idx}
-            sx={{
-              marginTop: "1rem",
-              background: "rgba(251, 194, 135, 0.16)",
-              color: "#fcb232",
-              textTransform: "uppercase",
-              borderRadius: "10rem",
-              paddingLeft: "1rem",
-              paddingRight: "1rem",
-              marginRight: "0.8rem",
-              textAlign: "center",
-            }}
-          >
-            <Typography fontSize="1rem"> {skill}</Typography>
-          </Box>
-        ))}
+      {skills.map((skill, idx) => (
+        <Box
+          key={idx}
+          sx={{
+            marginTop: "1rem",
+            background: "rgba(251, 194, 135, 0.16)",
+            color: "#fcb232",
+            textTransform: "uppercase",
+            borderRadius: "10rem",
+            paddingLeft: "1rem",
+            paddingRight: "1rem",
+            marginRight: "0.8rem",
+            textAlign: "center",
+          }}
+        >
+          <Typography fontSize="1rem">{skill}</Typography>
+        </Box>
+      ))}
     </Grid>
   );
 };
