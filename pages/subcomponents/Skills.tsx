@@ -10,7 +10,9 @@ const Skills = ({ skills }: { skills: Array<string> }) => {
   //   ["Seleinium", "python", "terminal", "excel"],
   //   ["html", "css", "javascript"],
   // ];
-
+  if (!skills || skills.length === 0) {
+    return <Typography>No Skills displayed</Typography>;
+  }
   return (
     <Grid
       container
