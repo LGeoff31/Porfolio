@@ -59,6 +59,7 @@ const Form = () => {
             style={{
               background: "rgba(148,163,184,.1)",
             }}
+            InputProps={{ sx: { color: "white" } }}
           />
         </Grid>
         <Grid xs={12} sm={6} item>
@@ -73,6 +74,7 @@ const Form = () => {
             style={{
               background: "rgba(148,163,184,.1)",
             }}
+            InputProps={{ sx: { color: "white" } }}
           />
         </Grid>
         <Grid xs={12} item>
@@ -88,6 +90,8 @@ const Form = () => {
             style={{
               background: "rgba(148,163,184,.1)",
             }}
+            className="autofill-style"
+            inputProps={{ sx: { color: "white" } }}
           />
         </Grid>
         <Grid xs={12} item>
@@ -104,6 +108,7 @@ const Form = () => {
             style={{
               background: "rgba(148,163,184,.1)",
             }}
+            inputProps={{ sx: { color: "white" } }}
           />
         </Grid>
         <Grid xs={12} item>

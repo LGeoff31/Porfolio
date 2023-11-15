@@ -15,7 +15,7 @@ const AboutBox = () => {
       src: "/images/IB-logo.png",
       name: "St. Robert CHS",
       heading: "IB Graduate",
-      date: "Sep 2023 - Apr 2028",
+      date: "Sep 2019 - Apr 2023",
       description:
         "St. Robert CHS. IB Graduate. Took Grade 11 & 12 Computer Science in Python and Java. Higher Level (Universiy Leveled) Courses:  Math, Physics and Economics. Standard Level courses: Chemistry, English, French. Clubs: President of Magic and Cardistry Club, Varsity Cross Country & Track and Field, Deca, Orchestra band,   ",
     },
@@ -25,7 +25,7 @@ const AboutBox = () => {
       heading: "Companies: Tutorax & Academy for Math and English",
       date: "Sep 2019 - Present",
       description:
-        "I Tutor Waterloo's infamous math contests (Euclid, CSMC, Fermet, Hypatia, CCC), along with Higher leveled calculus and advanced functions. I teach 12th grade physics topics (Kinematics, Forces, Energy, Electricity & Magnetism) and the fundementals of programming (loops, recursion, arrays, optimizations). Feel free to reach out: geoffrey31415@gmail.com ",
+        "I Tutor Waterloo's infamous math contests (Euclid, CSMC, Fermet, Hypatia, CCC), along with Higher leveled calculus and advanced functions. I teach 12th grade physics topics (Kinematics, Forces, Energy, Electricity & Magnetism) and the fundementals of programming (loops, recursion, arrays, optimizations).  ",
     },
     {
       src: "/images/marathon.png",

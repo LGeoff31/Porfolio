@@ -95,52 +95,71 @@ const Homepage = () => {
             >
               <span style={{ fontWeight: "100" }}> About</span>
             </ScrollLink>
-            {/* <Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              <span style={{ fontWeight: "100" }}> about</span>
-            </Link> */}
           </Button>
-          <Button
-            sx={{
-              textTransform: "uppercase",
+          <ScrollLink
+            to="projects"
+            spy={true}
+            smooth={true}
+            // offset={-100}
+            duration={1000}
+            style={{
+              padding: "0.5rem 0rem",
+              border: "2px solid transparent",
               textDecoration: "none",
               color: "grey",
-              fontWeight: "50",
               borderRadius: "10rem",
-              paddingLeft: "2rem",
-              paddingRight: "2rem",
+            }}
+          >
+            <Button
+              sx={{
+                textTransform: "uppercase",
+                textDecoration: "none",
+                color: "grey",
+                fontWeight: "50",
+                borderRadius: "10rem",
+                paddingLeft: "2rem",
+                paddingRight: "2rem",
 
-              "&:hover": {
-                border: "2px solid #F7AB0A",
-              },
-            }}
-          >
-            <ScrollLink to="projects">
+                "&:hover": {
+                  border: "2px solid #F7AB0A",
+                },
+              }}
+            >
               <span style={{ fontWeight: "100" }}> projects</span>
-            </ScrollLink>
-          </Button>
-          <Button
-            sx={{
-              textTransform: "uppercase",
+            </Button>
+          </ScrollLink>
+
+          <ScrollLink
+            to="skills"
+            spy={true}
+            smooth={true}
+            // offset={-100}
+            duration={1500}
+            style={{
+              padding: "0.5rem 0rem",
+              border: "2px solid transparent",
               textDecoration: "none",
               color: "grey",
-              fontWeight: "50",
               borderRadius: "10rem",
-              paddingLeft: "2rem",
-              paddingRight: "2rem",
-              "&:hover": {
-                border: "2px solid #F7AB0A",
-              },
             }}
           >
-            <span style={{ fontWeight: "100" }}> skills</span>
-          </Button>
+            <Button
+              sx={{
+                textTransform: "uppercase",
+                textDecoration: "none",
+                color: "grey",
+                fontWeight: "50",
+                borderRadius: "10rem",
+                paddingLeft: "2rem",
+                paddingRight: "2rem",
+                "&:hover": {
+                  border: "2px solid #F7AB0A",
+                },
+              }}
+            >
+              <span style={{ fontWeight: "100" }}> skills</span>
+            </Button>
+          </ScrollLink>
         </Stack>
       </div>
     </Box>

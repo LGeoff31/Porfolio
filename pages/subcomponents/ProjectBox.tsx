@@ -64,6 +64,7 @@ const Project = ({
       <Typography color="white" marginTop="1rem" paddingBottom="1rem">
         {description}
       </Typography>
+
       <HostedLinks hosted={hosted} code={code} />
     </Box>
   );

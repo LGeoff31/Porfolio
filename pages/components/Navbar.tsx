@@ -15,6 +15,10 @@ import {
   Stack,
 } from "@mui/material";
 import React, { useState } from "react";
+// import {
+//   Link as ScrollLink, // Alias Link as ScrollLink to avoid conflicts with your other Link imports
+// } from "react-scroll";
+import dynamic from "next/dynamic";
 import { SocialIcon } from "react-social-icons";
 const navigationLinks = [
   { name: "About", href: "/about" },
@@ -24,6 +28,10 @@ const navigationLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
+const ScrollLink = dynamic(
+  () => import("react-scroll").then((module) => module.Link),
+  { ssr: false }
+);
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -52,34 +60,56 @@ const Navbar = () => {
             title="GitHub"
             target="_blank"
           />
-          <SocialIcon
-            type="facebook"
-            url="https://www.instagram.com/electricochy/"
-            fgColor="gray"
-            bgColor="transparent"
-            title="GitHub"
-            target="_blank"
-          />
         </Box>
         <Stack direction="row" alignItems={"center"}>
-          <SocialIcon
-            type="facebook"
-            url="https://email.com"
-            fgColor="gray"
-            bgColor="transparent"
-            title="GitHub"
-            target="_blank"
-          />
-          <Typography
-            sx={{
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            // offset={-100}
+            duration={2000}
+            style={{
+              padding: "0.5rem 0rem",
+              border: "2px solid transparent",
+              textDecoration: "none",
               color: "grey",
-              padding: "1rem",
-              textTransform: "uppercase",
-              cursor: "pointer",
+              borderRadius: "10rem",
             }}
           >
-            Contact
-          </Typography>
+            <SocialIcon
+              type="facebook"
+              url="https://email.com"
+              fgColor="gray"
+              bgColor="transparent"
+              title="GitHub"
+              target="_blank"
+            />
+          </ScrollLink>
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            // offset={-100}
+            duration={2000}
+            style={{
+              padding: "0.5rem 0rem",
+              border: "2px solid transparent",
+              textDecoration: "none",
+              color: "grey",
+              borderRadius: "10rem",
+            }}
+          >
+            <Typography
+              sx={{
+                color: "grey",
+                padding: "1rem",
+                textTransform: "uppercase",
+                cursor: "pointer",
+              }}
+            >
+              Contact
+            </Typography>
+          </ScrollLink>
         </Stack>
       </Stack>
     </div>
