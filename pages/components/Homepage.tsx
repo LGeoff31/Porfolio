@@ -56,46 +56,43 @@ const Homepage = () => {
         </Typography>
         <Stack
           direction="row"
-          paddingTop="1rem"
+          // paddingTop="1rem"
           gap={{ md: "2rem", xs: "0.5rem" }}
           margin="0 auto"
         >
-          <Button
-            sx={{
-              textTransform: "uppercase",
+          <ScrollLink
+            to="about"
+            spy={true}
+            smooth={true}
+            // offset={-100}
+            duration={1000}
+            style={{
+              padding: "0.5rem 0rem",
+              border: "2px solid transparent",
               textDecoration: "none",
               color: "grey",
-              fontWeight: "50",
               borderRadius: "10rem",
-              paddingLeft: "2rem",
-              paddingRight: "2rem",
-              "&:hover": {
-                border: "2px solid #F7AB0A",
-              },
             }}
           >
-            <ScrollLink
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100} // Adjust the offset as needed
-              duration={500}
-              style={{
+            <Button
+              sx={{
+                textTransform: "uppercase",
                 textDecoration: "none",
                 color: "grey",
                 fontWeight: "50",
                 borderRadius: "10rem",
-                padding: "0.5rem 0rem",
-                border: "2px solid transparent",
-                // "&:hover": {
-                //   border: "2px solid #F7AB0A",
-                // },
+                paddingLeft: "2rem",
+                paddingRight: "2rem",
+
+                "&:hover": {
+                  border: "2px solid #F7AB0A",
+                },
               }}
             >
               <span style={{ fontWeight: "100" }}> About</span>
-            </ScrollLink>
-          </Button>
+            </Button>
+          </ScrollLink>
+
           <ScrollLink
             to="projects"
             spy={true}
@@ -158,6 +155,38 @@ const Homepage = () => {
               }}
             >
               <span style={{ fontWeight: "100" }}> skills</span>
+            </Button>
+          </ScrollLink>
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            // offset={-100}
+            duration={1000}
+            style={{
+              padding: "0.5rem 0rem",
+              border: "2px solid transparent",
+              textDecoration: "none",
+              color: "grey",
+              borderRadius: "10rem",
+            }}
+          >
+            <Button
+              sx={{
+                textTransform: "uppercase",
+                textDecoration: "none",
+                color: "grey",
+                fontWeight: "50",
+                borderRadius: "10rem",
+                paddingLeft: "2rem",
+                paddingRight: "2rem",
+
+                "&:hover": {
+                  border: "2px solid #F7AB0A",
+                },
+              }}
+            >
+              <span style={{ fontWeight: "100" }}> Contact</span>
             </Button>
           </ScrollLink>
         </Stack>
