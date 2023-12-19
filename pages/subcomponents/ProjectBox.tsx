@@ -81,12 +81,12 @@ const ProjectBox = () => {
       justifyContent={"center"}
     >
       <Project
-        title="ReturnPal(E-Commerce)"
-        link="https://return-pal.vercel.app/"
+        title="ReturnPal"
+        link="https://return-pal-preview.vercel.app/return"
         src="/images/returnpal.png"
         description="Start up company designed to make returns seamless! Have an item to return (Ex. Amazon) easy! Simply schedule a date and fill in some information and get couriers driven to your door within 48 hours to deliver your item to the post office. We take care of printing return labels, packaging, and driving the not so close post office."
-        hosted="https://return-pal.vercel.app/"
-        code="https://return-pal.vercel.app/"
+        hosted="https://return-pal-preview.vercel.app/return"
+        code="https://github.com/LGeoff31/return-pal"
         skills={[
           "react",
           "typescript",
@@ -98,7 +98,7 @@ const ProjectBox = () => {
       />
       <Project
         title="Fitness API"
-        link="https://return-pal.vercel.app/"
+        link="https://fitness-workouts.vercel.app/"
         src="/images/fitnessApp.png"
         description="Want a website to provide hundreds of distinct workouts targeting all muscle groups! With Rapid API, any workout can be searched and auto-populated in milliseconds with hundreds of pages organized with pagination."
         hosted="https://fitness-workouts.vercel.app/"
@@ -107,7 +107,7 @@ const ProjectBox = () => {
       />
       <Project
         title="Streaming Platform"
-        link="https://return-pal.vercel.app/"
+        link="https://electricochy-youtube.netlify.app/"
         src="/images/youtubeClone.png"
         description="This is a streaming platform utilizing rapid API to generate relevant videos targeted towards your preference! It includes features such as likes, views, and channel icons for you to enjoy your favourite videos online!"
         hosted="https://electricochy-youtube.netlify.app/"
@@ -116,7 +116,7 @@ const ProjectBox = () => {
       />
       <Project
         title="Memories"
-        link="https://return-pal.vercel.app/"
+        link="https://electricochy-memories.netlify.app/"
         src="/images/memories.png"
         description="Memories are what make life special so savor each moment! With this website, you can record all your special moments with dates so they'll never be lost!"
         hosted="https://electricochy-memories.netlify.app/"
@@ -133,7 +133,7 @@ const ProjectBox = () => {
 
       <Project
         title="RPS Contest Automation"
-        link="https://return-pal.vercel.app/"
+        link="https://github.com/LGeoff31/rock-paper-scissors-automater"
         src="/images/rps.jpeg"
         description="This Python program built using Selenium is a online submission automator to enter the Rock Paper Scissors Contest held seasonally by CirclekGames. The Game requires you to enter a phone number, play a simple game of rock paper scissors, then winning will give you a barcode to win a prize at your local CirclekGames to claim."
         hosted="https://github.com/LGeoff31/rock-paper-scissors-automater"
@@ -142,7 +142,7 @@ const ProjectBox = () => {
       />
       <Project
         title="Parkway Kitchen"
-        link="https://return-pal.vercel.app/"
+        link="https://parkway-kitchen.vercel.app/"
         src="/images/kitchen.png"
         description="This is an informative website for this local Chinese Restaurant named: Parway Kitchen. On this website, you can see view the menu, location, contact page, and more! Give this restaurant a try!"
         hosted="https://parkway-kitchen.vercel.app/"

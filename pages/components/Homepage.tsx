@@ -19,7 +19,7 @@ const Homepage = () => {
       <div className="h-screen  flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
         <BackgroundCircles />
 
-        <Image
+        {/* <Image
           src={"/images/cool_logo.png"}
           alt="face"
           width={300}
@@ -29,7 +29,7 @@ const Homepage = () => {
             margin: "0 auto",
             marginBottom: "1rem",
           }}
-        />
+        /> */}
 
         <Typography
           sx={{
