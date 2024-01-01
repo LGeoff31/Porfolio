@@ -100,7 +100,7 @@ const ProjectBox = () => {
         title="Where2Visit"
         link="https://where2visit-test.netlify.app/"
         src="/images/maybenow.png"
-        description="Start up company designed to make returns seamless! Have an item to return (Ex. Amazon) easy! Simply schedule a date and fill in some information and get couriers driven to your door within 48 hours to deliver your item to the post office. We take care of printing return labels, packaging, and driving the not so close post office."
+        description="A easily accessible web application to allow your friends to decide where to eat. The location will auto-generate to your current location, and zooming in and out of the maps will update the restaurants to fit the latitude and longitude in real-time! Additionally, view all the options on the sidebar with interesting information including rating, cuisine type, price, and their website! Moreover, this website not only allows for restaurants, but also includes hotels and entertainment spots! Have the option to Filter based on rating to satisfy your needs and enjoy a fun night out!"
         hosted="https://where2visit-test.netlify.app"
         code="https://github.com/LGeoff31/where2visittest"
         skills={["react", "Google Places API", "RapidAPI", "Material UI"]}
