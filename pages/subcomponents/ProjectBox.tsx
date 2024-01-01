@@ -97,6 +97,31 @@ const ProjectBox = () => {
         ]}
       />
       <Project
+        title="Where2Visit"
+        link="https://where2visit-test.netlify.app/"
+        src="/images/maybenow.png"
+        description="Start up company designed to make returns seamless! Have an item to return (Ex. Amazon) easy! Simply schedule a date and fill in some information and get couriers driven to your door within 48 hours to deliver your item to the post office. We take care of printing return labels, packaging, and driving the not so close post office."
+        hosted="https://where2visit-test.netlify.app"
+        code="https://github.com/LGeoff31/where2visittest"
+        skills={["react", "Google Places API", "RapidAPI", "Material UI"]}
+      />
+      <Project
+        title="Insomnia"
+        link="https://return-pal-preview.vercel.app/return"
+        src="/images/insomnia_pic.jpg"
+        description="Utilizing advanced Data Visualization and powerful Algorithms, gain insights into your sleep quality and duration. Visualize correlations and trends, empowering yourself to achieve better rest."
+        hosted="https://return-pal-preview.vercel.app/return"
+        code="https://github.com/LGeoff31/Insomnia"
+        skills={[
+          "MongoDB",
+          "Express",
+          "React",
+          "Node.JS",
+          "Material UI",
+          "Firebase",
+        ]}
+      />
+      <Project
         title="Fitness API"
         link="https://fitness-workouts.vercel.app/"
         src="/images/fitnessApp.png"

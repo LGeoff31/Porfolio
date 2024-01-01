@@ -9,7 +9,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 const Homepage = () => {
   const [text, count] = useTypewriter({
-    words: ["Geoffrey Lee", "Computer Engineer", "<LovesToCode />"],
+    words: ["Geoffrey Lee", "Software Engineer", "<LovesToCode />"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -30,7 +30,17 @@ const Homepage = () => {
             marginBottom: "1rem",
           }}
         /> */}
-
+        <Typography
+          fontWeight="100px"
+          // fontSize="2.5rem"
+          color="white"
+          textAlign={"center"}
+          variant="h3"
+          zIndex={0}
+        >
+          {text}
+          <Cursor cursorColor="#F7AB0A" />
+        </Typography>
         <Typography
           sx={{
             textAlign: "center",
@@ -43,17 +53,6 @@ const Homepage = () => {
           full-stack developer
         </Typography>
 
-        <Typography
-          fontWeight="100px"
-          // fontSize="2.5rem"
-          color="white"
-          textAlign={"center"}
-          variant="h3"
-          zIndex={0}
-        >
-          {text}
-          <Cursor cursorColor="#F7AB0A" />
-        </Typography>
         <Stack
           direction="row"
           // paddingTop="1rem"

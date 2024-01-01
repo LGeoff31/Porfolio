@@ -6,7 +6,7 @@ const AboutBox = () => {
     {
       src: "/images/waterlooLogo.png",
       name: "University of Waterloo",
-      heading: "Computer Engineering",
+      heading: "Software Engineering",
       date: "Sep 2023 - Apr 2028",
       description:
         "I'm currently in my 1A term in Computer Engineering. Courses: Classical Mechanics, Fundamentals of Programming, Linear Algebra, Calculus 1, Project Studio.",
