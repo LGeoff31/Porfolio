@@ -98,19 +98,19 @@ const ProjectBox = () => {
       />
       <Project
         title="Where2Visit"
-        link="https://where2visit-test.netlify.app/"
+        link="https://where2visit.netlify.app/"
         src="/images/maybenow.png"
         description="A easily accessible web application to allow your friends to decide where to eat. The location will auto-generate to your current location, and zooming in and out of the maps will update the restaurants to fit the latitude and longitude in real-time! Additionally, view all the options on the sidebar with interesting information including rating, cuisine type, price, and their website! Moreover, this website not only allows for restaurants, but also includes hotels and entertainment spots! Have the option to Filter based on rating to satisfy your needs and enjoy a fun night out!"
-        hosted="https://where2visit-test.netlify.app"
+        hosted="https://where2visit.netlify.app/"
         code="https://github.com/LGeoff31/where2visittest"
         skills={["react", "Google Places API", "RapidAPI", "Material UI"]}
       />
       <Project
         title="Insomnia"
-        link="https://return-pal-preview.vercel.app/return"
-        src="/images/insomnia_pic.jpg"
+        link="https://insomniahub.vercel.app/"
+        src="/images/line_chart.png"
         description="Utilizing advanced Data Visualization and powerful Algorithms, gain insights into your sleep quality and duration. Visualize correlations and trends, empowering yourself to achieve better rest."
-        hosted="https://return-pal-preview.vercel.app/return"
+        hosted="https://insomniahub.vercel.app/"
         code="https://github.com/LGeoff31/Insomnia"
         skills={[
           "MongoDB",
@@ -132,10 +132,10 @@ const ProjectBox = () => {
       />
       <Project
         title="Streaming Platform"
-        link="https://electricochy-youtube.netlify.app/"
+        link="https://visionarium.netlify.app/"
         src="/images/youtubeClone.png"
         description="This is a streaming platform utilizing rapid API to generate relevant videos targeted towards your preference! It includes features such as likes, views, and channel icons for you to enjoy your favourite videos online!"
-        hosted="https://electricochy-youtube.netlify.app/"
+        hosted="https://visionarium.netlify.app/"
         code="https://github.com/LGeoff31/youtubeWebsite"
         skills={["react", "javascript", "CSS", "HTML", "Material-ui"]}
       />

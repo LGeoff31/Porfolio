@@ -7,23 +7,23 @@ const AboutBox = () => {
       src: "/images/waterlooLogo.png",
       name: "University of Waterloo",
       heading: "Software Engineering",
-      date: "Sep 2023 - Apr 2028",
+      date: "2023 - 2028",
       description:
-        "I'm currently in my 1A term in Computer Engineering. Courses: Classical Mechanics, Fundamentals of Programming, Linear Algebra, Calculus 1, Project Studio.",
+        "Software Engineering. Courses: Data Abstraction and Implementation C++, Discrete Math, Linear Algebra, Calculus 2, Linear Circuits, Digital Circuits & Systems",
     },
     {
       src: "/images/IB-logo.png",
       name: "St. Robert CHS",
       heading: "IB Graduate",
-      date: "Sep 2019 - Apr 2023",
+      date: "2019 - 2023",
       description:
-        "St. Robert CHS. IB Graduate. Took Grade 11 & 12 Computer Science in Python and Java. Higher Level (Universiy Leveled) Courses:  Math, Physics and Economics. Standard Level courses: Chemistry, English, French. Clubs: President of Magic and Cardistry Club, Varsity Cross Country & Track and Field, Deca, Orchestra band,   ",
+        "I took higher level math, physics, economics and standard level: chemistry, english, french with an addition of Grade 11 & 12 Computer Science. President of Magic and Cardistry Club, Varsity Cross Country & Track and Field, Deca, Orchestra band,   ",
     },
     {
       src: "/images/Reacter (1).png",
-      name: "STEM & Contest Tutor",
-      heading: "Companies: Tutorax & Academy for Math and English",
-      date: "Sep 2019 - Present",
+      name: "Competitive STEM Tutor",
+      heading: "Tutorax | Play Forever | Academy for Math and English",
+      date: "2019 - Present",
       description:
         "I Tutor Waterloo's infamous math contests (Euclid, CSMC, Fermet, Hypatia, CCC), along with Higher leveled calculus and advanced functions. I teach 12th grade physics topics (Kinematics, Forces, Energy, Electricity & Magnetism) and the fundementals of programming (loops, recursion, arrays, optimizations).  ",
     },
