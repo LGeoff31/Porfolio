@@ -96,15 +96,7 @@ const ProjectBox = () => {
           "Firebase",
         ]}
       />
-      <Project
-        title="Where2Visit"
-        link="https://where2visit.netlify.app/"
-        src="/images/maybenow.png"
-        description="A easily accessible web application to allow your friends to decide where to eat. The location will auto-generate to your current location, and zooming in and out of the maps will update the restaurants to fit the latitude and longitude in real-time! Additionally, view all the options on the sidebar with interesting information including rating, cuisine type, price, and their website! Moreover, this website not only allows for restaurants, but also includes hotels and entertainment spots! Have the option to Filter based on rating to satisfy your needs and enjoy a fun night out!"
-        hosted="https://where2visit.netlify.app/"
-        code="https://github.com/LGeoff31/where2visittest"
-        skills={["react", "Google Places API", "RapidAPI", "Material UI"]}
-      />
+
       <Project
         title="Insomnia"
         link="https://insomniahub.vercel.app/"
@@ -120,6 +112,15 @@ const ProjectBox = () => {
           "Material UI",
           "Firebase",
         ]}
+      />
+      <Project
+        title="Where2Visit"
+        link="https://where2visit.netlify.app/"
+        src="/images/maybenow.png"
+        description="A easily accessible web application to allow your friends to decide where to eat. The location will auto-generate to your current location, and zooming in and out of the maps will update the restaurants to fit the latitude and longitude in real-time! Additionally, view all the options on the sidebar with interesting information including rating, cuisine type, price, and their website! Moreover, this website not only allows for restaurants, but also includes hotels and entertainment spots! Have the option to Filter based on rating to satisfy your needs and enjoy a fun night out!"
+        hosted="https://where2visit.netlify.app/"
+        code="https://github.com/LGeoff31/where2visittest"
+        skills={["react", "Google Places API", "RapidAPI", "Material UI"]}
       />
       <Project
         title="Fitness API"
