@@ -116,7 +116,7 @@ const ProjectBox = () => {
       <Project
         title="Where2Visit"
         link="https://where2visit.netlify.app/"
-        src="/images/maybenow.png"
+        src="/images/where2visit-pic.jpg"
         description="A easily accessible web application to allow your friends to decide where to eat. The location will auto-generate to your current location, and zooming in and out of the maps will update the restaurants to fit the latitude and longitude in real-time! Additionally, view all the options on the sidebar with interesting information including rating, cuisine type, price, and their website! Moreover, this website not only allows for restaurants, but also includes hotels and entertainment spots! Have the option to Filter based on rating to satisfy your needs and enjoy a fun night out!"
         hosted="https://where2visit.netlify.app/"
         code="https://github.com/LGeoff31/where2visittest"

@@ -9,7 +9,12 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 const Homepage = () => {
   const [text, count] = useTypewriter({
-    words: ["Geoffrey Lee", "Software Engineer", "<LovesToCode />"],
+    words: [
+      "Geoffrey Lee",
+      "Software Engineer",
+      "<LovesToCode />",
+      "Full Stack Developer",
+    ],
     loop: true,
     delaySpeed: 2000,
   });
