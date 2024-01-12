@@ -15,7 +15,7 @@ const BackgroundCircles = () => {
         borderRadius: ["20%", "20%", "50%", "80%", "20%"],
       }}
       transition={{
-        duration: 10.1,
+        duration: 3,
       }}
       className="relative flex justify-center items-center"
     >

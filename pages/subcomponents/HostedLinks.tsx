@@ -32,7 +32,6 @@ const HostedLinks = ({ hosted, code }: { hosted: string; code: string }) => {
           border: "1px solid black",
           borderRadius: "10rem",
           transition: "transform 0.3s",
-
           "&:hover": {
             background: "rgba(251, 194, 135, 0.16)",
             transform: "scale(1.1)",
