@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { Link, Typography, Box } from "@mui/material";
-
+import { SocialIcon } from "react-social-icons";
 const ContactInfo = () => {
   return (
     <motion.div
@@ -97,7 +97,13 @@ const ContactInfo = () => {
             },
           }}
         >
-          <EnvelopeIcon className="contactIcon" />
+          <a
+            href="mailto:geoffrey31415@gmail.com?subject=Interest%20From%20Your%20Portfolio%20Website&body=Hi%20Geoffrey,"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <EnvelopeIcon className="contactIcon" />
+          </a>
         </Box>
         <Typography
           fontSize="1.5rem"
