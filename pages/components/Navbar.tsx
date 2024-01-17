@@ -45,46 +45,74 @@ const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <Box>
-          <SocialIcon
-            url="https://www.linkedin.com/in/lgeoff31/"
-            fgColor="gray"
-            bgColor="transparent"
-            title="LinkedIn"
-            target="_blank"
-          />
-          <SocialIcon
-            url="https://github.com/lgeoff31"
-            fgColor="gray"
-            bgColor="transparent"
-            title="GitHub"
-            target="_blank"
-          />
-        </Box>
-        <Stack direction="row" alignItems={"center"}>
-          <ScrollLink
-            to="contact"
-            spy={true}
-            smooth={true}
-            // offset={-100}
-            duration={2000}
-            style={{
-              padding: "0.5rem 0rem",
-              border: "2px solid transparent",
-              textDecoration: "none",
-              color: "grey",
-              borderRadius: "10rem",
+        <Stack direction="row">
+          <Box
+            sx={{
+              transition: "transform 0.3s ease-in-out", // Animation transition
+              ":hover": {
+                transform: "scale(1.2)", // Scale to 1.2 times on hover
+              },
             }}
           >
             <SocialIcon
-              type="facebook"
-              url="https://email.com"
+              url="https://www.linkedin.com/in/lgeoff31/"
+              fgColor="gray"
+              bgColor="transparent"
+              title="LinkedIn"
+              target="_blank"
+            />
+          </Box>
+          <Box
+            sx={{
+              transition: "transform 0.3s ease-in-out", // Animation transition
+              ":hover": {
+                transform: "scale(1.2)", // Scale to 1.2 times on hover
+              },
+            }}
+          >
+            <SocialIcon
+              url="https://github.com/lgeoff31"
               fgColor="gray"
               bgColor="transparent"
               title="GitHub"
               target="_blank"
             />
-          </ScrollLink>
+          </Box>
+        </Stack>
+        <Stack direction="row" alignItems={"center"}>
+          {/* <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            // offset={-100}
+            duration={2000}
+            style={{
+              padding: "0.5rem 0rem",
+              border: "2px solid transparent",
+              textDecoration: "none",
+              color: "grey",
+              borderRadius: "10rem",
+            }}
+          > */}
+          <Box
+            sx={{
+              transition: "transform 0.3s ease-in-out", // Animation transition
+              ":hover": {
+                transform: "scale(1.2)", // Scale to 1.2 times on hover
+              },
+            }}
+          >
+            <SocialIcon
+              type="facebook"
+              url="mailto:geoffrey31415@gmail.com?subject=Interest From Your Portfolio Website&body=Hi Geoffrey,"
+              fgColor="gray"
+              bgColor="transparent"
+              title="GitHub"
+              target="_blank"
+            />
+          </Box>
+          {/* </ScrollLink> */}
+
           <ScrollLink
             to="contact"
             spy={true}
@@ -99,16 +127,25 @@ const Navbar = () => {
               borderRadius: "10rem",
             }}
           >
-            <Typography
+            <Box
               sx={{
-                color: "grey",
-                padding: "1rem",
-                textTransform: "uppercase",
-                cursor: "pointer",
+                transition: "transform 0.3s ease-in-out", // Animation transition
+                ":hover": {
+                  transform: "scale(1.2)", // Scale to 1.2 times on hover
+                },
               }}
             >
-              Contact
-            </Typography>
+              <Typography
+                sx={{
+                  color: "grey",
+                  padding: "1rem",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                }}
+              >
+                Contact
+              </Typography>
+            </Box>
           </ScrollLink>
         </Stack>
       </Stack>

@@ -13,7 +13,7 @@ const Homepage = () => {
       "Geoffrey Lee",
       "Software Engineer",
       "<LovesToCode />",
-      "Full Stack Developer",
+      "Full-Stack Developer",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -78,23 +78,32 @@ const Homepage = () => {
               borderRadius: "10rem",
             }}
           >
-            <Button
+            <Box
               sx={{
-                textTransform: "uppercase",
-                textDecoration: "none",
-                color: "grey",
-                fontWeight: "50",
-                borderRadius: "10rem",
-                paddingLeft: "2rem",
-                paddingRight: "2rem",
-
-                "&:hover": {
-                  border: "2px solid #F7AB0A",
+                transition: "transform 0.3s ease-in-out", // Animation transition
+                ":hover": {
+                  transform: "scale(1.2)", // Scale to 1.2 times on hover
                 },
               }}
             >
-              <span style={{ fontWeight: "100" }}> About</span>
-            </Button>
+              <Button
+                sx={{
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  color: "grey",
+                  fontWeight: "50",
+                  borderRadius: "10rem",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+
+                  "&:hover": {
+                    border: "2px solid #F7AB0A",
+                  },
+                }}
+              >
+                <span style={{ fontWeight: "100" }}> About</span>
+              </Button>
+            </Box>
           </ScrollLink>
 
           <ScrollLink
@@ -111,23 +120,32 @@ const Homepage = () => {
               borderRadius: "10rem",
             }}
           >
-            <Button
+            <Box
               sx={{
-                textTransform: "uppercase",
-                textDecoration: "none",
-                color: "grey",
-                fontWeight: "50",
-                borderRadius: "10rem",
-                paddingLeft: "2rem",
-                paddingRight: "2rem",
-
-                "&:hover": {
-                  border: "2px solid #F7AB0A",
+                transition: "transform 0.3s ease-in-out", // Animation transition
+                ":hover": {
+                  transform: "scale(1.2)", // Scale to 1.2 times on hover
                 },
               }}
             >
-              <span style={{ fontWeight: "100" }}> projects</span>
-            </Button>
+              <Button
+                sx={{
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  color: "grey",
+                  fontWeight: "50",
+                  borderRadius: "10rem",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+
+                  "&:hover": {
+                    border: "2px solid #F7AB0A",
+                  },
+                }}
+              >
+                <span style={{ fontWeight: "100" }}> projects</span>
+              </Button>
+            </Box>
           </ScrollLink>
 
           <ScrollLink
@@ -144,22 +162,31 @@ const Homepage = () => {
               borderRadius: "10rem",
             }}
           >
-            <Button
+            <Box
               sx={{
-                textTransform: "uppercase",
-                textDecoration: "none",
-                color: "grey",
-                fontWeight: "50",
-                borderRadius: "10rem",
-                paddingLeft: "2rem",
-                paddingRight: "2rem",
-                "&:hover": {
-                  border: "2px solid #F7AB0A",
+                transition: "transform 0.3s ease-in-out", // Animation transition
+                ":hover": {
+                  transform: "scale(1.2)", // Scale to 1.2 times on hover
                 },
               }}
             >
-              <span style={{ fontWeight: "100" }}> skills</span>
-            </Button>
+              <Button
+                sx={{
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  color: "grey",
+                  fontWeight: "50",
+                  borderRadius: "10rem",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+                  "&:hover": {
+                    border: "2px solid #F7AB0A",
+                  },
+                }}
+              >
+                <span style={{ fontWeight: "100" }}> skills</span>
+              </Button>
+            </Box>
           </ScrollLink>
           <ScrollLink
             to="contact"
@@ -175,23 +202,32 @@ const Homepage = () => {
               borderRadius: "10rem",
             }}
           >
-            <Button
+            <Box
               sx={{
-                textTransform: "uppercase",
-                textDecoration: "none",
-                color: "grey",
-                fontWeight: "50",
-                borderRadius: "10rem",
-                paddingLeft: "2rem",
-                paddingRight: "2rem",
-
-                "&:hover": {
-                  border: "2px solid #F7AB0A",
+                transition: "transform 0.3s ease-in-out", // Animation transition
+                ":hover": {
+                  transform: "scale(1.2)", // Scale to 1.2 times on hover
                 },
               }}
             >
-              <span style={{ fontWeight: "100" }}> Contact</span>
-            </Button>
+              <Button
+                sx={{
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  color: "grey",
+                  fontWeight: "50",
+                  borderRadius: "10rem",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+
+                  "&:hover": {
+                    border: "2px solid #F7AB0A",
+                  },
+                }}
+              >
+                <span style={{ fontWeight: "100" }}> Contact</span>
+              </Button>
+            </Box>
           </ScrollLink>
         </Stack>
       </div>

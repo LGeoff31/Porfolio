@@ -4,6 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
+      {/* <link rel="icon" href="../images/c++.png" />
+      </Head> */}
+      {/* <Head /> */}
+
       <body>
         <Main />
         <NextScript />
