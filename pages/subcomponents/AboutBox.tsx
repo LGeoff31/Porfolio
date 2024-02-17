@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
+import { motion } from "framer-motion";
 
 const AboutBox = () => {
   const aboutData = [
@@ -46,15 +47,22 @@ const AboutBox = () => {
   ];
   return (
     <Stack>
-      {aboutData.map((experience, idx) => (
-        <AboutMeSection
-          key={idx}
-          name={experience.name}
-          description={experience.description}
-          heading={experience.heading}
-          src={experience.src}
-          date={experience.date}
-        />
+      {aboutData?.map((experience, idx) => (
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="rounded-full object-cover md:rounded-lg  overflow-hidden"
+        >
+          <AboutMeSection
+            key={idx}
+            name={experience.name}
+            description={experience.description}
+            heading={experience.heading}
+            src={experience.src}
+            date={experience.date}
+          />
+        </motion.div>
       ))}
     </Stack>
   );
