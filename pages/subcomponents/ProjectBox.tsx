@@ -46,7 +46,7 @@ const Project = ({
         <motion.div
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.5 }}
           className=" rounded-full object-cover md:rounded-lg  overflow-hidden"
         >
           <Image
