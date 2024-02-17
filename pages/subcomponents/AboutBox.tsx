@@ -49,6 +49,7 @@ const AboutBox = () => {
     <Stack>
       {aboutData?.map((experience, idx) => (
         <motion.div
+          key={idx}
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
