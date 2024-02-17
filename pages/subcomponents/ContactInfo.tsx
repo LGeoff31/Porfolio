@@ -10,7 +10,7 @@ const ContactInfo = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 2 }}
       className="flex flex-col  space-y-2 mr-20 "
-      style={{ alignItems: "start" }}
+      style={{ alignItems: "start", marginLeft: "3rem" }}
     >
       <div className="contactInfo">
         <Link

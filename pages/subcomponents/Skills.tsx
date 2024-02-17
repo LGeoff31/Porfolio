@@ -37,7 +37,7 @@ const Skills = ({ skills }: { skills: Array<string> }) => {
             textAlign: "center",
           }}
         >
-          <Typography fontSize="1rem">{skill}</Typography>
+          <Typography fontSize={{ md: "1rem" }}>{skill}</Typography>
         </Box>
       ))}
     </Grid>

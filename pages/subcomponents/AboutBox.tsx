@@ -53,7 +53,7 @@ const AboutBox = () => {
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="rounded-full object-cover md:rounded-lg  overflow-hidden"
+          className=" object-cover md:rounded-lg  overflow-hidden"
         >
           <AboutMeSection
             key={idx}
@@ -87,8 +87,8 @@ const AboutMeSection = ({
       direction={{ md: "row", xs: "column" }}
       sx={{
         background: "#1d1d1f",
-        borderRadius: "1rem",
-        marginTop: "2%",
+        // borderRadius: "1rem",
+        marginTop: "2rem",
         padding: "2rem",
       }}
     >
@@ -99,7 +99,7 @@ const AboutMeSection = ({
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-
+          margin: "0 auto",
           width: "100px",
           height: "10%",
         }}

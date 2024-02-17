@@ -24,9 +24,9 @@ const Project = ({
 }) => {
   return (
     <Box
-      width="550px"
-      paddingLeft="2rem"
-      paddingRight="2rem"
+      width="500px"
+      paddingLeft={{ md: "2rem", xs: "0.1rem" }}
+      paddingRight={{ md: "2rem", xs: "0.1rem" }}
       sx={{ background: "#1d1d1f" }}
     >
       <Typography
@@ -47,7 +47,7 @@ const Project = ({
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className=" rounded-full object-cover md:rounded-lg  overflow-hidden"
+          className=" object-cover md:rounded-lg  overflow-hidden"
         >
           <Image
             src={src}
