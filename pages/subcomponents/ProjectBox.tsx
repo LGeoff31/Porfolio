@@ -101,7 +101,7 @@ const ProjectBox = () => {
         title="Insomnia"
         link="https://insomniahub.vercel.app/"
         src="/images/line_chart.png"
-        description="Utilizing advanced Data Visualization and powerful Algorithms, gain insights into your sleep quality and duration. Visualize correlations and trends, empowering yourself to achieve better rest."
+        description="Utilizing advanced Data Visualization and powerful Algorithms, gain insights into your sleep quality, duration, stress levels, quantity of exercise and correlations between them all. Visualize correlations and trends with quantitative and qualitative measures, empowering yourself to achieve better rest. Take over your sleep one night at a time. "
         hosted="https://insomniahub.vercel.app/"
         code="https://github.com/LGeoff31/Insomnia"
         skills={[
@@ -116,17 +116,17 @@ const ProjectBox = () => {
       <Project
         title="Where2Visit"
         link="https://where2visit.netlify.app/"
-        src="/images/where2visit-pic.jpg"
-        description="A easily accessible web application to allow your friends to decide where to eat. The location will auto-generate to your current location, and zooming in and out of the maps will update the restaurants to fit the latitude and longitude in real-time! Additionally, view all the options on the sidebar with interesting information including rating, cuisine type, price, and their website! Moreover, this website not only allows for restaurants, but also includes hotels and entertainment spots! Have the option to Filter based on rating to satisfy your needs and enjoy a fun night out!"
+        src="/images/where2visit.png"
+        description="A easily accessible web application to allow your friends to decide where to eat built with multiplayer feature and is very mobile friendly. "
         hosted="https://where2visit.netlify.app/"
         code="https://github.com/LGeoff31/where2visittest"
-        skills={["react", "Google Places API", "RapidAPI", "Material UI"]}
+        skills={["react", "Google Places", "Yelp", "MongoDB", "Socket.io"]}
       />
       <Project
         title="Fitness API"
         link="https://fitness-workouts.vercel.app/"
         src="/images/fitnessApp.png"
-        description="Want a website to provide hundreds of distinct workouts targeting all muscle groups! With Rapid API, any workout can be searched and auto-populated in milliseconds with hundreds of pages organized with pagination."
+        description="Any workout can be searched and auto-populated in milliseconds with hundreds of pages organized with pagination."
         hosted="https://fitness-workouts.vercel.app/"
         code="https://github.com/LGeoff31/workout_app"
         skills={["RapidAPI", "Pagination", "Javascript", "HTML", "Material-UI"]}
@@ -144,7 +144,7 @@ const ProjectBox = () => {
         title="Memories"
         link="https://electricochy-memories.netlify.app/"
         src="/images/memories.png"
-        description="Memories are what make life special so savor each moment! With this website, you can record all your special moments with dates so they'll never be lost!"
+        description="Memories are what make life special so savor each moment! With this website, you can record all your special moments with dates, specific descriptions, and images to go along so they'll never be lost!"
         hosted="https://electricochy-memories.netlify.app/"
         code="https://github.com/LGeoff31/memories"
         skills={[
@@ -164,7 +164,7 @@ const ProjectBox = () => {
         description="This Python program built using Selenium is a online submission automator to enter the Rock Paper Scissors Contest held seasonally by CirclekGames. The Game requires you to enter a phone number, play a simple game of rock paper scissors, then winning will give you a barcode to win a prize at your local CirclekGames to claim."
         hosted="https://github.com/LGeoff31/rock-paper-scissors-automater"
         code="https://github.com/LGeoff31/rock-paper-scissors-automater"
-        skills={["Seleinium", "python", "terminal", "excel"]}
+        skills={["Seleinium", "python", "excel"]}
       />
       <Project
         title="Parkway Kitchen"

@@ -10,7 +10,7 @@ const AboutBox = () => {
       heading: "Software Engineering",
       date: "2023 - 2028",
       description:
-        "Software Engineering. Courses: Data Abstraction and Implementation C++, Discrete Math, Linear Algebra, Calculus 2, Linear Circuits, Digital Circuits & Systems",
+        "My courses are Data Abstraction and Implementation C++, Discrete Math, Linear Algebra, Calculus 2, Linear Circuits, Digital Circuits & Systems. I'm interested in Full-Stack development, DSA problem-solving, and learning new technologies.",
     },
     {
       src: "/images/IB-logo.png",
@@ -18,7 +18,7 @@ const AboutBox = () => {
       heading: "IB Graduate",
       date: "2019 - 2023",
       description:
-        "I took higher level math, physics, economics and standard level: chemistry, english, french with an addition of Grade 11 & 12 Computer Science. President of Magic and Cardistry Club, Varsity Cross Country & Track and Field, Deca, Orchestra band,   ",
+        "I took higher level math, physics, economics and grade 11 & 12 Computer Science in Python and Java. I was president of the magic and cardistry club, captain in Varsity Cross Country & Track and Field, and a Deca finance competitor. ",
     },
     {
       src: "/images/Reacter (1).png",
@@ -26,7 +26,7 @@ const AboutBox = () => {
       heading: "Tutorax | Play Forever | Academy for Math and English",
       date: "2019 - Present",
       description:
-        "I Tutor Waterloo's infamous math contests (Euclid, CSMC, Fermet, Hypatia, CCC), along with Higher leveled calculus and advanced functions. I teach 12th grade physics topics (Kinematics, Forces, Energy, Electricity & Magnetism) and the fundementals of programming (loops, recursion, arrays, optimizations).  ",
+        "I've taught competitive math and computing for 4+ years to hundreds of high school students at over 3 tutoring organizations.  ",
     },
     {
       src: "/images/marathon.png",
@@ -34,7 +34,7 @@ const AboutBox = () => {
       heading: "Cross Country & Track and Field",
       date: "2017-2023",
       description:
-        "I mainly specizlize in long distance events from 5km and above. My PB's ~ 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02 ",
+        "I'm a marathoner with a range of personal bests My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
     },
     {
       src: "/images/magic.png",
@@ -42,7 +42,15 @@ const AboutBox = () => {
       heading: "Magician",
       date: "2019-2023",
       description:
-        "Passionate magician who loves the crafts of Deception and Psychology. Promoted through creating a Card Magic and Cardistry club at my school forming weekly iternary, numerous video demonstrations, and concluding with a school-wide magician talent show!   ",
+        "Love everything to do with cardistry, magic, and Penn and Teller. Hosted a magic talent show competition with numerous participants and prizes. ",
+    },
+    {
+      src: "/images/yt.png",
+      name: "Youtuber",
+      heading: "electricochy",
+      date: "2019-2023",
+      description:
+        "Day in the life and result reaction videos. Looking to make more and pump out some LeetCode Hard Content!",
     },
   ];
   return (
