@@ -115,7 +115,7 @@ const ProjectBox = () => {
       />
       <Project
         title="Where2Visit"
-        link="https://where2visit.netlify.app/"
+        link="https://where2visit.com/"
         src="/images/where2visit.png"
         description="A easily accessible web application to allow your friends to decide where to eat built with multiplayer feature and is very mobile friendly. "
         hosted="https://where2visit.netlify.app/"
