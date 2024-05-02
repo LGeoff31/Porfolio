@@ -87,16 +87,34 @@ const ProjectBox = () => {
         description="Start up company designed to make returns seamless! Have an item to return (Ex. Amazon) easy! Simply schedule a date and fill in some information and get couriers driven to your door within 48 hours to deliver your item to the post office. We take care of printing return labels, packaging, and driving the not so close post office."
         hosted="https://return-pal-preview.vercel.app/return"
         code="https://github.com/LGeoff31/return-pal"
+        skills={["react", "typescript", "Tailwind", "graphql", "Firebase"]}
+      />
+      <Project
+        title="UwRez"
+        link="https://uwdorm.vercel.app/"
+        src="/images/residence.png"
+        description="Currently Building. This is a site to share and add your experiences on all the residences near the Waterloo Region. Add comments, leaving star reviews on the room, building, washroom, location, and price. Get the best bang for your buck when it comes to deciding where to live!"
+        hosted="https://return-pal-preview.vercel.app/return"
+        code="https://github.com/LGeoff31/return-pal"
         skills={[
+          "postgresql",
+          "sql",
           "react",
           "typescript",
           "Tailwind",
-          "Typescript",
-          "graphql",
           "Firebase",
         ]}
       />
 
+      <Project
+        title="Where2Visit"
+        link="https://where2visit.com/"
+        src="/images/where2visit.png"
+        description="A easily accessible web application to allow your friends to decide where to eat built with multiplayer feature and is very mobile friendly. "
+        hosted="https://where2visit.netlify.app/"
+        code="https://github.com/LGeoff31/where2visittest"
+        skills={["react", "Google Places", "Yelp", "MongoDB", "Socket.io"]}
+      />
       <Project
         title="Insomnia"
         link="https://insomniahub.vercel.app/"
@@ -112,15 +130,6 @@ const ProjectBox = () => {
           "Material UI",
           "Firebase",
         ]}
-      />
-      <Project
-        title="Where2Visit"
-        link="https://where2visit.com/"
-        src="/images/where2visit.png"
-        description="A easily accessible web application to allow your friends to decide where to eat built with multiplayer feature and is very mobile friendly. "
-        hosted="https://where2visit.netlify.app/"
-        code="https://github.com/LGeoff31/where2visittest"
-        skills={["react", "Google Places", "Yelp", "MongoDB", "Socket.io"]}
       />
       <Project
         title="Fitness API"

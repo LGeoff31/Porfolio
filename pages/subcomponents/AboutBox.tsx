@@ -47,7 +47,7 @@ const AboutBox = () => {
     {
       src: "/images/yt.png",
       name: "Youtuber",
-      heading: "electricochy",
+      heading: "Geoffrey",
       date: "2019-2023",
       description:
         "Day in the life and result reaction videos. Looking to make more and pump out some LeetCode Hard Content!",
