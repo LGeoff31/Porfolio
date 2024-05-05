@@ -13,6 +13,13 @@ const AboutBox = () => {
         "My courses are Data Abstraction and Implementation C++, Discrete Math, Linear Algebra, Calculus 2, Linear Circuits, Digital Circuits & Systems. I'm interested in Full-Stack development, DSA problem-solving, and learning new technologies.",
     },
     {
+      src: "/images/rideco.png",
+      name: "RideCo",
+      heading: "Software Engineer",
+      date: "2024 - 2024",
+      description: "Incoming SWE Intern @ RideCo",
+    },
+    {
       src: "/images/IB-logo.png",
       name: "St. Robert CHS",
       heading: "IB Graduate",
