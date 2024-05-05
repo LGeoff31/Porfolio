@@ -91,7 +91,7 @@ const ProjectBox = () => {
       />
       <Project
         title="UwRez"
-        link="https://uwdorm.vercel.app/"
+        link="https://uwrez.com/"
         src="/images/residence.png"
         description="Currently Building. This is a site to share and add your experiences on all the residences near the Waterloo Region. Add comments, leaving star reviews on the room, building, washroom, location, and price. Get the best bang for your buck when it comes to deciding where to live!"
         hosted="https://return-pal-preview.vercel.app/return"

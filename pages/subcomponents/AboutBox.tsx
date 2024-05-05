@@ -19,14 +19,7 @@ const AboutBox = () => {
       date: "2024 - 2024",
       description: "Incoming SWE Intern @ RideCo",
     },
-    {
-      src: "/images/IB-logo.png",
-      name: "St. Robert CHS",
-      heading: "IB Graduate",
-      date: "2019 - 2023",
-      description:
-        "I took higher level math, physics, economics and grade 11 & 12 Computer Science in Python and Java. I was president of the magic and cardistry club, captain in Varsity Cross Country & Track and Field, and a Deca finance competitor. ",
-    },
+
     {
       src: "/images/Reacter (1).png",
       name: "Competitive STEM Tutor",
