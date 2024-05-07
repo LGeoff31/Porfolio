@@ -84,7 +84,7 @@ const ProjectBox = () => {
         title="ReturnPal"
         link="https://return-pal-preview.vercel.app/return"
         src="/images/returnpal.png"
-        description="Start up company designed to make returns seamless! Have an item to return (Ex. Amazon) easy! Simply schedule a date and fill in some information and get couriers driven to your door within 48 hours to deliver your item to the post office. We take care of printing return labels, packaging, and driving the not so close post office."
+        description="Return packages by the door, think of it as Uber for returns. We take care of printing return labels, packaging, and driving to the not so close post office."
         hosted="https://return-pal-preview.vercel.app/return"
         code="https://github.com/LGeoff31/return-pal"
         skills={["react", "typescript", "Tailwind", "graphql", "Firebase"]}
@@ -92,8 +92,8 @@ const ProjectBox = () => {
       <Project
         title="UwRez"
         link="https://uwrez.com/"
-        src="/images/residence.png"
-        description="Currently Building. This is a site to share and add your experiences on all the residences near the Waterloo Region. Add comments, leaving star reviews on the room, building, washroom, location, and price. Get the best bang for your buck when it comes to deciding where to live!"
+        src="/images/uwrez.png"
+        description="Aid Incoming Waterloo Students to decide which residence to choose. Share and add your experiences on all the residences near the Waterloo Region."
         hosted="https://return-pal-preview.vercel.app/return"
         code="https://github.com/LGeoff31/return-pal"
         skills={[
@@ -119,7 +119,7 @@ const ProjectBox = () => {
         title="Insomnia"
         link="https://insomniahub.vercel.app/"
         src="/images/line_chart.png"
-        description="Utilizing advanced Data Visualization and powerful Algorithms, gain insights into your sleep quality, duration, stress levels, quantity of exercise and correlations between them all. Visualize correlations and trends with quantitative and qualitative measures, empowering yourself to achieve better rest. Take over your sleep one night at a time. "
+        description="Gain insights into your sleep quality, duration, stress levels, exercise and correlations. Visualize your data and start change early! "
         hosted="https://insomniahub.vercel.app/"
         code="https://github.com/LGeoff31/Insomnia"
         skills={[
@@ -144,7 +144,7 @@ const ProjectBox = () => {
         title="Streaming Platform"
         link="https://visionarium.netlify.app/"
         src="/images/youtubeClone.png"
-        description="This is a streaming platform utilizing rapid API to generate relevant videos targeted towards your preference! It includes features such as likes, views, and channel icons for you to enjoy your favourite videos online!"
+        description="Generate relevant videos targeted towards your preference! It includes features such as likes, views, and channel icons for you to enjoy your favourite videos online!"
         hosted="https://visionarium.netlify.app/"
         code="https://github.com/LGeoff31/youtubeWebsite"
         skills={["react", "javascript", "CSS", "HTML", "Material-ui"]}
@@ -153,7 +153,7 @@ const ProjectBox = () => {
         title="Memories"
         link="https://electricochy-memories.netlify.app/"
         src="/images/memories.png"
-        description="Memories are what make life special so savor each moment! With this website, you can record all your special moments with dates, specific descriptions, and images to go along so they'll never be lost!"
+        description="Memories are what make life special so savor each moment! Record all your special moments so they'll never be lost!"
         hosted="https://electricochy-memories.netlify.app/"
         code="https://github.com/LGeoff31/memories"
         skills={[
@@ -170,10 +170,10 @@ const ProjectBox = () => {
         title="RPS Contest Automation"
         link="https://github.com/LGeoff31/rock-paper-scissors-automater"
         src="/images/rps.jpeg"
-        description="This Python program built using Selenium is a online submission automator to enter the Rock Paper Scissors Contest held seasonally by CirclekGames. The Game requires you to enter a phone number, play a simple game of rock paper scissors, then winning will give you a barcode to win a prize at your local CirclekGames to claim."
+        description="Online submission automator to enter Contests held seasonally by CirclekGames. Win unlimited prizes by running this program daily with a list of phone numbers."
         hosted="https://github.com/LGeoff31/rock-paper-scissors-automater"
         code="https://github.com/LGeoff31/rock-paper-scissors-automater"
-        skills={["Seleinium", "python", "excel"]}
+        skills={["Seleinium", "python", "excel", "chromedrivers"]}
       />
       <Project
         title="Parkway Kitchen"
