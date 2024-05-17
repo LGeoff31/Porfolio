@@ -17,7 +17,7 @@ const AboutBox = () => {
       name: "RideCo",
       heading: "Software Engineer",
       date: "2024 - 2024",
-      description: "Incoming SWE Intern @ RideCo",
+      description: "SWE Intern @ RideCo. Working on RideCo Replay",
     },
 
     {
