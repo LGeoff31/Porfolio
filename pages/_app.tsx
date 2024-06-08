@@ -1,10 +1,14 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <link rel="shortcut icon" href="../public/images/c++.png" />
+      <Head>
+        <link rel="shortcut icon" href="../public/images/c++.png" />
+        <title>Geoffrey Lee</title>
+      </Head>
       <Component {...pageProps} />;
     </>
   );

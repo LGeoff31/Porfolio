@@ -10,7 +10,7 @@ const AboutBox = () => {
       heading: "Software Engineering",
       date: "2023 - 2028",
       description:
-        "My courses are Data Abstraction and Implementation C++, Discrete Math, Linear Algebra, Calculus 2, Linear Circuits, Digital Circuits & Systems. I'm interested in Full-Stack development, DSA problem-solving, and learning new technologies.",
+        "I'm taking Sequential Programming, Logic and Computation, Statistics, and Psychology. I'm into Full-Stack development, competitive programming, and math.",
     },
     {
       src: "/images/rideco.png",
@@ -34,7 +34,7 @@ const AboutBox = () => {
       heading: "Cross Country & Track and Field",
       date: "2017-2023",
       description:
-        "I'm a marathoner with a range of personal bests My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
+        "I'm a marathoner with a range of personal bests. My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
     },
     {
       src: "/images/magic.png",
@@ -42,15 +42,15 @@ const AboutBox = () => {
       heading: "Magician",
       date: "2019-2023",
       description:
-        "Love everything to do with cardistry, magic, and Penn and Teller. Hosted a magic talent show competition with numerous participants and prizes. ",
+        "Love everything to do with cardistry, magic, and Penn and Teller. Hosted a school-wide magic talent show competition with numerous participants and prizes. ",
     },
     {
       src: "/images/yt.png",
       name: "Youtuber",
-      heading: "Geoffrey",
+      heading: "Electricochy & Daily Leetcode",
       date: "2019-2023",
       description:
-        "Day in the life and result reaction videos. Looking to make more and pump out some LeetCode Hard Content!",
+        "Channels focused on lifestyle and algorithmic programming. Looking to pump out more videos on both channels.",
     },
   ];
   return (

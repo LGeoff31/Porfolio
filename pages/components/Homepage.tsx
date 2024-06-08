@@ -13,7 +13,7 @@ const Homepage = () => {
       "Geoffrey Lee",
       "Software Engineer",
       "<LovesToCode />",
-      "Full-Stack Developer",
+      "Competitive Programmer",
     ],
     loop: true,
     delaySpeed: 2000,

@@ -112,26 +112,35 @@ const Form = () => {
           />
         </Grid>
         <Grid xs={12} item>
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            fullWidth
-            style={{
-              background: "rgb(247 171 10)",
+          <Box
+            sx={{
+              transition: "transform 0.4s ease-in-out", // Animation transition
+              ":hover": {
+                transform: "scale(1.03)", // Scale to 1.2 times on hover
+              },
             }}
           >
-            <span
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
               style={{
-                color: "rgb(0 0 0)",
-                fontWeight: "bold",
-                fontSize: "1.25rem",
-                textTransform: "none",
+                background: "rgb(247 171 10)",
               }}
             >
-              Submit
-            </span>
-          </Button>
+              <span
+                style={{
+                  color: "rgb(0 0 0)",
+                  fontWeight: "bold",
+                  fontSize: "1.25rem",
+                  textTransform: "none",
+                }}
+              >
+                Submit
+              </span>
+            </Button>
+          </Box>
         </Grid>
       </Grid>
     </form>

@@ -131,7 +131,7 @@ const ProjectBox = () => {
           "Firebase",
         ]}
       />
-      <Project
+      {/* <Project
         title="Fitness API"
         link="https://fitness-workouts.vercel.app/"
         src="/images/fitnessApp.png"
@@ -148,8 +148,8 @@ const ProjectBox = () => {
         hosted="https://visionarium.netlify.app/"
         code="https://github.com/LGeoff31/youtubeWebsite"
         skills={["react", "javascript", "CSS", "HTML", "Material-ui"]}
-      />
-      <Project
+      /> */}
+      {/* <Project
         title="Memories"
         link="https://electricochy-memories.netlify.app/"
         src="/images/memories.png"
@@ -164,7 +164,7 @@ const ProjectBox = () => {
           "material-ui",
           "express",
         ]}
-      />
+      /> */}
 
       <Project
         title="RPS Contest Automation"
