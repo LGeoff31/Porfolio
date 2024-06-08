@@ -24,7 +24,7 @@ const AboutBox = () => {
       src: "/images/Reacter (1).png",
       name: "Competitive STEM Tutor",
       heading: "Tutorax | Play Forever | Academy for Math and English",
-      date: "2019 - Present",
+      date: "2019 - 2024",
       description:
         "I've taught competitive math and computing for 4+ years to hundreds of high school students at over 3 tutoring organizations.  ",
     },
@@ -32,7 +32,7 @@ const AboutBox = () => {
       src: "/images/marathon.png",
       name: "Competitive Runner",
       heading: "Cross Country & Track and Field",
-      date: "2017-2023",
+      date: "2017 - 2023",
       description:
         "I'm a marathoner with a range of personal bests. My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
     },
@@ -40,7 +40,7 @@ const AboutBox = () => {
       src: "/images/magic.png",
       name: "Magic and Cardistry",
       heading: "Magician",
-      date: "2019-2023",
+      date: "2019 - 2023",
       description:
         "Love everything to do with cardistry, magic, and Penn and Teller. Hosted a school-wide magic talent show competition with numerous participants and prizes. ",
     },
@@ -48,7 +48,7 @@ const AboutBox = () => {
       src: "/images/yt.png",
       name: "Youtuber",
       heading: "Electricochy & Daily Leetcode",
-      date: "2019-2023",
+      date: "2023 - Present",
       description:
         "Channels focused on lifestyle and algorithmic programming. Looking to pump out more videos on both channels.",
     },
