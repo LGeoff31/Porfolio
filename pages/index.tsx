@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Project from "./components/Project";
 import Languages from "./components/Languages";
 import Contact from "./components/Contact";
+import Github from "./components/Github";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -55,6 +56,10 @@ export default function Home() {
 
       <section id="skills" className="snap-start">
         <Languages />
+      </section>
+
+      <section id="github" className="snap-start">
+        <Github />
       </section>
 
       <section id="contact" className="snap-start">
