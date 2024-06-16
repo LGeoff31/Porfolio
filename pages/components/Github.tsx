@@ -56,7 +56,7 @@ const Github = () => {
               }}
             >
               <GitHubIcon style={{ color: "white" }} />
-              &nbsp; Let's connect!
+              &nbsp; Let&apos;s connect!
             </Button>
           </Box>
           <motion.div
