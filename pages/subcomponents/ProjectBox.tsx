@@ -60,7 +60,6 @@ const Project = ({
         </motion.div>
       </Link>
       <Skills skills={skills} />
-      {/* <Skills skills={skills} /> */}
       <Typography color="white" marginTop="1rem" paddingBottom="1rem">
         {description}
       </Typography>
@@ -90,11 +89,20 @@ const ProjectBox = () => {
         skills={["react", "typescript", "Tailwind", "graphql", "Firebase"]}
       />
       <Project
+        title="AlgoFlow"
+        link="https://algoflow.ca"
+        src="/images/algoflow.png"
+        description="AlgoFlow is a visualizer for the most popular sorting algorithms with animations, playback speed, and the perfect sound. Feel free to give it a star ⭐"
+        hosted="https://algoflow.ca"
+        code="https://github.com/LGeoff31/AlgoFlow"
+        skills={["react", "javascript", "Audio API", "Material UI", "Next.js"]}
+      />
+      <Project
         title="UwRez"
         link="https://uwrez.com/"
         src="/images/uwrez.png"
         description="Aid Incoming Waterloo Students to decide which residence to choose. Share and add your experiences on all the residences near the Waterloo Region."
-        hosted="https://return-pal-preview.vercel.app/return"
+        hosted="https://uwrez.com/"
         code="https://github.com/LGeoff31/return-pal"
         skills={[
           "postgresql",
@@ -131,41 +139,6 @@ const ProjectBox = () => {
           "Firebase",
         ]}
       />
-      {/* <Project
-        title="Fitness API"
-        link="https://fitness-workouts.vercel.app/"
-        src="/images/fitnessApp.png"
-        description="Any workout can be searched and auto-populated in milliseconds with hundreds of pages organized with pagination."
-        hosted="https://fitness-workouts.vercel.app/"
-        code="https://github.com/LGeoff31/workout_app"
-        skills={["RapidAPI", "Pagination", "Javascript", "HTML", "Material-UI"]}
-      />
-      <Project
-        title="Streaming Platform"
-        link="https://visionarium.netlify.app/"
-        src="/images/youtubeClone.png"
-        description="Generate relevant videos targeted towards your preference! It includes features such as likes, views, and channel icons for you to enjoy your favourite videos online!"
-        hosted="https://visionarium.netlify.app/"
-        code="https://github.com/LGeoff31/youtubeWebsite"
-        skills={["react", "javascript", "CSS", "HTML", "Material-ui"]}
-      /> */}
-      {/* <Project
-        title="Memories"
-        link="https://electricochy-memories.netlify.app/"
-        src="/images/memories.png"
-        description="Memories are what make life special so savor each moment! Record all your special moments so they'll never be lost!"
-        hosted="https://electricochy-memories.netlify.app/"
-        code="https://github.com/LGeoff31/memories"
-        skills={[
-          "Mongodb",
-          "typescript",
-          "CSS",
-          "HTML",
-          "material-ui",
-          "express",
-        ]}
-      /> */}
-
       <Project
         title="RPS Contest Automation"
         link="https://github.com/LGeoff31/rock-paper-scissors-automater"
@@ -174,15 +147,6 @@ const ProjectBox = () => {
         hosted="https://github.com/LGeoff31/rock-paper-scissors-automater"
         code="https://github.com/LGeoff31/rock-paper-scissors-automater"
         skills={["Seleinium", "python", "excel", "chromedrivers"]}
-      />
-      <Project
-        title="Parkway Kitchen"
-        link="https://parkway-kitchen.vercel.app/"
-        src="/images/kitchen.png"
-        description="This is an informative website for this local Chinese Restaurant named: Parway Kitchen. On this website, you can see view the menu, location, contact page, and more! Give this restaurant a try!"
-        hosted="https://parkway-kitchen.vercel.app/"
-        code="https://github.com/LGeoff31/parkway-kitchen"
-        skills={["html", "css", "javascript"]}
       />
     </Grid>
   );

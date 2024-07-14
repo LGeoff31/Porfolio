@@ -2,26 +2,11 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const Skills = ({ skills }: { skills: Array<string> }) => {
-  // const skillDup = [
-  //   ["react", "typescript", "Tailwind", "Typescript", "graphql", "Firebase"],
-  //   ["RapidAPI", "Pagination", "Javascript", "HTML", "Material-UI"],
-  //   ["react", "javascript", "CSS", "HTML", "Material-ui"],
-  //   ["Mongodb", "typescript", "CSS", "HTML", "material-ui", "express"],
-  //   ["Seleinium", "python", "terminal", "excel"],
-  //   ["html", "css", "javascript"],
-  // ];
   if (!skills || skills.length === 0) {
     return <Typography>No Skills displayed</Typography>;
   }
   return (
-    <Grid
-      container
-      display="flex"
-      direction="row"
-      width="400px"
-      sx={{ background: "rgb(36,36,36)" }}
-      // sx={{ background: "rgb(36,36,36)" }}
-    >
+    <Grid container display="flex" direction="row" width="400px">
       {skills.map((skill, idx) => (
         <Box
           key={idx}
