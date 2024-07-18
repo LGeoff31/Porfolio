@@ -7,6 +7,7 @@ import {
 
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
+import CustomCursor from "./CustomCursor";
 const Homepage = () => {
   const [text, count] = useTypewriter({
     words: [
@@ -21,6 +22,7 @@ const Homepage = () => {
 
   return (
     <Box sx={{ background: "rgb(36,36,36)" }}>
+      <CustomCursor />
       <div className="h-screen  flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
         <BackgroundCircles />
 

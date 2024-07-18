@@ -32,3 +32,16 @@ div.contactInfo {
     justify-center
     space-x-5;
 }
+
+.custom-cursor {
+  position: fixed;
+  width: 54px;
+  height: 54px;
+  border: 2px solid transparent;
+  border-radius: 150%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: left 0.2s ease-out, top 0.2s ease-out;
+  box-shadow: 0 0 0 3px #c25604;
+}
