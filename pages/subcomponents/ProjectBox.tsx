@@ -39,6 +39,7 @@ const Project = ({
       </Typography>
       <Link
         href={link}
+        target="_blank"
         sx={{
           cursor: "pointer",
         }}
@@ -83,16 +84,16 @@ const ProjectBox = () => {
         title="ReturnPal"
         link="https://return-pal-preview.vercel.app/return"
         src="/images/returnpal.png"
-        description="Return packages by the door, think of it as Uber for returns. We take care of printing return labels, packaging, and driving to the not so close post office."
+        description="Return packages by the door. We take care of printing return labels, packaging, and driving to the post office."
         hosted="https://return-pal-preview.vercel.app/return"
-        code="https://github.com/LGeoff31/return-pal"
+        code="https://github.com/LGeoff31/returnPal"
         skills={["react", "typescript", "Tailwind", "graphql", "Firebase"]}
       />
       <Project
         title="AlgoFlow"
         link="https://algoflow.ca"
         src="/images/algoflow.png"
-        description="AlgoFlow is a visualizer for the most popular sorting algorithms with animations, playback speed, and the perfect sound. Feel free to give it a star ⭐"
+        description="AlgoFlow is a visualizer for the most popular sorting algorithms with animations, playback speed, and sound."
         hosted="https://algoflow.ca"
         code="https://github.com/LGeoff31/AlgoFlow"
         skills={["react", "javascript", "Audio API", "Material UI", "Next.js"]}
@@ -100,8 +101,8 @@ const ProjectBox = () => {
       <Project
         title="UwRez"
         link="https://uwrez.com/"
-        src="/images/uwrez.png"
-        description="Aid Incoming Waterloo Students to decide which residence to choose. Share and add your experiences on all the residences near the Waterloo Region."
+        src="/images/rez.png"
+        description="Help freshmens decide where to live by sharing your experiences. AI algorithm to provide the best choice for you."
         hosted="https://uwrez.com/"
         code="https://github.com/LGeoff31/return-pal"
         skills={[
@@ -118,16 +119,16 @@ const ProjectBox = () => {
         title="Where2Visit"
         link="https://where2visit.com/"
         src="/images/where2visit.png"
-        description="A easily accessible web application to allow your friends to decide where to eat built with multiplayer feature and is very mobile friendly. "
-        hosted="https://where2visit.netlify.app/"
-        code="https://github.com/LGeoff31/where2visittest"
+        description="Mobile application to allow your friends to decide where to eat. Features live voting with enabled filtering."
+        hosted="https://where2visit.com/"
+        code="https://github.com/LGeoff31/where2visit"
         skills={["react", "Google Places", "Yelp", "MongoDB", "Socket.io"]}
       />
       <Project
         title="Insomnia"
         link="https://insomniahub.vercel.app/"
         src="/images/line_chart.png"
-        description="Gain insights into your sleep quality, duration, stress levels, exercise and correlations. Visualize your data and start change early! "
+        description="Algorithm to correlate sleep quality, duration, stress levels, exercise. Visualize your data and start change early! "
         hosted="https://insomniahub.vercel.app/"
         code="https://github.com/LGeoff31/Insomnia"
         skills={[
@@ -143,7 +144,7 @@ const ProjectBox = () => {
         title="RPS Contest Automation"
         link="https://github.com/LGeoff31/rock-paper-scissors-automater"
         src="/images/rps.jpeg"
-        description="Online submission automator to enter Contests held seasonally by CirclekGames. Win unlimited prizes by running this program daily with a list of phone numbers."
+        description="Win unlimited gas station prizes by running this program daily with a list of phone numbers."
         hosted="https://github.com/LGeoff31/rock-paper-scissors-automater"
         code="https://github.com/LGeoff31/rock-paper-scissors-automater"
         skills={["Seleinium", "python", "excel", "chromedrivers"]}

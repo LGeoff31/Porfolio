@@ -8,16 +8,16 @@ const AboutBox = () => {
       src: "/images/waterlooLogo.png",
       name: "University of Waterloo",
       heading: "Software Engineering",
-      date: "2023 - 2028",
+      date: "Present",
       description:
-        "I'm taking Sequential Programming, Logic and Computation, Statistics, and Psychology. I'm into Full-Stack development, competitive programming, and math.",
+        "I'm taking Sequential Programming, Logic and Computation, Statistics, and Psychology. I'm into full-stack development, competitive programming, and math.",
     },
     {
       src: "/images/rideco.png",
       name: "RideCo",
       heading: "Software Engineer",
       date: "2024 - 2024",
-      description: "SWE Intern @ RideCo. Working on RideCo Replay",
+      description: "SWE Intern @ RideCo.",
     },
 
     {
@@ -26,15 +26,15 @@ const AboutBox = () => {
       heading: "Tutorax | Play Forever | Academy for Math and English",
       date: "2019 - 2024",
       description:
-        "I've taught competitive math and computing for 4+ years to hundreds of high school students at over 3 tutoring organizations.  ",
+        "Competitive math and computing tutor for 100+ high school students.",
     },
     {
       src: "/images/marathon.png",
       name: "Competitive Runner",
-      heading: "Cross Country & Track and Field",
+      heading: "Marathoner & Cross Country",
       date: "2017 - 2023",
       description:
-        "I'm a marathoner with a range of personal bests. My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
+        "My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
     },
     {
       src: "/images/magic.png",
@@ -42,15 +42,15 @@ const AboutBox = () => {
       heading: "Magician",
       date: "2019 - 2023",
       description:
-        "Love everything to do with cardistry, magic, and Penn and Teller. Hosted a school-wide magic talent show competition with numerous participants and prizes. ",
+        "Sleight of hand enthusiast. Hosted a school-wide magic talent show competition.",
     },
     {
       src: "/images/yt.png",
       name: "Youtuber",
-      heading: "Electricochy & Daily Leetcode",
+      heading: "electricochy",
       date: "2023 - Present",
       description:
-        "Channels focused on lifestyle and algorithmic programming. Looking to pump out more videos on both channels.",
+        "Channel focused on engineering, internships, and reactions. Looking forward to pump out more upcoming videos!",
     },
   ];
   return (
@@ -131,6 +131,7 @@ const AboutMeSection = ({
               display: { xs: "none", md: "block" },
               visibility: { xs: "hidden", md: "visible" },
               color: "white",
+              fontStyle: "italic",
             }}
           >
             {date}
