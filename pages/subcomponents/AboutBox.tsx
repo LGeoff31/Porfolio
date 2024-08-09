@@ -1,6 +1,7 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const AboutBox = () => {
   const aboutData = [
@@ -18,6 +19,7 @@ const AboutBox = () => {
       heading: "Software Engineer",
       date: "2024 - 2024",
       description: "SWE Intern @ RideCo.",
+      url: "/rideco",
     },
 
     {
@@ -70,6 +72,7 @@ const AboutBox = () => {
             heading={experience.heading}
             src={experience.src}
             date={experience.date}
+            url={experience.url}
           />
         </motion.div>
       ))}
@@ -83,12 +86,14 @@ const AboutMeSection = ({
   heading,
   src,
   date,
+  url,
 }: {
   name: string;
   description: string;
   heading: string;
   src: string;
   date: string;
+  url: string | undefined;
 }) => {
   return (
     <Stack
@@ -153,6 +158,26 @@ const AboutMeSection = ({
         <Typography sx={{ color: "white", paddingTop: "0.5rem" }}>
           {description}
         </Typography>
+        {url && (
+          <Button
+            href="/rideco"
+            sx={{
+              background: "rgba(251, 194, 135, 0.16)",
+              color: "#fcb232",
+              border: "1px solid black",
+              borderRadius: "10rem",
+              transition: "transform 0.3s",
+              marginTop: "1rem",
+              width: "12rem",
+              "&:hover": {
+                background: "rgba(251, 194, 135, 0.16)",
+                transform: "scale(1.1)",
+              },
+            }}
+          >
+            My Experience <ArrowForwardIcon />
+          </Button>
+        )}
       </Stack>
     </Stack>
   );
