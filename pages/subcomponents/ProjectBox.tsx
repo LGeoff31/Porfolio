@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import Image from "next/legacy/image";
 import { motion } from "framer-motion";
 import HostedLinks from "./HostedLinks";
+import { CodeBlock, dracula } from "react-code-blocks";
 
 const Project = ({
   title,
@@ -70,6 +71,60 @@ const Project = ({
   );
 };
 
+const PyScriptProjectCard = () => {
+  return (
+    <Box
+      width="500px"
+      paddingLeft={{ md: "2rem", xs: "0.1rem" }}
+      paddingRight={{ md: "2rem", xs: "0.1rem" }}
+      sx={{ background: "#1d1d1f" }}
+    >
+      <Typography
+        color="white"
+        variant="h4"
+        padding="1rem"
+        textAlign={"center"}
+      >
+        MetaScript
+      </Typography>
+      <motion.div
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className=" object-cover md:rounded-lg  overflow-hidden"
+      >
+        <pre>
+          <CodeBlock
+            text={`fn fibonacci (n) {
+    if |n <= 2| { return 1 }
+    let prev = 1; let curr = 1;
+    from 2 to n with i {
+        let next_value = prev + curr
+        prev = curr 
+        curr = next_value
+    }
+    return curr
+}`}
+            language="javascript"
+            showLineNumbers={true}
+            theme={dracula}
+          />
+        </pre>
+      </motion.div>
+      <Skills skills={["Typescript"]} />
+      <Typography color="white" marginTop="1rem" paddingBottom="1rem">
+        Meta script is an interpreter with support for user defined functions,
+        I/O, loops, conditionals, assignment operators and declarations.
+      </Typography>
+
+      <HostedLinks
+        hosted={"https://github.com/LGeoff31/MetaScript"}
+        code={"https://github.com/LGeoff31/MetaScript"}
+      />
+    </Box>
+  );
+};
+
 const ProjectBox = () => {
   return (
     <Grid
@@ -114,7 +169,7 @@ const ProjectBox = () => {
           "Firebase",
         ]}
       />
-
+      <PyScriptProjectCard />
       <Project
         title="Where2Visit"
         link="https://where2visit.com/"

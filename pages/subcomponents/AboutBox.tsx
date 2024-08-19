@@ -52,7 +52,7 @@ const AboutBox = () => {
       heading: "electricochy",
       date: "2023 - Present",
       description:
-        "Channel focused on engineering, internships, and reactions. Looking forward to pump out more upcoming videos!",
+        "Channel focused on internships and reactions. Looking forward to pump out more upcoming videos!",
     },
   ];
   return (
