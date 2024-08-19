@@ -28,10 +28,11 @@ const Github = () => {
             textAlign={"center"}
             fontSize={{ md: "2.5rem", xs: "1.8rem" }}
             textTransform={"uppercase"}
+            marginBottom="4rem"
           >
             Github History
           </Typography>
-          <Box
+          {/* <Box
             sx={{
               margin: "0 auto",
               transition: "transform 0.4s ease-in-out", // Animation transition
@@ -57,7 +58,7 @@ const Github = () => {
             >
               <GitHubIcon style={{ color: "white", fontSize: "2rem" }} />
             </Button>
-          </Box>
+          </Box> */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ x: 0, opacity: 2 }}
