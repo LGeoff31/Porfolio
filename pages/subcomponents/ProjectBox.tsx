@@ -114,7 +114,7 @@ const PyScriptProjectCard = () => {
       <Skills skills={["Typescript"]} />
       <Typography color="white" marginTop="1rem" paddingBottom="1rem">
         Meta script is an interpreter with support for user defined functions,
-        I/O, loops, conditionals, assignment operators and declarations.
+        I/O, loops, conditionals.
       </Typography>
 
       <HostedLinks
@@ -142,7 +142,7 @@ const ProjectBox = () => {
         description="Return packages by the door. We take care of printing return labels, packaging, and driving to the post office."
         hosted="https://return-pal-preview.vercel.app/return"
         code="https://github.com/LGeoff31/returnPal"
-        skills={["react", "typescript", "Tailwind", "graphql", "Firebase"]}
+        skills={["react", "graphql", "Firebase"]}
       />
       <Project
         title="AlgoFlow"
@@ -151,7 +151,7 @@ const ProjectBox = () => {
         description="AlgoFlow is a visualizer for the most popular sorting algorithms with animations, playback speed, and sound."
         hosted="https://algoflow.ca"
         code="https://github.com/LGeoff31/AlgoFlow"
-        skills={["react", "javascript", "Audio API", "Material UI", "Next.js"]}
+        skills={["javascript", "Material UI", "Next.js"]}
       />
       <Project
         title="UwRez"
@@ -160,25 +160,9 @@ const ProjectBox = () => {
         description="Help freshmens decide where to live by sharing your experiences. AI algorithm to provide the best choice for you."
         hosted="https://uwrez.com/"
         code="https://github.com/LGeoff31/return-pal"
-        skills={[
-          "postgresql",
-          "sql",
-          "react",
-          "typescript",
-          "Tailwind",
-          "Firebase",
-        ]}
+        skills={["sql", "Firebase", "Mapbox"]}
       />
       <PyScriptProjectCard />
-      <Project
-        title="Where2Visit"
-        link="https://where2visit.com/"
-        src="/images/where2visit.png"
-        description="Mobile application to allow your friends to decide where to eat. Features live voting with enabled filtering."
-        hosted="https://where2visit.com/"
-        code="https://github.com/LGeoff31/where2visit"
-        skills={["react", "Google Places", "Yelp", "MongoDB", "Socket.io"]}
-      />
       <Project
         title="Insomnia"
         link="https://insomniahub.vercel.app/"
@@ -186,14 +170,7 @@ const ProjectBox = () => {
         description="Algorithm to correlate sleep quality, duration, stress levels, exercise. Visualize your data and start change early! "
         hosted="https://insomniahub.vercel.app/"
         code="https://github.com/LGeoff31/Insomnia"
-        skills={[
-          "MongoDB",
-          "Express",
-          "React",
-          "Node.JS",
-          "Material UI",
-          "Firebase",
-        ]}
+        skills={["MongoDB", "Express", "Node.JS"]}
       />
       <Project
         title="RPS Contest Automation"
@@ -202,7 +179,7 @@ const ProjectBox = () => {
         description="Win unlimited gas station prizes by running this program daily with a list of phone numbers."
         hosted="https://github.com/LGeoff31/rock-paper-scissors-automater"
         code="https://github.com/LGeoff31/rock-paper-scissors-automater"
-        skills={["Seleinium", "python", "excel", "chromedrivers"]}
+        skills={["Seleinium", "python", "excel"]}
       />
     </Grid>
   );
