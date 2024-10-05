@@ -11,7 +11,14 @@ const AboutBox = () => {
       heading: "Software Engineering",
       date: "Present",
       description:
-        "I'm taking Sequential Programming, Logic and Computation, Statistics, and Psychology. I'm into full-stack development, competitive programming, and math.",
+        "I'm taking Sequential Programming, Discrete Math, Statistics, and Psychology. I'm into full-stack development, competitive programming, and math.",
+    },
+    {
+      src: "/images/shopify.png",
+      name: "Shopify",
+      heading: "Software Engineer",
+      date: "2025 - 2025",
+      description: "Upcoming SWE Intern.",
     },
     {
       src: "/images/rideco.png",
@@ -24,7 +31,7 @@ const AboutBox = () => {
 
     {
       src: "/images/Reacter (1).png",
-      name: "Competitive STEM Tutor",
+      name: "Contest Tutor",
       heading: "Tutorax | Play Forever | Academy for Math and English",
       date: "2019 - 2024",
       description:
@@ -33,7 +40,7 @@ const AboutBox = () => {
     {
       src: "/images/marathon.png",
       name: "Competitive Runner",
-      heading: "Marathoner & Cross Country",
+      heading: "Marathon | Cross Country",
       date: "2017 - 2023",
       description:
         "My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
@@ -43,16 +50,15 @@ const AboutBox = () => {
       name: "Magic and Cardistry",
       heading: "Magician",
       date: "2019 - 2023",
-      description:
-        "Sleight of hand enthusiast. Hosted a school-wide magic talent show competition.",
+      description: "President of the magic and cardistry club.",
     },
     {
       src: "/images/yt.png",
       name: "Youtuber",
-      heading: "electricochy",
+      heading: "Electricochy",
       date: "2023 - Present",
       description:
-        "Channel focused on internships and reactions. Looking forward to pump out more upcoming videos!",
+        "Channel focused on internships, skits, and reactions. Looking forward to pump out more upcoming videos!",
     },
   ];
   return (
