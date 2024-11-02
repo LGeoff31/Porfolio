@@ -9,12 +9,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 const Homepage = () => {
   const [text, count] = useTypewriter({
-    words: [
-      "Geoffrey Lee",
-      "Software Engineer",
-      "<LovesToCode />",
-      "Competitive Programmer",
-    ],
+    words: ["Geoffrey Lee", "Software Engineer", "Competitive Programmer"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -23,21 +18,8 @@ const Homepage = () => {
     <Box sx={{ background: "rgb(36,36,36)" }}>
       <div className="h-screen  flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
         <BackgroundCircles />
-
-        {/* <Image
-          src={"/images/cool_logo.png"}
-          alt="face"
-          width={300}
-          height={100}
-          style={{
-            borderRadius: "50%",
-            margin: "0 auto",
-            marginBottom: "1rem",
-          }}
-        /> */}
         <Typography
           fontWeight="100px"
-          // fontSize="2.5rem"
           color="white"
           textAlign={"center"}
           variant="h3"
@@ -60,7 +42,6 @@ const Homepage = () => {
 
         <Stack
           direction="row"
-          // paddingTop="1rem"
           gap={{ md: "2rem", xs: "0.5rem" }}
           margin="0 auto"
         >
@@ -68,7 +49,6 @@ const Homepage = () => {
             to="about"
             spy={true}
             smooth={true}
-            // offset={-100}
             duration={1000}
             style={{
               padding: "0.5rem 0rem",
@@ -110,7 +90,6 @@ const Homepage = () => {
             to="projects"
             spy={true}
             smooth={true}
-            // offset={-100}
             duration={1000}
             style={{
               padding: "0.5rem 0rem",
@@ -152,7 +131,6 @@ const Homepage = () => {
             to="skills"
             spy={true}
             smooth={true}
-            // offset={-100}
             duration={1500}
             style={{
               padding: "0.5rem 0rem",
@@ -189,10 +167,49 @@ const Homepage = () => {
             </Box>
           </ScrollLink>
           <ScrollLink
+            to="blog"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            style={{
+              padding: "0.5rem 0rem",
+              border: "2px solid transparent",
+              textDecoration: "none",
+              color: "grey",
+              borderRadius: "10rem",
+            }}
+          >
+            <Box
+              sx={{
+                transition: "transform 0.3s ease-in-out", // Animation transition
+                ":hover": {
+                  transform: "scale(1.2)", // Scale to 1.2 times on hover
+                },
+              }}
+            >
+              <Button
+                sx={{
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  color: "grey",
+                  fontWeight: "50",
+                  borderRadius: "10rem",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+
+                  "&:hover": {
+                    border: "2px solid #F7AB0A",
+                  },
+                }}
+              >
+                <span style={{ fontWeight: "100" }}> Blog</span>
+              </Button>
+            </Box>
+          </ScrollLink>
+          <ScrollLink
             to="contact"
             spy={true}
             smooth={true}
-            // offset={-100}
             duration={1000}
             style={{
               padding: "0.5rem 0rem",

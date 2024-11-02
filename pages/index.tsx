@@ -9,6 +9,7 @@ import Project from "./components/Project";
 import Languages from "./components/Languages";
 import Contact from "./components/Contact";
 import Github from "./components/Github";
+import Blog from "./components/Blog";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -56,6 +57,9 @@ export default function Home() {
 
       <section id="skills" className="snap-start">
         <Languages />
+      </section>
+      <section id="blog" className="snap-start">
+        <Blog />
       </section>
 
       <section id="github" className="snap-start">

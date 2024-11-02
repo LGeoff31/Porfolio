@@ -28,7 +28,6 @@ const AboutBox = () => {
       description: "SWE Intern @ RideCo.",
       url: "/rideco",
     },
-
     {
       src: "/images/Reacter (1).png",
       name: "Contest Tutor",
