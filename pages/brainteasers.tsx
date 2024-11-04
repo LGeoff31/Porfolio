@@ -16,23 +16,22 @@ const brainTeasers = [
   {
     question:
       "Two ropes take 1h each to burn completely, yet the burning process is not uniform (Ex. 30min does not mean the fire is in the middle). How would you measure 45min?",
-    answer:
-      "Light one rope from both ends and the other from one end. When the first rope is burned out (30 mins), light the other end of the second rope. It will take 15 more minutes to burn completely, totaling 45 minutes.",
+    hint: "You may light the rope from both ends, when they intersect, half the time has passed..",
     gif: "/burning_rope.gif", // Path to the GIF in the public folder
   },
   {
     question:
-      "You measure my life in hours and I serve you by expiring. I'm quick when I'm thin and slow when I'm fat. The wind is my enemy.",
-    answer: "A candle",
+      "There are 10 bags with 100 identical coins. In all bags but one, each coin weights 10g. However, all the coins in the counterfeit bag weighs 9g or 11g. Find the counterfeit bag using 1 usage of a digital scale that tells you exact weight.",
+    hint: "Try removing a certain amount of coins from each bag and comparing the scale weight with the expected weight,",
   },
   {
     question:
       "I have keys but no locks. I have space but no room. You can enter, but you can't go outside. What am I?",
-    answer: "A keyboard",
+    hint: "A keyboard",
   },
   {
     question: "What has to be broken before you can use it?",
-    answer: "An egg",
+    hint: "An egg",
   },
   // Add more brain teasers here
 ];
@@ -99,7 +98,7 @@ const BrainTeasers = () => {
                         color="gray"
                         sx={{ fontStyle: "italic", marginTop: "0.5rem" }}
                       >
-                        Hint: {teaser.answer}
+                        Hint: {teaser.hint}
                       </Typography>
                       {/* {teaser.gif && (
                         <Box
