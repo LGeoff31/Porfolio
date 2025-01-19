@@ -162,6 +162,15 @@ const ProjectBox = () => {
         code="https://github.com/LGeoff31/return-pal"
         skills={["sql", "Firebase", "Mapbox"]}
       />
+      <Project
+        title="VisuGraph"
+        link="https://visugraph.vercel.app/"
+        src="/images/graph.png"
+        description="Learn about different graph searching algorithms visually. Understand the tradeoffs and which traversal to use."
+        hosted="https://visugraph.vercel.app/"
+        code="https://github.com/LGeoff31/Graphs"
+        skills={["javascript", "tailwind", "html"]}
+      />
       <PyScriptProjectCard />
       <Project
         title="Insomnia"
