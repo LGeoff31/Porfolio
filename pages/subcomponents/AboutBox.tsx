@@ -18,14 +18,14 @@ const AboutBox = () => {
       name: "Shopify",
       heading: "Software Engineer",
       date: "2025 - 2025",
-      description: "Upcoming SWE Intern.",
+      description: "SWE Intern on Monetization.",
     },
     {
       src: "/images/rideco.png",
       name: "RideCo",
       heading: "Software Engineer",
       date: "2024 - 2024",
-      description: "SWE Intern @ RideCo.",
+      description: "SWE Intern on Platforms.",
       url: "/rideco",
     },
     {
