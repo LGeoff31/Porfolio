@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography, Divider } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -61,14 +61,14 @@ const AboutBox = () => {
     },
   ];
   return (
-    <Stack>
+    <Stack spacing={3}>
       {aboutData?.map((experience, idx) => (
         <motion.div
           key={idx}
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className=" object-cover md:rounded-lg  overflow-hidden"
+          className="object-cover md:rounded-lg overflow-hidden"
         >
           <AboutMeSection
             key={idx}
@@ -104,83 +104,130 @@ const AboutMeSection = ({
     <Stack
       direction={{ md: "row", xs: "column" }}
       sx={{
-        background: "#1d1d1f",
-        // borderRadius: "1rem",
+        background: "rgba(26, 26, 26, 0.8)",
         marginTop: "2rem",
         padding: "2rem",
+        borderRadius: "16px",
+        backdropFilter: "blur(10px)",
+        border: "1px solid rgba(252, 178, 50, 0.1)",
+        transition: "all 0.3s ease",
+        "&:hover": {
+          transform: "translateY(-5px)",
+          boxShadow: "0 8px 20px rgba(252, 178, 50, 0.15)",
+          border: "1px solid rgba(252, 178, 50, 0.3)",
+        },
       }}
     >
-      <img
-        src={src}
-        alt="logo"
-        style={{
+      <Box
+        sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          margin: "0 auto",
-          width: "100px",
-          height: "10%",
+          minWidth: { md: "120px", xs: "100px" },
+          height: { md: "120px", xs: "100px" },
+          margin: { xs: "0 auto", md: "0" },
+          padding: "1rem",
+          borderRadius: "12px",
+          background: "rgba(255, 255, 255, 0.05)",
+          backdropFilter: "blur(5px)",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
         }}
-      />
-      <Stack paddingLeft={{ md: "2rem" }} paddingTop="1rem" width="100%">
+      >
+        <img
+          src={src}
+          alt="logo"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+          }}
+        />
+      </Box>
+      <Stack
+        paddingLeft={{ md: "2rem" }}
+        paddingTop={{ xs: "1.5rem", md: "0" }}
+        width="100%"
+        spacing={1}
+      >
         <Stack
           direction={{ md: "row", xs: "column" }}
           justifyContent={"space-between"}
+          alignItems={{ md: "center", xs: "flex-start" }}
         >
           <Typography
             variant="h6"
-            fontWeight="bold"
-            paddingBottom="0rem"
-            marginBottom="0rem"
-            sx={{ color: "white" }}
+            sx={{
+              color: "#fcb232",
+              fontSize: { md: "1.5rem", xs: "1.3rem" },
+              fontWeight: "600",
+              letterSpacing: "0.5px",
+            }}
           >
             {name}
           </Typography>
           <Typography
             sx={{
               display: { xs: "none", md: "block" },
-              visibility: { xs: "hidden", md: "visible" },
-              color: "white",
+              color: "rgba(255, 255, 255, 0.7)",
               fontStyle: "italic",
+              fontSize: "0.9rem",
             }}
           >
             {date}
           </Typography>
         </Stack>
-        <Typography variant="body1" sx={{ color: "white" }}>
+        <Typography
+          variant="body1"
+          sx={{
+            color: "white",
+            fontSize: "1.1rem",
+            fontWeight: "500",
+            opacity: 0.9,
+          }}
+        >
           {heading}
         </Typography>
         <Typography
           sx={{
             display: { xs: "block", md: "none" },
-            color: "white",
-            padding: { md: "0.5rem" },
+            color: "rgba(255, 255, 255, 0.7)",
+            fontSize: "0.9rem",
+            fontStyle: "italic",
           }}
         >
           {date}
         </Typography>
 
-        <Typography sx={{ color: "white", paddingTop: "0.5rem" }}>
+        <Typography
+          sx={{
+            color: "rgba(255, 255, 255, 0.8)",
+            paddingTop: "0.5rem",
+            lineHeight: 1.6,
+            fontSize: "1rem",
+          }}
+        >
           {description}
         </Typography>
         {url && (
           <Button
             href="/rideco"
             sx={{
-              background: "rgba(251, 194, 135, 0.16)",
+              background: "rgba(252, 178, 50, 0.1)",
               color: "#fcb232",
-              border: "1px solid black",
+              border: "1px solid rgba(252, 178, 50, 0.3)",
               borderRadius: "10rem",
-              transition: "transform 0.3s",
+              transition: "all 0.3s ease",
               marginTop: "1rem",
               width: "12rem",
+              padding: "0.5rem 0rem",
               "&:hover": {
-                background: "rgba(251, 194, 135, 0.16)",
-                transform: "scale(1.1)",
+                background: "rgba(252, 178, 50, 0.2)",
+                transform: "scale(1.05)",
+                boxShadow: "0 4px 12px rgba(252, 178, 50, 0.2)",
               },
             }}
           >
-            My Experience <ArrowForwardIcon />
+            My Experience <ArrowForwardIcon sx={{ marginLeft: "0.5rem" }} />
           </Button>
         )}
       </Stack>

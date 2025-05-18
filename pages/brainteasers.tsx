@@ -5,33 +5,56 @@ import {
   Box,
   Card,
   CardContent,
+  Fade,
 } from "@mui/material";
 import React, { useState } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Navbar from "./components/Navbar";
 import BackButton from "./subcomponents/BackButton";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
 
 // Array of brain teasers with questions and answers
 const brainTeasers = [
   {
     question:
-      "Two ropes take 1h each to burn completely, yet the burning process is not uniform (Ex. 30min does not mean the fire is in the middle). How would you measure 45min?",
-    hint: "You may light the rope from both ends, when they intersect, half the time has passed..",
+      "Two ropes take 1h each to burn completely. You have a lighter. How would you track exactly 45 minutes.\nNote, the burning process is not uniform.",
+    hint: "You may light the rope from both ends, when they intersect, half the time has passed.",
     gif: "/burning_rope.gif", // Path to the GIF in the public folder
   },
   {
     question:
-      "There are 10 bags with 100 identical coins. In all bags but one, each coin weights 10g. However, all the coins in the counterfeit bag weighs 9g or 11g. Find the counterfeit bag using 1 usage of a digital scale that tells you exact weight.",
-    hint: "Try removing a certain amount of coins from each bag and comparing the scale weight with the expected weight,",
+      "There are 10 bags with 100 identical coins. Each bag contain 10g coins except one bag, which contains all 11g coins. Find the counterfeit bag using 1 usage of a digital scale that tells you exact weight.",
+    hint: "Try placing on the scale a certain amount of coins from each bag and comparing the scale weight with the expected weight,",
   },
   {
     question:
-      "I have keys but no locks. I have space but no room. You can enter, but you can't go outside. What am I?",
-    hint: "A keyboard",
+      "There are 100 tigers and 1 sheep. If a tiger eats a sheep, it will become a sheep. A tiger will eat the sheep only if it knows it won't be eaten by another tiger, otherwise it wouldn't eat the sheep. Will the initial sheep be eaten?",
+    hint: "Consider the case when there is only 1 tiger and 1 sheep. Now 2 tigers and 1 sheep. Now 3 tigers and 1 sheep. You can find a recurrence pattern here.",
   },
   {
-    question: "What has to be broken before you can use it?",
-    hint: "An egg",
+    question:
+      "You're trapped in a circular dark cave with torches spread across the wall, randomly lit or not lit. You can toggle a torch on and off. You can move clockwise or counterclockwise. Assuming you have infinite time and memory, how would you find the number of torches?",
+    hint: "To be certain you've looped around the cave, turn the first torch on. Then go to the 2nd torch and turn it off. Go back to 1st torch and ensure it's still on. Continue the process. When you turn off the ith torch and return to the 1st torch and see it off, you know you've reached a cycle.",
+  },
+  {
+    question:
+      "There are 9 rocks of equal weight, except one which is slightly heavier. You have a balance scale. What is the minimum number of times you need to use the scale to find the heavier rock?",
+    hint: "Divide the rocks into 3 groups of 3. After using the scale, you will narrow down the heavier rock to 3 rocks. Now, divide the 3 rocks into 3 groups of 1. Now you've found it in 2 uses. Note with n rocks, it will take approx log3(n) uses.",
+  },
+  {
+    question:
+      "You have a bowl with 100 noodles. You can connect the end of a noodle to any other noodle, even itself. After connecting the ends of all noodles, what is the expected number of noodle loops?",
+    hint: "Consider the case when there is only 1 noodle. Now 2 noodles. Now 3 noodles. You can find a recurrence pattern here.",
+  },
+  {
+    question:
+      "You and 3 others are trying to escape zombies in the middle of the night. You must cross a bridge to escape. You have 1 flashlight, which must be used when crossing the bridge. The time it takes each of you to cross is 1m, 2m, 5m, 10m. Only at most two of you can cross the bridge at a time. How do you cross the bridge in 17 minutes?",
+    hint: "Have the 5m and 10m go together to save time. Use the 1m and 2m as the main transporters back for the flashlight. Start with 1m and 2m going first.",
+  },
+  {
+    question:
+      "There are 25 horses. You can only race 5 horses at a time. You don't have a stopwatch. What is the least number of races you need to find the fastest horse?",
+    hint: "Divide the horses into 5 groups of 5. Race the groups against each other. Now you know the fastest from each group. Now race the 5 horses in the fastest group against each other to find the fastest horse. Now you only need 2 more races to find the second and third fastest horses.",
   },
   // Add more brain teasers here
 ];
@@ -56,7 +79,9 @@ const BrainTeasers = () => {
       <BackButton />
       <Box
         sx={{
-          background: "rgb(36,36,36)",
+          background:
+            "linear-gradient(180deg, rgb(36,36,36) 0%, rgb(26,26,26) 100%)",
+          minHeight: "100vh",
           paddingBottom: "10rem",
           paddingLeft: { md: "11rem", sm: "4rem", xs: "2rem" },
           paddingRight: { md: "11rem", sm: "4rem", xs: "2rem" },
@@ -72,61 +97,81 @@ const BrainTeasers = () => {
             margin: "0 auto",
             display: "flex",
             marginBottom: "4rem",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
           }}
         >
           Brain Teasers
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={4}>
           {brainTeasers.map((teaser, index) => (
             <Grid item xs={12} key={index}>
               <Card
                 sx={{
-                  backgroundColor: "#1a1a1a",
+                  backgroundColor: "rgba(26, 26, 26, 0.8)",
                   color: "#fff",
-                  borderRadius: "8px",
-                  padding: "1rem",
+                  borderRadius: "16px",
+                  padding: "1.5rem",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(252, 178, 50, 0.1)",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0 8px 20px rgba(252, 178, 50, 0.15)",
+                    border: "1px solid rgba(252, 178, 50, 0.3)",
+                  },
                 }}
               >
-                <CardContent>
-                  <Typography variant="h6" fontWeight="bold">
+                <CardContent sx={{ padding: "0 !important" }}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontSize: { md: "1.8rem", xs: "1.4rem" },
+                      marginBottom: "1.5rem",
+                      color: "white",
+                      fontWeight: "400",
+                      lineHeight: 1.4,
+                      letterSpacing: "0.3px",
+                      fontFamily: "'Inter', sans-serif",
+                      background:
+                        "linear-gradient(120deg, #ffffff 0%, #e0e0e0 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      textShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                      whiteSpace: "pre-line",
+                    }}
+                  >
                     {teaser.question}
                   </Typography>
-                  {showAnswers[index] && (
-                    <>
+                  <Fade in={showAnswers[index]}>
+                    <Box>
                       <Typography
-                        variant="body2"
-                        color="gray"
-                        sx={{ fontStyle: "italic", marginTop: "0.5rem" }}
+                        variant="body1"
+                        sx={{
+                          color: "rgba(255, 255, 255, 0.8)",
+                          marginTop: "1rem",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "0.5rem",
+                        }}
                       >
-                        Hint: {teaser.hint}
+                        <LightbulbIcon sx={{ color: "#fcb232" }} />
+                        {teaser.hint}
                       </Typography>
-                      {/* {teaser.gif && (
-                        <Box
-                          component="img"
-                          src={teaser.gif}
-                          alt="Burning rope animation"
-                          sx={{
-                            width: "100%",
-                            maxWidth: "200px",
-                            marginTop: "1rem",
-                            borderRadius: "8px",
-                          }}
-                        />
-                      )} */}
-                    </>
-                  )}
+                    </Box>
+                  </Fade>
                   <Button
                     sx={{
-                      marginTop: "1rem",
-                      background: "rgba(251, 194, 135, 0.16)",
+                      marginTop: "1.5rem",
+                      background: "rgba(252, 178, 50, 0.1)",
                       color: "#fcb232",
-                      border: "1px solid black",
+                      border: "1px solid rgba(252, 178, 50, 0.3)",
                       borderRadius: "10rem",
-                      transition: "transform 0.3s",
-                      padding: "0.5rem",
+                      transition: "all 0.3s ease",
+                      padding: "0.75rem 1.5rem",
                       "&:hover": {
-                        background: "rgba(251, 194, 135, 0.16)",
-                        transform: "scale(1.1)",
+                        background: "rgba(252, 178, 50, 0.2)",
+                        transform: "scale(1.05)",
+                        boxShadow: "0 4px 12px rgba(252, 178, 50, 0.2)",
                       },
                     }}
                     onClick={() => toggleAnswer(index)}
