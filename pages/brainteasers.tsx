@@ -17,9 +17,13 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 const brainTeasers = [
   {
     question:
+      "There are 100 lockers initially all closed. You do 100 passes on the lockers where on the ith pass, you toggle every ith locker. Which lockers will remain open at the end.",
+    hint: "You may light the rope from both ends, when they intersect, half the time has passed.",
+  },
+  {
+    question:
       "Two ropes take 1h each to burn completely. You have a lighter. How would you track exactly 45 minutes.\nNote, the burning process is not uniform.",
     hint: "You may light the rope from both ends, when they intersect, half the time has passed.",
-    gif: "/burning_rope.gif", // Path to the GIF in the public folder
   },
   {
     question:
