@@ -5,13 +5,21 @@ interface BlogPost {
   title: string;
   date: string;
   description: string;
+  href: string;
 }
 
 const blogPosts: BlogPost[] = [
   {
     title: "Brain Teasers",
     date: "October 22 2024",
+    description: "My favourite riddles and puzzles.",
+    href: "brainteasers",
+  },
+  {
+    title: "Zetamac",
+    date: "October 22 2024",
     description: "Compilation of my favourite riddles and puzzles.",
+    href: "zetamac",
   },
 ];
 
@@ -53,7 +61,7 @@ const Blog: React.FC = () => {
           >
             <Box>
               <Link
-                href="brainteasers"
+                href={post.href}
                 variant="h5"
                 color="#fcb232"
                 sx={{

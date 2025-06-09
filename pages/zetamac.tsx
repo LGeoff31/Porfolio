@@ -104,88 +104,12 @@ const BrainTeasers = () => {
             textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
           }}
         >
-          Brain Teasers
+          ZetaMac
         </Typography>
         <Grid container spacing={4}>
-          {brainTeasers.map((teaser, index) => (
-            <Grid item xs={12} key={index}>
-              <Card
-                sx={{
-                  backgroundColor: "rgba(26, 26, 26, 0.8)",
-                  color: "#fff",
-                  borderRadius: "16px",
-                  padding: "1.5rem",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(252, 178, 50, 0.1)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0 8px 20px rgba(252, 178, 50, 0.15)",
-                    border: "1px solid rgba(252, 178, 50, 0.3)",
-                  },
-                }}
-              >
-                <CardContent sx={{ padding: "0 !important" }}>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontSize: { md: "1.8rem", xs: "1.4rem" },
-                      marginBottom: "1.5rem",
-                      color: "white",
-                      fontWeight: "400",
-                      lineHeight: 1.4,
-                      letterSpacing: "0.3px",
-                      fontFamily: "'Inter', sans-serif",
-                      background:
-                        "linear-gradient(120deg, #ffffff 0%, #e0e0e0 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      textShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                      whiteSpace: "pre-line",
-                    }}
-                  >
-                    {teaser.question}
-                  </Typography>
-                  <Fade in={showAnswers[index]}>
-                    <Box>
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          color: "rgba(255, 255, 255, 0.8)",
-                          marginTop: "1rem",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "0.5rem",
-                        }}
-                      >
-                        <LightbulbIcon sx={{ color: "#fcb232" }} />
-                        {teaser.hint}
-                      </Typography>
-                    </Box>
-                  </Fade>
-                  <Button
-                    sx={{
-                      marginTop: "1.5rem",
-                      background: "rgba(252, 178, 50, 0.1)",
-                      color: "#fcb232",
-                      border: "1px solid rgba(252, 178, 50, 0.3)",
-                      borderRadius: "10rem",
-                      transition: "all 0.3s ease",
-                      padding: "0.75rem 1.5rem",
-                      "&:hover": {
-                        background: "rgba(252, 178, 50, 0.2)",
-                        transform: "scale(1.05)",
-                        boxShadow: "0 4px 12px rgba(252, 178, 50, 0.2)",
-                      },
-                    }}
-                    onClick={() => toggleAnswer(index)}
-                  >
-                    {showAnswers[index] ? "Hide Hint" : "Show Hint"}
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
+          <Typography color="white" fontWeight="bold">
+            Coming soon...
+          </Typography>
         </Grid>
       </Box>
     </>
