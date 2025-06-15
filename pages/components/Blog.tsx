@@ -18,7 +18,7 @@ const blogPosts: BlogPost[] = [
   {
     title: "Zetamac",
     date: "October 22 2024",
-    description: "Compilation of my favourite riddles and puzzles.",
+    description: "Zetamac progression + strategies.",
     href: "zetamac",
   },
 ];
