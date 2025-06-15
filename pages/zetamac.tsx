@@ -121,7 +121,7 @@ const BrainTeasers = () => {
             time limit.
           </Typography>
           <Typography color="white">
-            My goal score is to average 80 but I'm quite the ways off so I'll be
+            My goal score is to average 80 but I&apos;m quite the ways off so I&apos;ll be
             documenting my progression and new found strategies as I go.
           </Typography>
           <Typography color="white">
@@ -181,7 +181,7 @@ const BrainTeasers = () => {
             realized this intuitive part gets much quicker with more practice.
           </Typography>
           <Typography color="white">
-            If it's a 3 digit subtract 2 digit, I will determine what I need to
+            If it&apos;s a 3 digit subtract 2 digit, I will determine what I need to
             add to that 2 digit to make it 100, then determine from 100 how much
             I need to add to get that 3 digit number.
           </Typography>
@@ -255,7 +255,7 @@ const BrainTeasers = () => {
             Division
           </Typography>
           <Typography color="white">
-            The constraints here in Zetamac's default control is the same in
+            The constraints here in Zetamac&apos;s default control is the same in
             multiplication, just in reverse. So 2-100 number divided by 2-12.
           </Typography>
           <Typography color="white">
@@ -292,7 +292,7 @@ const BrainTeasers = () => {
             Conclusion & Thoughts
           </Typography>
           <Typography color="white">
-            I'm going to continue doing a Zetamac a day while keeping track of my score. I've been doing it for around 2 weeks now, averaging 30 with a peak of 41.
+            I&apos;m going to continue doing a Zetamac a day while keeping track of my score. I&apos;ve been doing it for around 2 weeks now, averaging 30 with a peak of 41.
             </Typography>
             <Typography color="white">
               I think if you were going to learn anything from school, mental math is often the one that shows up most practically in real-life, which is one of my motivations behind it.
