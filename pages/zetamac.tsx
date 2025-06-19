@@ -121,8 +121,9 @@ const BrainTeasers = () => {
             time limit.
           </Typography>
           <Typography color="white">
-            My goal score is to average 80 but I&apos;m quite the ways off so I&apos;ll be
-            documenting my progression and new found strategies as I go.
+            My goal score is to average 80 but I&apos;m quite the ways off so
+            I&apos;ll be documenting my progression and new found strategies as
+            I go.
           </Typography>
           <Typography color="white">
             The nice thing is that all answers will be nice integers, meaning
@@ -181,9 +182,9 @@ const BrainTeasers = () => {
             realized this intuitive part gets much quicker with more practice.
           </Typography>
           <Typography color="white">
-            If it&apos;s a 3 digit subtract 2 digit, I will determine what I need to
-            add to that 2 digit to make it 100, then determine from 100 how much
-            I need to add to get that 3 digit number.
+            If it&apos;s a 3 digit subtract 2 digit, I will determine what I
+            need to add to that 2 digit to make it 100, then determine from 100
+            how much I need to add to get that 3 digit number.
           </Typography>
           <Typography color="white">
             For example, 132 - 79. I know I need 21 to make 79 become 100. Then
@@ -255,8 +256,8 @@ const BrainTeasers = () => {
             Division
           </Typography>
           <Typography color="white">
-            The constraints here in Zetamac&apos;s default control is the same in
-            multiplication, just in reverse. So 2-100 number divided by 2-12.
+            The constraints here in Zetamac&apos;s default control is the same
+            in multiplication, just in reverse. So 2-100 number divided by 2-12.
           </Typography>
           <Typography color="white">
             This mean we can employ a lot of the same strategies.
@@ -272,18 +273,26 @@ const BrainTeasers = () => {
           <Typography color="white">
             Now consider, 974 / 11 = 84. Here whenever we see the hundreds digit
             greater than or equal to the tens digit, subtract it by 1 since
-            there was a carry over. So since 9 >= 7, our answer is 84 instead of 94.
+            there was a carry over. So since 9 &gt; 7, our answer is 84 instead
+            of 94.
           </Typography>
           <Typography color="white">
-            I want to preface again that this strategy only works since Zetamac answers are all integers. You cannot go out there using this method in the real world where the answer might be a decimal.
+            I want to preface again that this strategy only works since Zetamac
+            answers are all integers. You cannot go out there using this method
+            in the real world where the answer might be a decimal.
           </Typography>
           <Typography color="white">
-            Now for more general divisions, my strategy is to go up to a nice number and then add for any offsets. This is best shown through example.
-            </Typography>
-            <Typography color="white">
-          For example, 540/12. I work backwards so I start at 12, I know 10 amounts of 12 will be 120. I know 40 amounts of 12 will be 480. I need to make up 60 more, which I know is 5 amounts of 12. Hence the answer is 45.
-            </Typography>
-            <Typography
+            Now for more general divisions, my strategy is to go up to a nice
+            number and then add for any offsets. This is best shown through
+            example.
+          </Typography>
+          <Typography color="white">
+            For example, 540/12. I work backwards so I start at 12, I know 10
+            amounts of 12 will be 120. I know 40 amounts of 12 will be 480. I
+            need to make up 60 more, which I know is 5 amounts of 12. Hence the
+            answer is 45.
+          </Typography>
+          <Typography
             color="white"
             fontWeight="bold"
             variant="h6"
@@ -292,14 +301,20 @@ const BrainTeasers = () => {
             Conclusion & Thoughts
           </Typography>
           <Typography color="white">
-            I&apos;m going to continue doing a Zetamac a day while keeping track of my score. I&apos;ve been doing it for around 2 weeks now, averaging 30 with a peak of 41.
-            </Typography>
-            <Typography color="white">
-              I think if you were going to learn anything from school, mental math is often the one that shows up most practically in real-life, which is one of my motivations behind it.
-            </Typography>
-            <Typography color="white">
-              Think calculating percentages for tax, convering between hourly and salary pay, speeding up matrix multiplication on tests with minimal mistakes, competing your friends, etc.
-            </Typography>
+            I&apos;m going to continue doing a Zetamac a day while keeping track
+            of my score. I&apos;ve been doing it for around 2 weeks now,
+            averaging 30 with a peak of 41.
+          </Typography>
+          <Typography color="white">
+            I think if you were going to learn anything from school, mental math
+            is often the one that shows up most practically in real-life, which
+            is one of my motivations behind it.
+          </Typography>
+          <Typography color="white">
+            Think calculating percentages for tax, convering between hourly and
+            salary pay, speeding up matrix multiplication on tests with minimal
+            mistakes, competing your friends, etc.
+          </Typography>
         </Grid>
       </Box>
     </>
