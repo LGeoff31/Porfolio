@@ -341,7 +341,7 @@ const ProjectBox = () => {
       link: "https://algoflow.ca",
       src: "/images/algoflow.png",
       description:
-        "AlgoFlow is a visualizer for the most popular sorting algorithms with animations, playback speed, and sound.",
+        "Visualizer for the most popular sorting algorithms with real-time animations, playback speed, sound, and embedded code.",
       hosted: "https://algoflow.ca",
       code: "https://github.com/LGeoff31/AlgoFlow",
       skills: ["javascript", "Material UI", "Next.js"],
@@ -351,7 +351,7 @@ const ProjectBox = () => {
       link: "https://uwdorm-lgeoff31s-projects.vercel.app/",
       src: "/images/rez.png",
       description:
-        "Help freshmens decide where to live by sharing your experiences. AI algorithm to provide the best choice for you.",
+        "Helping freshmens decide where to live by sharing experiences. AI algorithm to provide the best choice for you.",
       hosted: "https://uwdorm-lgeoff31s-projects.vercel.app/",
       code: "https://github.com/LGeoff31/uwdorm",
       skills: ["sql", "Firebase", "Mapbox", "React"],
@@ -371,7 +371,7 @@ const ProjectBox = () => {
       link: "https://insomniahub.vercel.app/",
       src: "/images/line_chart.png",
       description:
-        "Algorithm to correlate sleep quality, duration, stress levels, exercise. Visualize your data and start change early!",
+        "Algorithm to correlate sleep quality, duration, stress levels, exercise. Visualize your data and start change early.",
       hosted: "https://insomniahub.vercel.app/",
       code: "https://github.com/LGeoff31/Insomnia",
       skills: ["MongoDB", "Express", "Node.JS"],

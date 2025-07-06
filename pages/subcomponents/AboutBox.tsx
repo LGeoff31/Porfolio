@@ -10,7 +10,7 @@ const AboutBox = () => {
       heading: "Software Engineering",
       date: "Present",
       description:
-        "I'm taking Sequential Programming, Discrete Math, Statistics, and Psychology. I'm into full-stack development, competitive programming, and math.",
+        "I'm currently taking Data Structures & Algorithms, Databases, Advanced OOP, and Combinatorics.",
       color: "from-blue-500 to-cyan-500",
       iconBg: "from-blue-500/20 to-cyan-500/20",
     },
@@ -28,7 +28,7 @@ const AboutBox = () => {
       name: "RideCo",
       heading: "Software Engineer",
       date: "2024 - 2024",
-      description: "SWE Intern on Platforms.",
+      description: "SWE Intern on Vehicle Tracking.",
 
       color: "from-purple-500 to-pink-500",
       iconBg: "from-purple-500/20 to-pink-500/20",
@@ -39,14 +39,14 @@ const AboutBox = () => {
       heading: "Academy for Math",
       date: "2019 - 2024",
       description:
-        "Competitive math and computing tutor for 100+ high school students.",
+        "Competitive math and computing for 100+ high school students.",
       color: "from-orange-500 to-red-500",
       iconBg: "from-orange-500/20 to-red-500/20",
     },
     {
       src: "/images/marathon.png",
       name: "Competitive Runner",
-      heading: "Marathon | Cross Country",
+      heading: "Marathoner",
       date: "2017 - 2023",
       description:
         "My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
@@ -68,7 +68,7 @@ const AboutBox = () => {
       heading: "Electricochy",
       date: "2023 - Present",
       description:
-        "Channel focused on internships, skits, and reactions. Looking forward to pump out more upcoming videos!",
+        "Channel focused on internships, skits, and reactions. Looking to pump out more upcoming videos!",
       color: "from-red-500 to-pink-500",
       iconBg: "from-red-500/20 to-pink-500/20",
     },
@@ -193,9 +193,7 @@ const AboutMeSection = ({
             </div>
           </motion.div>
 
-          {/* Content */}
           <div className="flex-1 space-y-3">
-            {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
               <motion.h3
                 className={`text-xl md:text-2xl font-bold bg-gradient-to-r ${color} bg-clip-text text-transparent`}
@@ -215,7 +213,6 @@ const AboutMeSection = ({
               </motion.span>
             </div>
 
-            {/* Role */}
             <motion.h4
               className="text-lg font-semibold text-white/90"
               initial={{ opacity: 0, y: 10 }}
@@ -226,7 +223,6 @@ const AboutMeSection = ({
               {heading}
             </motion.h4>
 
-            {/* Description */}
             <motion.p
               className="text-gray-300 leading-relaxed"
               initial={{ opacity: 0, y: 10 }}
@@ -237,7 +233,6 @@ const AboutMeSection = ({
               {description}
             </motion.p>
 
-            {/* Action Button */}
             {/* {url && (
               <motion.div
                 variants={buttonVariants}

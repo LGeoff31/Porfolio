@@ -5,27 +5,23 @@ import Skill from "../subcomponents/Language";
 const Languages = () => {
   const skills = [
     {
+      url: "/images/typescript.png",
+      name: "TypeScript",
+      color: "from-blue-400 to-blue-700",
+    },
+    {
       url: "/images/JavaScript.png",
       name: "JavaScript",
       color: "from-yellow-500 to-orange-500",
     },
+
     {
-      url: "/images/HTML (1).png",
-      name: "HTML 5",
-      color: "from-orange-500 to-red-500",
-    },
-    {
-      url: "/images/CSS3.png",
-      name: "CSS 3",
-      color: "from-blue-500 to-indigo-500",
-    },
-    {
-      url: "/images/React (1).jpeg",
-      name: "React.js",
+      url: "/images/React.png",
+      name: "React",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      url: "/images/NextJS (1).jpeg",
+      url: "/images/next.png",
       name: "Next.js",
       color: "from-gray-600 to-gray-800",
     },
@@ -35,8 +31,8 @@ const Languages = () => {
       color: "from-green-500 to-emerald-500",
     },
     {
-      url: "/images/Tailwind.png",
-      name: "Tailwind",
+      url: "/images/graphql.png",
+      name: "GraphQL",
       color: "from-cyan-400 to-blue-500",
     },
     {
@@ -55,14 +51,19 @@ const Languages = () => {
       color: "from-blue-500 to-yellow-500",
     },
     {
-      url: "/images/mongodb.png",
-      name: "MongoDB",
+      url: "/images/sql.png",
+      name: "SQL",
       color: "from-green-500 to-emerald-500",
     },
     {
-      url: "/images/material.png",
-      name: "Material UI",
+      url: "/images/postgres.png",
+      name: "PostgreSQL",
       color: "from-blue-500 to-indigo-500",
+    },
+    {
+      url: "/images/rails.png",
+      name: "Rails",
+      color: "from-red-500 to-pink-600",
     },
   ];
 

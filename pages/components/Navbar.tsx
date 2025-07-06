@@ -8,12 +8,10 @@ const ScrollLink = dynamic(
   { ssr: false }
 );
 
-// Add prop type
 interface NavbarProps {
   useScrollLinks?: boolean;
 }
 
-// Update Navbar to accept props
 const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -103,7 +101,6 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo/Brand */}
           <motion.div
             className="flex items-center space-x-4"
             variants={itemVariants}
@@ -157,7 +154,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
                     network={social.network}
                     fgColor="white"
                     bgColor="transparent"
-                    style={{ width: 20, height: 20 }}
+                    style={{ width: 32, height: 32 }}
                     className="transition-transform duration-300 group-hover:scale-110"
                   />
                 </motion.div>
