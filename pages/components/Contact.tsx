@@ -116,7 +116,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            I'm always excited to discuss new opportunities and innovative
+            I&apos;m always excited to discuss new opportunities and innovative
             solutions.
           </motion.p>
         </motion.div>
@@ -138,7 +138,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Let's Connect
+                Let&apos;s Connect
               </span>
             </motion.h3>
             <ContactInfo />

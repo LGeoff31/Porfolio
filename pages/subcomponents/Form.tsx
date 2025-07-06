@@ -94,7 +94,7 @@ const Form = () => {
             className="text-center text-green-400 font-medium"
             sx={{ color: "rgb(74 222 128)" }}
           >
-            Message sent successfully! I'll get back to you soon.
+            Message sent successfully! I&apos;ll get back to you soon.
           </Typography>
         </motion.div>
       )}
