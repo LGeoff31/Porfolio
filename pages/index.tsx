@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Head from "next/head";
-import BackgroundCircles from "@/pages/components/BackgroundCircles";
 import Homepage from "@/pages/components/Homepage";
 import Navbar from "@/pages/components/Navbar";
 import About from "./components/About";
@@ -30,8 +29,7 @@ export default function Home() {
   return (
     <div
       id="container"
-      //overflow-y-scroll
-      className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory   z-0 scrollbar scrollbar-thumb-rounded-[5px] scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/40 scroll-smooth"
+      className="relative z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white h-screen snap-y snap-mandatory scrollbar scrollbar-thumb-rounded-[5px] scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/40 scroll-smooth overflow-y-auto"
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,7 +38,7 @@ export default function Home() {
       </Head>
 
       <section id="hero" className="snap-start">
-        <Navbar />
+        <Navbar useScrollLinks={true} />
       </section>
 
       <section id="homepage" className="snap-center">

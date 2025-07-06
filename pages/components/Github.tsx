@@ -1,82 +1,113 @@
-import { Box, Button, Grid, Stack, Typography, Card } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
-import Skill from "../subcomponents/Language";
 import GitHubCalendar from "react-github-calendar";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { Group } from "@mui/icons-material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Github = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <>
-      <Grid sx={{ background: "rgb(36,36,36)", paddingTop: "7rem" }}>
-        <Stack
-          sx={{
-            // background: "#1d1d1f",
-            paddingTop: "2rem",
-            paddingLeft: "2rem",
-            paddingRight: "2rem",
-            width: { md: "60%", xs: "80%" },
-            margin: "0 auto",
-          }}
+    <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden flex flex-col items-center justify-center">
+      <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-3xl w-full mx-auto flex flex-col items-center">
+        {/* Section Header */}
+        <motion.div
+          className="text-center mb-12 w-full"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          <Typography
-            variant="h4"
-            color="rgb(107 114 128/var(--tw-text-opacity))"
-            letterSpacing={"10px"}
-            fontWeight="100"
-            textAlign={"center"}
-            fontSize={{ md: "2.5rem", xs: "1.8rem" }}
-            textTransform={"uppercase"}
-            marginBottom="4rem"
+          <motion.h2
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
           >
-            Github History
-          </Typography>
-          {/* <Box
-            sx={{
-              margin: "0 auto",
-              transition: "transform 0.4s ease-in-out", // Animation transition
-              ":hover": {
-                transform: "scale(1.03)", // Scale to 1.2 times on hover
-              },
+            GitHub
+          </motion.h2>
+
+          <motion.div
+            className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          />
+
+          <motion.p
+            className="text-xl text-gray-400 mt-8 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Explore my open-source contributions, project activity, and coding
+            journey on GitHub.
+          </motion.p>
+        </motion.div>
+
+        {/* GitHub Content */}
+        <motion.div
+          className="relative flex flex-col items-center justify-center w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.div
+            className="group relative flex flex-col items-center justify-center w-full"
+            variants={itemVariants}
+            whileHover={{
+              y: -5,
+              transition: { duration: 0.3 },
             }}
           >
-            <Button
-              onClick={() =>
-                window.open("https://github.com/lgeoff31", "_blank")
-              }
-              sx={{
-                color: "white",
-                textTransform: "none",
-                fontSize: "1rem",
-                paddingTop: "2rem",
-                paddingBottom: "2rem",
-                "&:hover": {
-                  backgroundColor: "transparent",
-                },
-              }}
+            <div className="flex items-center justify-center mb-4">
+              <GitHubIcon className="text-4xl mr-4 text-green-400" />
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                GitHub Contributions
+              </h3>
+            </div>
+            <div className="flex justify-center w-full mb-6">
+              <GitHubCalendar username="lgeoff31" colorScheme="dark" />
+            </div>
+            <a
+              href="https://github.com/lgeoff31"
+              className="inline-flex items-center px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-green-500 to-emerald-500 hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 group/btn mt-2"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <GitHubIcon style={{ color: "white", fontSize: "2rem" }} />
-            </Button>
-          </Box> */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ x: 0, opacity: 2 }}
-            transition={{ duration: 3 }}
-            className=" object-cover md:rounded-lg  overflow-hidden"
-          >
-            <GitHubCalendar
-              username="lgeoff31"
-              style={{
-                margin: "0 auto",
-                color: "white",
-                paddingBottom: "3rem",
-              }}
-            />
+              View GitHub
+              <ArrowForwardIcon className="ml-2" />
+            </a>
           </motion.div>
-        </Stack>
-      </Grid>
-    </>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

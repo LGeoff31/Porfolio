@@ -2,11 +2,133 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Scrollbar */
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: rgba(156, 163, 175, 0.1);
+  border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f7ab0a, #f59e0b);
+  border-radius: 10px;
+  opacity: 0.4;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  opacity: 0.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+}
+
+.btn-hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.btn-hover:hover {
+  @apply transform scale-105 shadow-lg;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 8%,
+    rgba(255, 255, 255, 0.2) 18%,
+    rgba(255, 255, 255, 0.1) 33%
+  );
+  background-size: 800px 104px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background: rgb(36, 36, 36); ow install */
 }
 
 .contactIcon {

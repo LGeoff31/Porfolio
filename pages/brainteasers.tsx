@@ -1,19 +1,8 @@
-import {
-  Grid,
-  Typography,
-  Button,
-  Box,
-  Card,
-  CardContent,
-  Fade,
-} from "@mui/material";
 import React, { useState } from "react";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Navbar from "./components/Navbar";
 import BackButton from "./subcomponents/BackButton";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 
-// Array of brain teasers with questions and answers
 const brainTeasers = [
   {
     question:
@@ -60,7 +49,11 @@ const brainTeasers = [
       "There are 25 horses. You can only race 5 horses at a time. You don't have a stopwatch. What is the least number of races you need to find the fastest horse?",
     hint: "Divide the horses into 5 groups of 5. Race the groups against each other. Now you know the fastest from each group. Now race the 5 horses in the fastest group against each other to find the fastest horse. Now you only need 2 more races to find the second and third fastest horses.",
   },
-  // Add more brain teasers here
+  {
+    question:
+      "There are 5 pirates and 100 coins. To divide the loot, the most senior pirate will propose a distribution. Then a vote will take place. If at least 50% of pirates agree, it will proceed, otherwise, the senior pirate will be thrown off and the process is continued until an agreed distribution. Assuming all pirates are rational, how will the coins be divided in the end? ",
+    hint: "Work up from the simple cases i.e 2 pirates, 3 pirates ,etc.",
+  },
 ];
 
 const BrainTeasers = () => {
@@ -68,7 +61,6 @@ const BrainTeasers = () => {
     Array(brainTeasers.length).fill(false)
   );
 
-  // Toggle answer visibility for a specific question
   const toggleAnswer = (index: number) => {
     setShowAnswers((prev) => {
       const updatedAnswers = [...prev];
@@ -78,117 +70,41 @@ const BrainTeasers = () => {
   };
 
   return (
-    <>
-      <Navbar />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white pb-20">
+      <Navbar useScrollLinks={false} />
       <BackButton />
-      <Box
-        sx={{
-          background:
-            "linear-gradient(180deg, rgb(36,36,36) 0%, rgb(26,26,26) 100%)",
-          minHeight: "100vh",
-          paddingBottom: "10rem",
-          paddingLeft: { md: "11rem", sm: "4rem", xs: "2rem" },
-          paddingRight: { md: "11rem", sm: "4rem", xs: "2rem" },
-        }}
-      >
-        <Typography
-          variant="h4"
-          color="#fcb232"
-          fontWeight="bold"
-          fontSize={{ md: "3.5rem", xs: "2rem" }}
-          sx={{
-            justifyContent: "center",
-            margin: "0 auto",
-            display: "flex",
-            marginBottom: "4rem",
-            textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
-          }}
-        >
+      <div className="max-w-3xl mx-auto pt-24 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-5xl md:text-6xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
           Brain Teasers
-        </Typography>
-        <Grid container spacing={4}>
+        </h1>
+        <div className="space-y-8">
           {brainTeasers.map((teaser, index) => (
-            <Grid item xs={12} key={index}>
-              <Card
-                sx={{
-                  backgroundColor: "rgba(26, 26, 26, 0.8)",
-                  color: "#fff",
-                  borderRadius: "16px",
-                  padding: "1.5rem",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(252, 178, 50, 0.1)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0 8px 20px rgba(252, 178, 50, 0.15)",
-                    border: "1px solid rgba(252, 178, 50, 0.3)",
-                  },
-                }}
+            <div
+              key={index}
+              className="relative bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-yellow-400/20 rounded-2xl p-8 shadow-lg transition-all duration-300 hover:border-yellow-400/60 group"
+            >
+              <div className="mb-4 text-xl md:text-2xl font-semibold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent whitespace-pre-line">
+                {teaser.question}
+              </div>
+              {showAnswers[index] && (
+                <div className="flex items-center gap-2 mt-4 animate-fade-in">
+                  <LightbulbIcon className="text-yellow-400" />
+                  <span className="text-lg text-yellow-200/90">
+                    {teaser.hint}
+                  </span>
+                </div>
+              )}
+              <button
+                className="mt-6 px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 text-white shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                onClick={() => toggleAnswer(index)}
               >
-                <CardContent sx={{ padding: "0 !important" }}>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontSize: { md: "1.8rem", xs: "1.4rem" },
-                      marginBottom: "1.5rem",
-                      color: "white",
-                      fontWeight: "400",
-                      lineHeight: 1.4,
-                      letterSpacing: "0.3px",
-                      fontFamily: "'Inter', sans-serif",
-                      background:
-                        "linear-gradient(120deg, #ffffff 0%, #e0e0e0 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      textShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                      whiteSpace: "pre-line",
-                    }}
-                  >
-                    {teaser.question}
-                  </Typography>
-                  <Fade in={showAnswers[index]}>
-                    <Box>
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          color: "rgba(255, 255, 255, 0.8)",
-                          marginTop: "1rem",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "0.5rem",
-                        }}
-                      >
-                        <LightbulbIcon sx={{ color: "#fcb232" }} />
-                        {teaser.hint}
-                      </Typography>
-                    </Box>
-                  </Fade>
-                  <Button
-                    sx={{
-                      marginTop: "1.5rem",
-                      background: "rgba(252, 178, 50, 0.1)",
-                      color: "#fcb232",
-                      border: "1px solid rgba(252, 178, 50, 0.3)",
-                      borderRadius: "10rem",
-                      transition: "all 0.3s ease",
-                      padding: "0.75rem 1.5rem",
-                      "&:hover": {
-                        background: "rgba(252, 178, 50, 0.2)",
-                        transform: "scale(1.05)",
-                        boxShadow: "0 4px 12px rgba(252, 178, 50, 0.2)",
-                      },
-                    }}
-                    onClick={() => toggleAnswer(index)}
-                  >
-                    {showAnswers[index] ? "Hide Hint" : "Show Hint"}
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
+                {showAnswers[index] ? "Hide Hint" : "Show Hint"}
+              </button>
+            </div>
           ))}
-        </Grid>
-      </Box>
-    </>
+        </div>
+      </div>
+    </div>
   );
 };
 
