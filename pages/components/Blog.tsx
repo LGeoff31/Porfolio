@@ -5,8 +5,7 @@ const blogPosts = [
   {
     title: "Brain Teasers",
     date: "October 22, 2024",
-    description:
-      "My favourite riddles and puzzles that challenge the mind and spark creativity.",
+    description: "Collection of my favourite riddles and puzzles.",
     href: "brainteasers",
     color: "from-purple-500 to-pink-500",
     icon: "🧩",
@@ -14,8 +13,7 @@ const blogPosts = [
   {
     title: "Zetamac",
     date: "October 22, 2024",
-    description:
-      "Zetamac progression strategies and mathematical insights for competitive programming.",
+    description: "Zetamac strategies and progression.",
     href: "zetamac",
     color: "from-blue-500 to-cyan-500",
     icon: "⚡",
@@ -59,7 +57,6 @@ const Blog: React.FC = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
       <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        {/* Section Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -88,7 +85,6 @@ const Blog: React.FC = () => {
           />
         </motion.div>
 
-        {/* Blog Posts */}
         <motion.div
           className="relative space-y-6"
           variants={containerVariants}
@@ -106,7 +102,6 @@ const Blog: React.FC = () => {
                 transition: { duration: 0.3 },
               }}
             >
-              {/* Background Glow Effect */}
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${post.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
               />
