@@ -98,7 +98,7 @@ const Project = ({
               <Image
                 src={src}
                 alt={title}
-                width={850}
+                width={1000}
                 height={550}
                 className="w-full h-auto object-cover"
                 layout="responsive"
