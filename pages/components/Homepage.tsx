@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import GitHubCalendar from "react-github-calendar";
 
 const Homepage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -80,7 +81,7 @@ const Homepage = () => {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div className="relative h-screen overflow-hidden overflow-x-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <div className="absolute inset-0">
         <motion.div
           className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
@@ -177,7 +178,17 @@ const Homepage = () => {
           </p>
         </motion.div>
 
-        <motion.div
+        <div className="flex justify-center mt-10">
+          <GitHubCalendar
+            username="lgeoff31"
+            blockSize={14}
+            blockMargin={4}
+            fontSize={16}
+            colorScheme="dark"
+          />
+        </div>
+
+        {/* <motion.div
           variants={itemVariants}
           className="flex flex-wrap justify-center gap-4 md:gap-6"
         >
@@ -235,7 +246,7 @@ const Homepage = () => {
               </motion.button>
             </ScrollLink>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Scroll Indicator */}
         <motion.div

@@ -337,16 +337,6 @@ const ProjectBox = () => {
       skills: ["react", "graphql", "Firebase"],
     },
     {
-      title: "AlgoFlow",
-      link: "https://algoflow.ca",
-      src: "/images/algoflow.png",
-      description:
-        "Visualizer for the most popular sorting algorithms with real-time animations, playback speed, sound, and embedded code.",
-      hosted: "https://algoflow.ca",
-      code: "https://github.com/LGeoff31/AlgoFlow",
-      skills: ["javascript", "Material UI", "Next.js"],
-    },
-    {
       title: "UwRez",
       link: "https://uwdorm-lgeoff31s-projects.vercel.app/",
       src: "/images/rez.png",
@@ -365,6 +355,26 @@ const ProjectBox = () => {
       hosted: "https://visugraph.vercel.app/",
       code: "https://github.com/LGeoff31/Graphs",
       skills: ["javascript", "tailwind", "html"],
+    },
+    {
+      title: "AlgoFlow",
+      link: "https://algo-flow.vercel.app/",
+      src: "/images/algoflow.png",
+      description:
+        "Visualizer for the most popular sorting algorithms with real-time animations, playback speed, sound, and embedded code.",
+      hosted: "https://algo-flow.vercel.app/",
+      code: "https://github.com/LGeoff31/AlgoFlow",
+      skills: ["javascript", "Material UI", "Next.js"],
+    },
+    {
+      title: "Datamac",
+      link: "https://datamac.vercel.app/",
+      src: "/images/datamac.png",
+      description:
+        "Zetamac but with score tracking + leaderboard. Compete each day to get the highest score.",
+      hosted: "https://datamac.vercel.app/",
+      code: "https://github.com/LGeoff31/DataMac",
+      skills: ["javascript", "Material UI", "Next.js"],
     },
     {
       title: "Insomnia",
