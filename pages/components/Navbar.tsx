@@ -162,15 +162,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
             ))}
 
             {useScrollLinks ? (
-              <ScrollLink
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={1000}
-                offset={-80}
-                containerId="container"
-                className="block"
-              >
+              <ScrollLink to="contact" duration={0} containerId="container">
                 <motion.button
                   className="relative px-6 py-2 rounded-full font-medium text-white overflow-hidden group transition-all duration-300"
                   style={{

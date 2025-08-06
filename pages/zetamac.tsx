@@ -1,79 +1,119 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import BackButton from "./subcomponents/BackButton";
 
 const Zetamac = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white pb-20 relative overflow-x-hidden">
+      <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl z-0 animate-float pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-60 h-60 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl z-0 animate-float pointer-events-none" />
       <Navbar useScrollLinks={false} />
-      <div className="max-w-3xl mx-auto pt-24 px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center mb-12 gap-4">
-          {/* <div className="flex-shrink-0">
+      <div className="max-w-4xl mx-auto pt-24 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative mb-12 flex justify-center items-center">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2">
             <BackButton />
-          </div> */}
-          <h1 className="flex-1 text-5xl md:text-6xl font-bold text-center bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
+          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-5xl md:text-6xl font-bold text-center bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg"
+          >
             Zetamac
-          </h1>
+          </motion.h1>
         </div>
-        <div className="space-y-8">
-          <div className="bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-yellow-400/20 rounded-2xl p-8 shadow-lg">
+
+        <motion.div
+          className="space-y-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div
+            variants={cardVariants}
+            className="w-full bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-yellow-400/20 rounded-2xl p-10 md:p-12 shadow-lg"
+          >
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
               Summary
             </h2>
             <p className="text-lg text-gray-200 mb-2">
-              Zetamac is an online website people test their mental math
-              abilities in addition, subtraction, multiplication, and division
-              within a 120s time limit.
+              Zetamac is a popular online website as a benchmark for mental
+              math.
             </p>
             <p className="text-lg text-gray-200 mb-2">
-              My goal score is to average 80 but I&apos;m quite the ways off so
-              I&apos;ll be documenting my progression and new found strategies
-              as I go.
+              It consists of solving as many addition, subtraction,
+              multiplication, and division problems within 120s.
             </p>
             <p className="text-lg text-gray-200 mb-2">
-              The nice thing is that all answers will be nice integers, meaning
-              things like division are guaranteed to result nicely into
-              integers.
+              My goal score is to reach a score of 80, granted I&apos;m quite
+              the ways off so I&apos;ll be documenting my progression and new
+              found strategies as I go.
             </p>
-            <p className="text-lg text-gray-200">
-              This is what allows some of my arithmetic strategies to work.
+            <p className="text-lg text-gray-200 mb-2">
+              I wanted to keep track of my progress so I created this website
+              which stores and graphs my progress. Check it out:
+              https://datamac.vercel.app/.
             </p>
-          </div>
-          <div className="bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-yellow-400/20 rounded-2xl p-8 shadow-lg">
+          </motion.div>
+          <motion.div
+            variants={cardVariants}
+            className="w-full bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-yellow-400/20 rounded-2xl p-10 md:p-12 shadow-lg"
+          >
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-              Strategy
+              Strategies
             </h2>
             <p className="text-lg text-gray-200 mb-2">
-              Before I get into my strategy for each of the four operations, it
-              is a very good idea to know your 12x12 times table by heart. This
-              is what will save you the most time.
+              First things first, ensure you can answer anything within the
+              12x12 times table in 1s. Also remember, getting quicker comes from
+              a lot of intuition that you build up through practice.
             </p>
             <h3 className="text-2xl font-semibold mt-6 mb-2 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
               Addition
             </h3>
             <p className="text-gray-200 mb-2">
-              This is most often the easier type. The quickest way for me is to
-              determine the last digit by summing the last digits and
-              intuitively getting the rest.
+              This is the easiest type. Typically summing digits left to right
+              is always faster than right to left. It allows you to start typing
+              the answer immediately, and you only need to worry about off by 1
+              fluctuations due to carry over.
             </p>
             <p className="text-gray-200 mb-2">
-              For example, 38 + 55, I know it should end in a 3, and have a
-              carry over. Then I glance at the tens digits, 3 and 5 and quickly
-              add my carry over to get to 9.
+              For example, 38 + 55, I know it should start with an 8, then I see
+              the ones digits sum to 13, so I quickly change my answer to 93.
             </p>
             <h3 className="text-2xl font-semibold mt-6 mb-2 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
               Subtraction
             </h3>
             <p className="text-gray-200 mb-2">
               This is a bit trickier than addition but quite similar. If it is a
-              2 digit subtract 2 digit, I will use a similar strategy
-              determining what ones digit I need then intuitively guess the tens
-              digit.
+              2 digit subtract 2 digit, I will use the strategy as from
+              addition, working right to left and being clever about carry
+              overs. Another strategy is seeing how much you need to add to the
+              smaller number to get to the larger value.
             </p>
             <p className="text-gray-200 mb-2">
-              For example, 83 - 69. I know the ones digit should be 4, and
-              intuitively I can see the tens digit should be a 1. So 14. I
-              realized this intuitive part gets much quicker with more practice.
+              For example, 83 - 69. I can see I just need to add 14 to turn 69
+              into 83, so 14 is my answer.
             </p>
             <p className="text-gray-200 mb-2">
               If it&apos;s a 3 digit subtract 2 digit, I will determine what I
@@ -88,29 +128,22 @@ const Zetamac = () => {
               Multiplication
             </h3>
             <p className="text-gray-200 mb-2">
-              Thankfully, Zetamac default controls limit the first number to
-              2-12 and the second to 2-100.
-            </p>
-            <p className="text-gray-200 mb-2">
               Most often a single digit multiplied by the second number is
               solvable by rounding the second number to a nice value, then
               subtracting / adding as needed.
             </p>
             <p className="text-gray-200 mb-2">
               For example, 9x74. Here it is actually easier to round the single
-              digit to 10 then subtract. So 740 - 74 = 666.
-            </p>
-            <p className="text-gray-200 mb-2">
-              Now take, 7x74. I break it up to a nice number, 7x70=490, then add
-              7x4=28. So I get 518.
+              digit to 10 then subtract. So 740 - 74 = 666. Or breaking the
+              problem to 9x70 + 9x4 = 666 is another strategy, sometimes faster
+              since addition is less brain intensive that subtraction.
             </p>
             <p className="text-gray-200 mb-2">
               Now the challenging aspect comes when both digits are two digits.
             </p>
             <p className="text-gray-200 mb-2">
-              If the first digit is 11, there is a neat trick. Add the digits in
-              the second number, and insert that value in the middle of those
-              two numbers, that is the answer.
+              If the first number is 11, add the digits in the second number,
+              and insert that value in the middle of those two numbers.
             </p>
             <p className="text-gray-200 mb-2">
               For example, 11x63. 6+3=9, so the answer is 693. Now consider,
@@ -126,28 +159,19 @@ const Zetamac = () => {
               sum of digits.
             </p>
             <p className="text-gray-200 mb-2">
-              If the first digit is 12, I employ the same strategy in single
-              digits. Round either to a nice number, multiply and add/subtract
-              accordingly.
+              If the first number is 12, I typically break it down into 10 x
+              number2 + 2 x number2.
             </p>
             <p className="text-gray-200 mb-2">
-              For example, 12x45 = 12x50 - 12x5 = 600 - 60 = 540.
+              For example, 12x45 = 10 x 45 + 2 x 45 = 540.
             </p>
             <h3 className="text-2xl font-semibold mt-6 mb-2 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
               Division
             </h3>
             <p className="text-gray-200 mb-2">
-              The constraints here in Zetamac&apos;s default control is the same
-              in multiplication, just in reverse. So 2-100 number divided by
-              2-12.
-            </p>
-            <p className="text-gray-200 mb-2">
-              This mean we can employ a lot of the same strategies.
-            </p>
-            <p className="text-gray-200 mb-2">
-              Like when dividing by 11 the answer is either the two outer digits
-              or because of the carry over, the two outer digits but subtract
-              the leftmost digit by 1.
+              When dividing by 11 the answer is either the two outer digits or
+              because of the carry over, the two outer digits but subtract the
+              leftmost digit by 1.
             </p>
             <p className="text-gray-200 mb-2">
               For example, 374 / 11 = 34. This is simple case without carry
@@ -160,23 +184,32 @@ const Zetamac = () => {
               instead of 94.
             </p>
             <p className="text-gray-200 mb-2">
-              I want to preface again that this strategy only works since
-              Zetamac answers are all integers. You cannot go out there using
-              this method in the real world where the answer might be a decimal.
+              When dividing a 3 digit number by 9, there is a clever trick which
+              I will show by example.
             </p>
             <p className="text-gray-200 mb-2">
-              Now for more general divisions, my strategy is to go up to a nice
-              number and then add for any offsets. This is best shown through
-              example.
+              Consider 342/9. The answer is comprised of two digits, the first
+              is floor(34/9), the second is 10-2. So the answer is 38. In other
+              words, the first digit is how many times 9 goes into the two most
+              significant digits, and the second digit is 10 - least significant
+              digit.
             </p>
             <p className="text-gray-200 mb-2">
-              For example, 540/12. I work backwards so I start at 12, I know 10
-              amounts of 12 will be 120. I know 40 amounts of 12 will be 480. I
-              need to make up 60 more, which I know is 5 amounts of 12. Hence
-              the answer is 45.
+              I want to preface again these strategies work because Zetamac
+              ensures results are always integers, so these rules aren&apos;t
+              generalizable to any values.
             </p>
-          </div>
-        </div>
+            <p className="text-gray-200 mb-2">
+              Another important strategy, for the smaller number, memorize the
+              sequence of 10xnumber, 20xnumber, etc and also the multiples of a
+              number.
+            </p>
+            <p className="text-gray-200 mb-2">
+              For example, 540/12. I know instantly that 480 = 40 x 12. Now I
+              need an additional 60 which is 12x5. So the answer is 45.
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

@@ -62,16 +62,16 @@ const AboutBox = () => {
       color: "from-pink-500 to-rose-500",
       iconBg: "from-pink-500/20 to-rose-500/20",
     },
-    {
-      src: "/images/yt.png",
-      name: "Youtuber",
-      heading: "Electricochy",
-      date: "2023 - Present",
-      description:
-        "Channel focused on internships, skits, and reactions. Looking to pump out more upcoming videos!",
-      color: "from-red-500 to-pink-500",
-      iconBg: "from-red-500/20 to-pink-500/20",
-    },
+    // {
+    //   src: "/images/yt.png",
+    //   name: "Youtuber",
+    //   heading: "Electricochy",
+    //   date: "2023 - Present",
+    //   description:
+    //     "Channel focused on internships, skits, and reactions. Looking to pump out more upcoming videos!",
+    //   color: "from-red-500 to-pink-500",
+    //   iconBg: "from-red-500/20 to-pink-500/20",
+    // },
   ];
 
   const containerVariants = {

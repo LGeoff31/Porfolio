@@ -53,11 +53,11 @@ export default function Home() {
         <Project />
       </section>
 
-      <section id="skills" className="snap-start">
-        <Languages />
-      </section>
       <section id="blog" className="snap-start">
         <Blog />
+      </section>
+      <section id="skills" className="snap-start">
+        <Languages />
       </section>
 
       <section id="github" className="snap-start">
