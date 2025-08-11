@@ -161,6 +161,34 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
               </motion.div>
             ))}
 
+            <motion.a
+              href="https://searchengineland.com/" // TODO: replace with actual SE Webring URL if different
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={buttonVariants}
+              initial="initial"
+              whileHover="hover"
+              whileTap="tap"
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <motion.div
+                className="relative p-2 rounded-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-purple-500/50 transition-all duration-300"
+                whileHover={{ boxShadow: "0 0 20px rgba(139, 92, 246, 0.3)" }}
+              >
+                <img
+                  alt="SE Webring"
+                  src="/images/webring.png"
+                  className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  style={{
+                    width: 32,
+                    height: 32,
+                    filter: "brightness(0) invert(1)",
+                  }}
+                />
+              </motion.div>
+            </motion.a>
+
             {useScrollLinks ? (
               <ScrollLink to="contact" duration={0} containerId="container">
                 <motion.button
