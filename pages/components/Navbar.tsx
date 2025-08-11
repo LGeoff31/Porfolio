@@ -162,14 +162,13 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
             ))}
 
             <motion.a
-              href="https://searchengineland.com/" // TODO: replace with actual SE Webring URL if different
+              href="https://se-webring.xyz/"
               target="_blank"
-              rel="noopener noreferrer"
               variants={buttonVariants}
               initial="initial"
               whileHover="hover"
               whileTap="tap"
-              className="relative group"
+              className="relative group hidden sm:block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <motion.div
