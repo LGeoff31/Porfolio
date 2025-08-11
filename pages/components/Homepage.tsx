@@ -178,16 +178,19 @@ const Homepage = () => {
           </p>
         </motion.div>
 
-        <div className="flex justify-center mt-10">
-          <GitHubCalendar
-            username="lgeoff31"
-            blockSize={14}
-            blockMargin={4}
-            fontSize={16}
-            colorScheme="dark"
-          />
+        <div className="flex justify-center mt-10 w-full">
+          <div className="w-full overflow-x-auto touch-pan-x -mx-4 px-4 scrollbar-thin scrollbar-thumb-gray-600/50 scrollbar-track-transparent">
+            <div className="inline-block">
+              <GitHubCalendar
+                username="lgeoff31"
+                blockSize={14}
+                blockMargin={4}
+                fontSize={16}
+                colorScheme="dark"
+              />
+            </div>
+          </div>
         </div>
-
         {/* <motion.div
           variants={itemVariants}
           className="flex flex-wrap justify-center gap-4 md:gap-6"
