@@ -10,9 +10,9 @@ const AboutBox = () => {
       heading: "Software Engineering",
       date: "Present",
       description:
-        "I'm currently taking Data Structures & Algorithms, Databases, Advanced OOP, and Combinatorics.",
-      color: "from-blue-500 to-cyan-500",
-      iconBg: "from-blue-500/20 to-cyan-500/20",
+        "Software Engineering student taking interesting courses such as operating systems, databases, algorithms, and software engineering principles.",
+      color: "from-yellow-400 to-amber-500",
+      iconBg: "from-yellow-500/20 to-amber-500/20",
     },
     {
       src: "/images/shopify.png",
@@ -34,31 +34,31 @@ const AboutBox = () => {
       iconBg: "from-purple-500/20 to-pink-500/20",
     },
     {
-      src: "/images/Reacter (1).png",
+      src: "/images/brain.png",
       name: "Contest Tutor",
-      heading: "Academy for Math",
+      heading: "Waterloo Contests",
       date: "2019 - 2024",
       description:
-        "Competitive math and computing for 100+ high school students.",
-      color: "from-orange-500 to-red-500",
-      iconBg: "from-orange-500/20 to-red-500/20",
+        "Competitive math and programming for 100+ high school students.",
+      color: "from-cyan-400 to-blue-500",
+      iconBg: "from-cyan-400/20 to-blue-500/20",
     },
     {
       src: "/images/marathon.png",
       name: "Competitive Runner",
       heading: "Marathoner",
-      date: "2017 - 2023",
+      date: "2017 - 2025",
       description:
         "My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
-      color: "from-indigo-500 to-purple-500",
-      iconBg: "from-indigo-500/20 to-purple-500/20",
+      color: "from-red-500 to-orange-500",
+      iconBg: "from-red-500/20 to-orange-500/20",
     },
     {
       src: "/images/magic.png",
       name: "Magic and Cardistry",
       heading: "Magician",
       date: "2019 - 2023",
-      description: "President of the magic and cardistry club.",
+      description: "Ex-president of the magic and cardistry club.",
       color: "from-pink-500 to-rose-500",
       iconBg: "from-pink-500/20 to-rose-500/20",
     },
@@ -188,7 +188,7 @@ const AboutMeSection = ({
               <img
                 src={src}
                 alt={name}
-                className="relative z-10 w-full h-full object-contain filter brightness-0 invert"
+                className="relative z-10 w-full h-full object-contain"
               />
             </div>
           </motion.div>

@@ -229,14 +229,14 @@ const PyScriptProjectCard = () => {
         </motion.h3>
 
         <motion.div
-          className="mb-4 overflow-hidden rounded-2xl max-h-40"
+          className="relative mb-4 overflow-hidden rounded-2xl"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="relative">
-            <pre className="rounded-2xl overflow-hidden text-xs">
+          <div className="relative w-full h-[160px] md:h-[200px]">
+            <pre className="rounded-2xl overflow-hidden text-xs h-full">
               <CodeBlock
                 text={`fn fibonacci (n) {
   if |n <= 2| { return 1 }
@@ -247,14 +247,16 @@ const PyScriptProjectCard = () => {
     curr = next_value
   }
   return curr
-}`}
+ }`}
                 language="javascript"
                 showLineNumbers={true}
                 theme={dracula}
                 customStyle={{
-                  fontSize: "11px",
-                  lineHeight: "1.3",
+                  fontSize: "10px",
+                  lineHeight: "1.25",
                   padding: "8px",
+                  height: "100%",
+                  overflow: "auto",
                 }}
               />
             </pre>
@@ -263,7 +265,7 @@ const PyScriptProjectCard = () => {
         </motion.div>
 
         <motion.p
-          className="text-gray-300 leading-relaxed mb-4 text-sm"
+          className="text-gray-300 leading-relaxed mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -281,10 +283,31 @@ const PyScriptProjectCard = () => {
           viewport={{ once: true }}
         >
           <motion.a
+            href="https://github.com/LGeoff31/MetaScript" // TODO: replace with hosted URL if available
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-green-500 to-emerald-500 hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 group/btn relative z-20"
+            variants={buttonVariants}
+            initial="initial"
+            whileHover="hover"
+            whileTap="tap"
+          >
+            <span>Hosted</span>
+            <motion.div
+              className="ml-2"
+              initial={{ x: 0 }}
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.2 }}
+            >
+              <ArrowForwardIcon className="w-5 h-5" />
+            </motion.div>
+          </motion.a>
+
+          <motion.a
             href="https://github.com/LGeoff31/MetaScript"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 group/btn relative z-20"
+            className="inline-flex items-center px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-gray-600 to-gray-700 hover:shadow-lg hover:shadow-gray-500/25 transition-all duration-300 group/btn relative z-20"
             variants={buttonVariants}
             initial="initial"
             whileHover="hover"

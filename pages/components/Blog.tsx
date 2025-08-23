@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const blogPosts = [
   {
     title: "Brain Teasers",
-    date: "October 22, 2024",
+    date: "July 19, 2025",
     description: "Collection of my favourite riddles and puzzles.",
     href: "brainteasers",
     color: "from-purple-500 to-pink-500",
@@ -12,11 +12,20 @@ const blogPosts = [
   },
   {
     title: "Zetamac",
-    date: "October 22, 2024",
+    date: "July 23, 2025",
     description: "Zetamac strategies and progression.",
     href: "zetamac",
     color: "from-blue-500 to-cyan-500",
     icon: "⚡",
+  },
+  {
+    title: "Quant Puzzles",
+    date: "August 23, 2025",
+    description:
+      "Quantitative brainteasers on probability, EV, and decision theory.",
+    href: "quant-puzzles",
+    color: "from-emerald-500 to-cyan-500",
+    icon: "📈",
   },
 ];
 
@@ -112,7 +121,13 @@ const Blog: React.FC = () => {
                     <h3 className="text-2xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                       {post.title}
                     </h3>
-                    <span className="text-gray-400 text-sm">{post.date}</span>
+                    <div className="flex items-center text-gray-400 text-sm">
+                      <span className="relative flex h-2 w-2 mr-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                      </span>
+                      <span>Updated {post.date}</span>
+                    </div>
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">{post.description}</p>

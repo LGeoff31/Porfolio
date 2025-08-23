@@ -174,7 +174,7 @@ const Homepage = () => {
 
         <motion.div variants={itemVariants} className="mb-8">
           <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wider uppercase">
-            Problem Solver
+            Puzzle Solver
           </p>
         </motion.div>
 
