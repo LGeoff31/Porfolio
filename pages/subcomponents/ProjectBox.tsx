@@ -350,6 +350,15 @@ const ProjectBox = () => {
 
   const projects = [
     {
+      title: "Sync AI",
+      link: "https://synqai.vercel.app/",
+      src: "/images/sync.png",
+      description: "Reducing social friction. Still in progress...",
+      hosted: "https://synqai.vercel.app/",
+      code: "https://github.com/LGeoff31/Sync-AI",
+      skills: ["react", "graphql", "Firebase"],
+    },
+    {
       title: "ReturnPal",
       link: "https://return-pal-preview.vercel.app/return",
       src: "/images/returnpal.png",
