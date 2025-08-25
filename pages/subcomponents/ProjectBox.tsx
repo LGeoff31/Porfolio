@@ -271,8 +271,8 @@ const PyScriptProjectCard = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Meta script is an interpreter with support for user defined functions,
-          I/O, loops, conditionals.
+          MetaScript is an interpreter with support for user defined functions,
+          I/O, loops, conditionals, and environment scopes.
         </motion.p>
 
         <motion.div
@@ -353,7 +353,8 @@ const ProjectBox = () => {
       title: "Sync AI",
       link: "https://synqai.vercel.app/",
       src: "/images/sync.png",
-      description: "Reducing social friction. Still in progress...",
+      description:
+        "Know when friends are free and what activity to plan. AI schedules the activity right into everyone's calender. Still in progress...",
       hosted: "https://synqai.vercel.app/",
       code: "https://github.com/LGeoff31/Sync-AI",
       skills: ["react", "graphql", "Firebase"],
@@ -363,7 +364,7 @@ const ProjectBox = () => {
       link: "https://return-pal-preview.vercel.app/return",
       src: "/images/returnpal.png",
       description:
-        "Return packages by the door. We take care of printing return labels, packaging, and driving to the post office.",
+        "Return packages by the door. We take care of printing return labels, packaging, and driving to the not-so-near post office.",
       hosted: "https://return-pal-preview.vercel.app/return",
       code: "https://github.com/LGeoff31/returnPal",
       skills: ["react", "graphql", "Firebase"],
@@ -371,9 +372,9 @@ const ProjectBox = () => {
     {
       title: "UwRez",
       link: "https://uwdorm-lgeoff31s-projects.vercel.app/",
-      src: "/images/rez.png",
+      src: "/images/uwrez.png",
       description:
-        "Helping freshmens decide where to live by sharing experiences. AI algorithm to provide the best choice for you.",
+        "Helping freshmens decide where to live. Features an AI algorithm suited to your preferences + map visualization.",
       hosted: "https://uwdorm-lgeoff31s-projects.vercel.app/",
       code: "https://github.com/LGeoff31/uwdorm",
       skills: ["sql", "Firebase", "Mapbox", "React"],
@@ -383,7 +384,7 @@ const ProjectBox = () => {
       link: "https://visugraph.vercel.app/",
       src: "/images/graph.png",
       description:
-        "Learn about different graph searching algorithms visually. Understand the tradeoffs and which traversal to use.",
+        "Learn different graph searching algorithms visually. Understand the tradeoffs and which traversal to use when.",
       hosted: "https://visugraph.vercel.app/",
       code: "https://github.com/LGeoff31/Graphs",
       skills: ["javascript", "tailwind", "html"],
@@ -393,7 +394,7 @@ const ProjectBox = () => {
       link: "https://algo-flow.vercel.app/",
       src: "/images/algoflow.png",
       description:
-        "Visualizer for the most popular sorting algorithms with real-time animations, playback speed, sound, and embedded code.",
+        "Visualize the most popular sorting algorithms with real-time animations, playback speed, sound, and embedded code all by me.",
       hosted: "https://algo-flow.vercel.app/",
       code: "https://github.com/LGeoff31/AlgoFlow",
       skills: ["javascript", "Material UI", "Next.js"],
@@ -403,7 +404,7 @@ const ProjectBox = () => {
       link: "https://datamac.vercel.app/",
       src: "/images/datamac.png",
       description:
-        "Zetamac but with score tracking + leaderboard. Compete each day to get the highest score.",
+        "Zetamac but with progress tracking + leaderboard competition. Compete each day to improve and get the highest score.",
       hosted: "https://datamac.vercel.app/",
       code: "https://github.com/LGeoff31/DataMac",
       skills: ["javascript", "Material UI", "Next.js"],
@@ -423,7 +424,7 @@ const ProjectBox = () => {
       link: "https://github.com/LGeoff31/rock-paper-scissors-automater",
       src: "/images/rps.jpeg",
       description:
-        "Win unlimited gas station prizes by running this program daily with a list of phone numbers.",
+        "Win unlimited gas station prizes by running this daily script with a list of phone numbers. Eligible for Circle K.",
       hosted: "https://github.com/LGeoff31/rock-paper-scissors-automater",
       code: "https://github.com/LGeoff31/rock-paper-scissors-automater",
       skills: ["Seleinium", "python", "excel"],

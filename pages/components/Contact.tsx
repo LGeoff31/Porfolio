@@ -116,8 +116,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            I&apos;m always excited to discuss new opportunities and innovative
-            solutions.
+            Love to chat about new opportunities or fresh perspectives.
           </motion.p>
         </motion.div>
 
