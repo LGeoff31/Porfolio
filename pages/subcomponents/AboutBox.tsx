@@ -15,6 +15,15 @@ const AboutBox = () => {
       iconBg: "from-yellow-500/20 to-amber-500/20",
     },
     {
+      src: "/images/biztrip.png",
+      name: "BizTrip AI",
+      heading: "Software Engineer",
+      date: "2025 - 2025",
+      description: "Incoming SWE Fall 2025.",
+      color: "from-sky-400 to-blue-500",
+      iconBg: "from-sky-400/20 to-blue-500/20",
+    },
+    {
       src: "/images/shopify.png",
       name: "Shopify",
       heading: "Software Engineer",
@@ -137,7 +146,6 @@ const AboutMeSection = ({
   heading,
   src,
   date,
-
   color,
   iconBg,
 }: {
@@ -146,7 +154,6 @@ const AboutMeSection = ({
   heading: string;
   src: string;
   date: string;
-
   color: string;
   iconBg: string;
 }) => {
@@ -233,33 +240,7 @@ const AboutMeSection = ({
               {description}
             </motion.p>
 
-            {/* {url && (
-              <motion.div
-                variants={buttonVariants}
-                initial="initial"
-                whileHover="hover"
-                whileTap="tap"
-                className="pt-2"
-              >
-                <motion.a
-                  href={url}
-                  className={`inline-flex items-center px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r ${color} hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 group/btn`}
-                  whileHover={{
-                    boxShadow: "0 10px 30px rgba(139, 92, 246, 0.3)",
-                  }}
-                >
-                  <span>My Experience</span>
-                  <motion.div
-                    className="ml-2"
-                    initial={{ x: 0 }}
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <ArrowForwardIcon className="w-5 h-5" />
-                  </motion.div>
-                </motion.a>
-              </motion.div>
-            )} */}
+            {/* Link button intentionally removed */}
           </div>
         </div>
 
