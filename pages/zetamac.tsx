@@ -1,215 +1,391 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import BackButton from "./subcomponents/BackButton";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
+import CalculateIcon from "@mui/icons-material/Calculate";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+
+interface BlogPost {
+  id: number;
+  title: string;
+  content: string;
+  category: string;
+  readTime: number;
+  date: string;
+  tags: string[];
+  difficulty: "Beginner" | "Intermediate" | "Advanced";
+  examples?: string[];
+}
+
+const blogPosts: BlogPost[] = [
+  {
+    id: 1,
+    title: "Introduction to Zetamac: Mental Math Mastery",
+    content: `Zetamac is a popular online website that serves as a benchmark for mental math skills. It consists of solving as many addition, subtraction, multiplication, and division problems as possible within 120 seconds.
+
+My goal score is to reach 100, currently I'm at 60. I'll be documenting my progression and newly discovered strategies as I go.
+
+I wanted to keep track of my progress, so I created a website that stores and graphs my performance. Check it out: https://datamac.vercel.app/
+
+The key to success in Zetamac is building intuition through practice. First things first, ensure you can answer anything within the 12x12 times table in <1 second. Getting quicker comes from a lot of intuition that you build up through practice.`,
+    category: "Introduction",
+    readTime: 4,
+    date: "2024-01-20",
+    tags: ["mental math", "zetamac", "introduction", "practice"],
+    difficulty: "Beginner"
+  },
+  {
+    id: 2,
+    title: "Addition Strategies: Left-to-Right Mental Math",
+    content: `Addition is typically the easiest type of problem in Zetamac. The key strategy is to sum digits from left to right, which is always faster than right to left. This approach allows you to start typing the answer immediately, and you only need to worry about off-by-one fluctuations due to carry over.
+
+**The Strategy:**
+- Start with the leftmost digits
+- Work your way right
+- Adjust for carry overs as needed
+
+**Example Walkthrough:**
+For 38 + 55:
+1. I know it should start with an 8 (3+5)
+2. Then I see the ones digits sum to 13 (8+5)
+3. So I quickly change my answer to 93
+
+This method is faster because you can begin typing while still processing the remaining digits.`,
+    category: "Addition",
+    readTime: 3,
+    date: "2024-01-18",
+    tags: ["addition", "left-to-right", "carry over", "strategy"],
+    difficulty: "Beginner",
+    examples: ["38 + 55 = 93", "67 + 89 = 156", "124 + 237 = 361"]
+  },
+  {
+    id: 3,
+    title: "Subtraction Techniques: Finding the Difference",
+    content: `Subtraction is a bit trickier than addition but follows similar principles. For 2-digit subtract 2-digit problems, I use the same left-to-right strategy as addition, working right to left and being clever about carry overs.
+
+**Strategy 1: Direct Subtraction**
+Work from right to left, handling carry overs as they come.
+
+**Strategy 2: Complement Method**
+Instead of subtracting, think about how much you need to add to the smaller number to get the larger value.
+
+**Example Walkthrough:**
+For 83 - 69:
+- I can see I just need to add 14 to turn 69 into 83
+- So 14 is my answer
+
+**For 3-digit subtract 2-digit:**
+1. Determine what you need to add to the 2-digit number to make it 100
+2. Then determine from 100 how much you need to add to get the 3-digit number
+
+**Example:**
+For 132 - 79:
+1. I know I need 21 to make 79 become 100
+2. Then I add 21 + 32 = 53 to get my answer`,
+    category: "Subtraction",
+    readTime: 4,
+    date: "2024-01-16",
+    tags: ["subtraction", "complement method", "carry over", "3-digit"],
+    difficulty: "Intermediate",
+    examples: ["83 - 69 = 14", "132 - 79 = 53", "245 - 178 = 67"]
+  },
+  {
+    id: 4,
+    title: "Multiplication Mastery: Single Digit Strategies",
+    content: `Most single-digit multiplication problems can be solved by rounding the second number to a nice value, then subtracting or adding as needed.
+
+**Strategy 1: Rounding Method**
+Round one number to make the calculation easier, then adjust.
+
+**Example:**
+For 9 × 74:
+- Round 9 to 10: 10 × 74 = 740
+- Subtract 74: 740 - 74 = 666
+
+**Strategy 2: Breaking Down**
+Break the problem into easier parts.
+
+**Example:**
+For 9 × 74:
+- 9 × 70 = 630
+- 9 × 4 = 36
+- 630 + 36 = 666
+
+This is sometimes faster since addition is less brain-intensive than subtraction.
+
+**The 11 Trick:**
+When multiplying by 11, add the digits of the second number and insert that value in the middle.
+
+**Example:**
+For 11 × 63:
+- 6 + 3 = 9
+- Insert 9 in the middle: 693
+
+**With Carry Over:**
+For 11 × 84:
+- 8 + 4 = 12
+- Insert 2 in the middle, carry 1: 924
+
+**Why This Works:**
+11 × 63 = 10 × 63 + 63 = 630 + 63 = 693
+The middle digit is the sum of the original digits because we're adding the number to its 10x version.`,
+    category: "Multiplication",
+    readTime: 5,
+    date: "2024-01-14",
+    tags: ["multiplication", "11 trick", "rounding", "breaking down"],
+    difficulty: "Intermediate",
+    examples: ["9 × 74 = 666", "11 × 63 = 693", "11 × 84 = 924"]
+  },
+  {
+    id: 5,
+    title: "Two-Digit Multiplication: Advanced Techniques",
+    content: `When both numbers are two digits, the strategies become more complex but still manageable with practice.
+
+**Strategy 1: Breaking Down by 10s**
+Break the first number into 10s and units, then multiply each part.
+
+**Example:**
+For 12 × 45:
+- 10 × 45 = 450
+- 2 × 45 = 90
+- 450 + 90 = 540
+
+**Strategy 2: The 12 Trick**
+For 12 × any number:
+- 12 × n = 10 × n + 2 × n
+
+**Memorization Strategy:**
+For smaller numbers, memorize sequences of multiples:
+- 10×, 20×, 30×, etc.
+- Also memorize the multiples of common numbers
+
+**Example:**
+For 540 ÷ 12:
+- I know instantly that 480 = 40 × 12
+- I need an additional 60, which is 12 × 5
+- So the answer is 45
+
+**Important Note:**
+These strategies work because Zetamac ensures results are always integers, so these rules aren't generalizable to all values.`,
+    category: "Multiplication",
+    readTime: 4,
+    date: "2024-01-12",
+    tags: ["two-digit multiplication", "breaking down", "memorization", "12 trick"],
+    difficulty: "Advanced",
+    examples: ["12 × 45 = 540", "15 × 67 = 1005", "23 × 56 = 1288"]
+  },
+  {
+    id: 6,
+    title: "Division Shortcuts: The 11 and 9 Tricks",
+    content: `Division in Zetamac can be made much faster with specific tricks for common divisors.
+
+**The 11 Division Trick:**
+When dividing by 11, the answer is either the two outer digits, or (due to carry over) the two outer digits with the leftmost digit reduced by 1.
+
+**Example 1 (No Carry Over):**
+374 ÷ 11 = 34
+- Take the first two digits: 37
+- Take the last digit: 4
+- Result: 34
+
+**Example 2 (With Carry Over):**
+974 ÷ 11 = 84
+- When the hundreds digit ≥ tens digit, subtract 1 from the hundreds digit
+- Since 9 > 7, our answer is 84 (not 94)
+
+**The 9 Division Trick:**
+For 3-digit numbers divided by 9:
+1. First digit = floor(first two digits ÷ 9)
+2. Second digit = 10 - last digit
+
+**Example:**
+342 ÷ 9 = 38
+- First digit: floor(34 ÷ 9) = 3
+- Second digit: 10 - 2 = 8
+- Result: 38
+
+**Why This Works:**
+The first digit represents how many times 9 goes into the two most significant digits, and the second digit is 10 minus the least significant digit.
+
+**General Strategy:**
+Memorize sequences of multiples for common divisors to quickly identify patterns and solutions.`,
+    category: "Division",
+    readTime: 5,
+    date: "2024-01-10",
+    tags: ["division", "11 trick", "9 trick", "carry over", "shortcuts"],
+    difficulty: "Advanced",
+    examples: ["374 ÷ 11 = 34", "974 ÷ 11 = 84", "342 ÷ 9 = 38"]
+  }
+];
 
 const Zetamac = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
-      },
-    },
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case "Beginner":
+        return "text-green-400 bg-green-400/20";
+      case "Intermediate":
+        return "text-yellow-400 bg-yellow-400/20";
+      case "Advanced":
+        return "text-red-400 bg-red-400/20";
+      default:
+        return "text-gray-400 bg-gray-400/20";
+    }
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
   };
+
+  const formatContent = (content: string) => {
+    return content.split('\n').map((line, index) => {
+      if (line.startsWith('**') && line.endsWith('**')) {
+        return (
+          <h4 key={index} className="text-lg font-semibold text-yellow-300 mt-4 mb-2">
+            {line.slice(2, -2)}
+          </h4>
+        );
+      }
+      if (line.startsWith('- ')) {
+        return (
+          <li key={index} className="text-gray-200 ml-4 mb-1">
+            {line.slice(2)}
+          </li>
+        );
+      }
+      if (line.startsWith('For ') && line.includes(':')) {
+        return (
+          <p key={index} className="text-blue-300 font-medium mt-3 mb-2">
+            {line}
+          </p>
+        );
+      }
+      if (line.trim() === '') {
+        return <br key={index} />;
+      }
+      return (
+        <p key={index} className="text-gray-200 mb-2 leading-relaxed">
+          {line}
+        </p>
+      );
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white pb-20 relative overflow-x-hidden">
       <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl z-0 animate-float pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-60 h-60 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl z-0 animate-float pointer-events-none" />
       <Navbar useScrollLinks={false} />
       <div className="max-w-4xl mx-auto pt-24 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="relative mb-12 flex justify-center items-center">
+        {/* Header */}
+        <div className="relative mb-16 flex justify-center items-center">
           <div className="absolute left-4 top-1/2 -translate-y-1/2">
             <BackButton />
           </div>
-          <motion.h1
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl md:text-6xl font-bold text-center bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg"
-          >
-            Zetamac
-          </motion.h1>
+          <div className="text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg mb-4"
+            >
+              Zetamac Strategies
+            </motion.h1>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              A comprehensive guide to by journey mastering zetamac.
+            </p>
+          </div>
         </div>
 
-        <motion.div
-          className="space-y-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div
-            variants={cardVariants}
-            className="w-full bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-yellow-400/20 rounded-2xl p-10 md:p-12 shadow-lg"
-          >
-            <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-              Summary
-            </h2>
-            <p className="text-lg text-gray-200 mb-2">
-              Zetamac is a popular online website as a benchmark for mental
-              math.
-            </p>
-            <p className="text-lg text-gray-200 mb-2">
-              It consists of solving as many addition, subtraction,
-              multiplication, and division problems within 120s.
-            </p>
-            <p className="text-lg text-gray-200 mb-2">
-              My goal score is to reach a score of 80, granted I&apos;m quite
-              the ways off so I&apos;ll be documenting my progression and new
-              found strategies as I go.
-            </p>
-            <p className="text-lg text-gray-200 mb-2">
-              I wanted to keep track of my progress so I created this website
-              which stores and graphs my progress. Check it out:
-              https://datamac.vercel.app/.
-            </p>
-          </motion.div>
-          <motion.div
-            variants={cardVariants}
-            className="w-full bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-yellow-400/20 rounded-2xl p-10 md:p-12 shadow-lg"
-          >
-            <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-              Strategies
-            </h2>
-            <p className="text-lg text-gray-200 mb-2">
-              First things first, ensure you can answer anything within the
-              12x12 times table in 1s. Also remember, getting quicker comes from
-              a lot of intuition that you build up through practice.
-            </p>
-            <h3 className="text-2xl font-semibold mt-6 mb-2 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-              Addition
-            </h3>
-            <p className="text-gray-200 mb-2">
-              This is the easiest type. Typically summing digits left to right
-              is always faster than right to left. It allows you to start typing
-              the answer immediately, and you only need to worry about off by 1
-              fluctuations due to carry over.
-            </p>
-            <p className="text-gray-200 mb-2">
-              For example, 38 + 55, I know it should start with an 8, then I see
-              the ones digits sum to 13, so I quickly change my answer to 93.
-            </p>
-            <h3 className="text-2xl font-semibold mt-6 mb-2 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-              Subtraction
-            </h3>
-            <p className="text-gray-200 mb-2">
-              This is a bit trickier than addition but quite similar. If it is a
-              2 digit subtract 2 digit, I will use the strategy as from
-              addition, working right to left and being clever about carry
-              overs. Another strategy is seeing how much you need to add to the
-              smaller number to get to the larger value.
-            </p>
-            <p className="text-gray-200 mb-2">
-              For example, 83 - 69. I can see I just need to add 14 to turn 69
-              into 83, so 14 is my answer.
-            </p>
-            <p className="text-gray-200 mb-2">
-              If it&apos;s a 3 digit subtract 2 digit, I will determine what I
-              need to add to that 2 digit to make it 100, then determine from
-              100 how much I need to add to get that 3 digit number.
-            </p>
-            <p className="text-gray-200 mb-2">
-              For example, 132 - 79. I know I need 21 to make 79 become 100.
-              Then I add 21 + 32 = 53 to get my answer.
-            </p>
-            <h3 className="text-2xl font-semibold mt-6 mb-2 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-              Multiplication
-            </h3>
-            <p className="text-gray-200 mb-2">
-              Most often a single digit multiplied by the second number is
-              solvable by rounding the second number to a nice value, then
-              subtracting / adding as needed.
-            </p>
-            <p className="text-gray-200 mb-2">
-              For example, 9x74. Here it is actually easier to round the single
-              digit to 10 then subtract. So 740 - 74 = 666. Or breaking the
-              problem to 9x70 + 9x4 = 666 is another strategy, sometimes faster
-              since addition is less brain intensive that subtraction.
-            </p>
-            <p className="text-gray-200 mb-2">
-              Now the challenging aspect comes when both digits are two digits.
-            </p>
-            <p className="text-gray-200 mb-2">
-              If the first number is 11, add the digits in the second number,
-              and insert that value in the middle of those two numbers.
-            </p>
-            <p className="text-gray-200 mb-2">
-              For example, 11x63. 6+3=9, so the answer is 693. Now consider,
-              11x84. 8+4=12, so now we must do a carry over and insert the 2 in
-              the middle. So it becomes 924.
-            </p>
-            <p className="italic text-gray-300 mb-2">Why does this work?</p>
-            <p className="text-gray-200 mb-2">
-              Under the hood, to solve 11x63, it is doing 10x63 + 63. We know
-              10x63 will always result in the number ending in 0. Then adding 63
-              on will guarantee the last digit stays the same. The middle digit
-              is calculated by adding 6 + 3 which is why the middle digit is the
-              sum of digits.
-            </p>
-            <p className="text-gray-200 mb-2">
-              If the first number is 12, I typically break it down into 10 x
-              number2 + 2 x number2.
-            </p>
-            <p className="text-gray-200 mb-2">
-              For example, 12x45 = 10 x 45 + 2 x 45 = 540.
-            </p>
-            <h3 className="text-2xl font-semibold mt-6 mb-2 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-              Division
-            </h3>
-            <p className="text-gray-200 mb-2">
-              When dividing by 11 the answer is either the two outer digits or
-              because of the carry over, the two outer digits but subtract the
-              leftmost digit by 1.
-            </p>
-            <p className="text-gray-200 mb-2">
-              For example, 374 / 11 = 34. This is simple case without carry
-              over.
-            </p>
-            <p className="text-gray-200 mb-2">
-              Now consider, 974 / 11 = 84. Here whenever we see the hundreds
-              digit greater than or equal to the tens digit, subtract it by 1
-              since there was a carry over. So since 9 &gt; 7, our answer is 84
-              instead of 94.
-            </p>
-            <p className="text-gray-200 mb-2">
-              When dividing a 3 digit number by 9, there is a clever trick which
-              I will show by example.
-            </p>
-            <p className="text-gray-200 mb-2">
-              Consider 342/9. The answer is comprised of two digits, the first
-              is floor(34/9), the second is 10-2. So the answer is 38. In other
-              words, the first digit is how many times 9 goes into the two most
-              significant digits, and the second digit is 10 - least significant
-              digit.
-            </p>
-            <p className="text-gray-200 mb-2">
-              I want to preface again these strategies work because Zetamac
-              ensures results are always integers, so these rules aren&apos;t
-              generalizable to any values.
-            </p>
-            <p className="text-gray-200 mb-2">
-              Another important strategy, for the smaller number, memorize the
-              sequence of 10xnumber, 20xnumber, etc and also the multiples of a
-              number.
-            </p>
-            <p className="text-gray-200 mb-2">
-              For example, 540/12. I know instantly that 480 = 40 x 12. Now I
-              need an additional 60 which is 12x5. So the answer is 45.
-            </p>
-          </motion.div>
-        </motion.div>
+        {/* Blog posts */}
+        <div className="space-y-8">
+          {blogPosts.map((post, index) => (
+            <motion.article
+              key={post.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-gray-600/30 rounded-3xl p-8 md:p-10 shadow-xl transition-all duration-300 hover:border-yellow-400/40 hover:shadow-2xl group"
+            >
+              {/* Blog post header */}
+              <header className="mb-6">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(post.difficulty)}`}>
+                    {post.difficulty}
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-400/20 text-blue-400">
+                    {post.category}
+                  </span>
+                  <div className="flex items-center gap-1 text-gray-400 text-sm">
+                    <ScheduleIcon className="w-4 h-4" />
+                    <span>{post.readTime} min read</span>
+                  </div>
+                </div>
+                
+                <h2 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-yellow-400 group-hover:to-pink-400 transition-all duration-300">
+                  {post.title}
+                </h2>
+                
+                <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                  <span>{formatDate(post.date)}</span>
+                  <div className="flex items-center gap-1">
+                    <LocalFireDepartmentIcon className="w-4 h-4" />
+                    <span>#{post.id}</span>
+                  </div>
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {post.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-2 py-1 rounded-md text-xs bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 transition-colors"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </header>
+
+              {/* Full content */}
+              <div className="mb-6">
+                <div className="text-gray-200 leading-relaxed space-y-4">
+                  {formatContent(post.content)}
+                  {post.examples && (
+                    <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg">
+                      <h4 className="text-blue-300 font-semibold mb-3 flex items-center gap-2">
+                        <CalculateIcon className="w-5 h-5" />
+                        Examples
+                      </h4>
+                      <div className="space-y-2">
+                        {post.examples.map((example, exampleIndex) => (
+                          <div key={exampleIndex} className="text-blue-200 font-mono text-sm">
+                            {example}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Post footer */}
+              {post.examples && (
+                <div className="flex items-center gap-1 text-gray-400 text-sm pt-4 border-t border-gray-600/30">
+                  <CalculateIcon className="w-4 h-4" />
+                  <span>{post.examples.length} examples included</span>
+                </div>
+              )}
+            </motion.article>
+          ))}
+        </div>
       </div>
     </div>
   );

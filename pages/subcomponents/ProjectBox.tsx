@@ -354,7 +354,7 @@ const ProjectBox = () => {
       link: "https://synqai.vercel.app/",
       src: "/images/sync.png",
       description:
-        "Know when friends are free and what activity to plan. AI schedules the activity right into everyone's calender. Still in progress...",
+        "Know when friends are free and what activity to plan. AI schedules the activity right into everyone's calender.",
       hosted: "https://synqai.vercel.app/",
       code: "https://github.com/LGeoff31/Sync-AI",
       skills: ["react", "graphql", "Firebase"],

@@ -60,9 +60,9 @@ export default function Home() {
         <Languages />
       </section> */}
 
-      <section id="github" className="snap-start">
+      {/* <section id="github" className="snap-start">
         <Github />
-      </section>
+      </section> */}
 
       <section id="contact" className="snap-start">
         <Contact />
