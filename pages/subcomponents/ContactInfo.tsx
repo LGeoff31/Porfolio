@@ -94,7 +94,7 @@ const ContactInfo = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-4 p-4 rounded-2xl bg-gradient-to-r from-gray-700/30 to-gray-600/30 backdrop-blur-sm border border-gray-600/20 hover:border-gray-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+              className="flex items-center space-x-4 p-4 rounded-2xl bg-gradient-to-r from-gray-700/30 to-gray-600/30 backdrop-blur-sm border border-gray-600/20 transition-all duration-300"
               whileHover={{ y: -2 }}
             >
               <motion.div

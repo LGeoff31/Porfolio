@@ -23,16 +23,12 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "Introduction to Zetamac: Mental Math Mastery",
+    title: "Intro to Zetamac",
     content: `Zetamac is a popular online website that serves as a benchmark for mental math skills. It consists of solving as many addition, subtraction, multiplication, and division problems as possible within 120 seconds.
-
-My goal score is to reach 100, currently I'm at 60. I'll be documenting my progression and newly discovered strategies as I go.
-
-I wanted to keep track of my progress, so I created a website that stores and graphs my performance. Check it out: https://datamac.vercel.app/
-
-The key to success in Zetamac is building intuition through practice. First things first, ensure you can answer anything within the 12x12 times table in <1 second. Getting quicker comes from a lot of intuition that you build up through practice.`,
+My goal score is to hit 100, my current best, 63. I feel like out of all skills taught in school, mental math has been the most useful in real life, hence my motivation.
+I wanted to track my progress, so I created a website that stores and graphs my performance. Check it out, https://datamac.vercel.app/.`,
     category: "Introduction",
-    readTime: 4,
+    readTime: 2,
     date: "2024-01-20",
     tags: ["mental math", "zetamac", "introduction", "practice"],
     difficulty: "Beginner"
@@ -280,8 +276,7 @@ const Zetamac = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white pb-20 relative overflow-x-hidden">
-      <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl z-0 animate-float pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-60 h-60 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl z-0 animate-float pointer-events-none" />
+      {/* Background blobs removed */}
       <Navbar useScrollLinks={false} />
       <div className="max-w-4xl mx-auto pt-24 px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -294,13 +289,10 @@ const Zetamac = () => {
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg mb-4"
+              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg mb-4"
             >
               Zetamac Strategies
             </motion.h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              A comprehensive guide to by journey mastering zetamac.
-            </p>
           </div>
         </div>
 
@@ -312,7 +304,7 @@ const Zetamac = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-gray-600/30 rounded-3xl p-8 md:p-10 shadow-xl transition-all duration-300 hover:border-yellow-400/40 hover:shadow-2xl group"
+              className="relative bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-gray-600/30 rounded-3xl p-8 md:p-10 shadow-xl transition-all duration-300 hover:border-green-400/40 hover:shadow-2xl group"
             >
               {/* Blog post header */}
               <header className="mb-6">
@@ -332,26 +324,6 @@ const Zetamac = () => {
                 <h2 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-yellow-400 group-hover:to-pink-400 transition-all duration-300">
                   {post.title}
                 </h2>
-                
-                <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                  <span>{formatDate(post.date)}</span>
-                  <div className="flex items-center gap-1">
-                    <LocalFireDepartmentIcon className="w-4 h-4" />
-                    <span>#{post.id}</span>
-                  </div>
-                </div>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {post.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 rounded-md text-xs bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 transition-colors"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
               </header>
 
               {/* Full content */}

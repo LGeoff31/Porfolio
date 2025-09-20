@@ -93,10 +93,10 @@ const Github = () => {
               </h3>
             </div>
             <div className="flex justify-center w-full mb-6">
-              <GitHubCalendar username="lgeoff31" colorScheme="dark" />
+              <GitHubCalendar username="LGeoff31" colorScheme="dark" hideTotalCount={true} />
             </div>
             <a
-              href="https://github.com/lgeoff31"
+              href="https://github.com/LGeoff31"
               className="inline-flex items-center px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-green-500 to-emerald-500 hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 group/btn mt-2"
               target="_blank"
               rel="noopener noreferrer"

@@ -10,7 +10,7 @@ const AboutBox = () => {
       heading: "Software Engineering",
       date: "Present",
       description:
-        "Software Engineering student taking interesting courses such as operating systems, databases, algorithms, and software engineering principles.",
+        "Software Engineering student taking interesting courses such as OS, databases, data structures, algorithms, and machine learning.",
       color: "from-yellow-400 to-amber-500",
       iconBg: "from-yellow-500/20 to-amber-500/20",
     },
@@ -176,29 +176,20 @@ const AboutMeSection = ({
         className={`absolute inset-0 bg-gradient-to-r ${iconBg} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
       />
 
-      <div className="relative bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-purple-500/50 rounded-2xl p-6 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
+      <div className="relative bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-green-500/50 rounded-2xl p-6 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-green-500/20">
         <div className="flex flex-col md:flex-row gap-6 items-start">
-          <motion.div
-            className="relative flex-shrink-0"
-            whileHover={{ rotate: 5, scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
+          <div className="relative flex-shrink-0">
             <div
               className={`relative w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-r ${iconBg} p-4 flex items-center justify-center backdrop-blur-sm border border-white/10`}
             >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-xl"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-xl" />
               <img
                 src={src}
                 alt={name}
                 className="relative z-10 w-full h-full object-contain"
               />
             </div>
-          </motion.div>
+          </div>
 
           <div className="flex-1 space-y-3">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
@@ -245,9 +236,9 @@ const AboutMeSection = ({
         </div>
 
         <motion.div
-          className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{
-            background: `linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.1), transparent)`,
+            background: `linear-gradient(45deg, transparent, rgba(34, 197, 94, 0.1), transparent)`,
           }}
         />
       </div>

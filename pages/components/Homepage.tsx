@@ -82,7 +82,7 @@ const Homepage = () => {
 
   return (
     <div className="relative h-screen overflow-hidden overflow-x-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
@@ -129,7 +129,7 @@ const Homepage = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
       <motion.div
         className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4"
@@ -145,7 +145,7 @@ const Homepage = () => {
         >
           <div className="relative w-32 h-32 mx-auto mb-6">
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-full"
+              className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 rounded-full"
               animate={{
                 rotate: 360,
               }}
@@ -156,7 +156,7 @@ const Homepage = () => {
               }}
             />
             <div className="absolute inset-2 bg-gray-900 rounded-full flex items-center justify-center">
-              <span className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                 GL
               </span>
             </div>
@@ -168,7 +168,7 @@ const Homepage = () => {
             <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
               {text}
             </span>
-            <Cursor cursorColor="#F7AB0A" />
+            <Cursor cursorColor="#22c55e" />
           </h1>
         </motion.div>
 
@@ -182,11 +182,12 @@ const Homepage = () => {
           <div className="w-full overflow-x-auto touch-pan-x -mx-4 px-4 scrollbar-thin scrollbar-thumb-gray-600/50 scrollbar-track-transparent">
             <div className="inline-block">
               <GitHubCalendar
-                username="lgeoff31"
+                username="LGeoff31"
                 blockSize={14}
                 blockMargin={4}
                 fontSize={16}
                 colorScheme="dark"
+                hideTotalCount={true}
               />
             </div>
           </div>
@@ -269,7 +270,7 @@ const Homepage = () => {
 
       {/* Mouse Follower Effect */}
       <motion.div
-        className="fixed w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed w-4 h-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
           x: mousePosition.x - 8,
           y: mousePosition.y - 8,

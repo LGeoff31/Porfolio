@@ -26,8 +26,9 @@ const Github = () => {
       }}
     >
       <GitHubCalendar
-        username="lgeoff31"
+        username="LGeoff31"
         style={{ justifyContent: "center" }}
+        hideTotalCount={true}
       />
     </Card>
   );

@@ -24,12 +24,12 @@ interface QuantPuzzle {
 const quantPuzzles: QuantPuzzle[] = [
   {
     id: 1,
-    title: "Geometric Distribution: Expected Flips",
+    title: "Expected Flips",
     question:
       "A biased coin with P(H) = p is flipped until the first head appears. What is the expected number of flips?",
     hint: "Geometric distribution with success probability p.",
     answer: "E[N] = 1/p.",
-    difficulty: "Medium",
+    difficulty: "Easy",
     category: "Probability",
     readTime: 3,
     date: "2024-01-20",
@@ -39,7 +39,7 @@ const quantPuzzles: QuantPuzzle[] = [
     id: 2,
     title: "Fair Coin Simulation",
     question: "How can you simulate a fair coin using an unfair coin?",
-    hint: "Consider the martingale nature of doubling. Compare the expected value of continuing vs stopping after k heads.",
+    hint: "Consider flipping the unfair coin twice.",
     answer:
       "Flip the unfair coin twice. If it lands heads-tails, call it heads. If it lands tails-heads, call it tails. If it lands on tails-tails or heads-heads, repeat the process. This simulates a fair coin because P(HT) = P(TH)",
     difficulty: "Hard",
@@ -53,7 +53,7 @@ const quantPuzzles: QuantPuzzle[] = [
     title: "Optimal Betting Strategy",
     question:
       "You have $100 and a fair coin. You can play up to 100 rounds of tossing the coin. During each round, you can bet an amount up to your current holding, and if you win, you gain double your bet + your original bet back. Otherwise, you lose your bet. What is the optimal strategy to maximize expected value?",
-    hint: "Consider the martingale nature of doubling. Compare the expected value of continuing vs stopping after k heads.",
+    hint: "Be greedy.",
     answer:
       "Bet all your balance each round. The expected value is maximized this way since either you triple your balance or you leave empty handed. The EV is (1/2^100 * 100 * 3^100)) + (1-1/2^100) * 0. AKA either win big or lose it all.",
     difficulty: "Hard",
@@ -133,12 +133,9 @@ const QuantPuzzles = () => {
             <BackButton />
           </div>
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500 bg-clip-text text-transparent drop-shadow-lg mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg mb-4">
               Quant Puzzles
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              A collection of challenging quantitative puzzles and probability problems to sharpen your analytical skills.
-            </p>
           </div>
         </div>
 
@@ -150,7 +147,7 @@ const QuantPuzzles = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-gray-600/30 rounded-3xl p-8 md:p-10 shadow-xl transition-all duration-300 hover:border-emerald-400/40 hover:shadow-2xl group"
+              className="relative bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-gray-600/30 rounded-3xl p-8 md:p-10 shadow-xl transition-all duration-300 hover:border-green-400/40 hover:shadow-2xl group"
             >
               {/* Blog post header */}
               <header className="mb-6">
@@ -158,7 +155,7 @@ const QuantPuzzles = () => {
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(puzzle.difficulty)}`}>
                     {puzzle.difficulty}
                   </span>
-                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-emerald-400/20 text-emerald-400">
+                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-green-400/20 text-green-400">
                     {puzzle.category}
                   </span>
                   <div className="flex items-center gap-1 text-gray-400 text-sm">
@@ -167,34 +164,15 @@ const QuantPuzzles = () => {
                   </div>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-emerald-400 group-hover:to-cyan-400 transition-all duration-300">
+                <h2 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-green-400 group-hover:to-emerald-400 transition-all duration-300">
                   {puzzle.title}
                 </h2>
-                
-                <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                  <span>{formatDate(puzzle.date)}</span>
-                  <div className="flex items-center gap-1">
-                    <LocalFireDepartmentIcon className="w-4 h-4" />
-                    <span>#{puzzle.id}</span>
-                  </div>
-                </div>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {puzzle.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 rounded-md text-xs bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 transition-colors"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
               </header>
 
               {/* Question */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-emerald-400 mb-3 flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-green-400 mb-3 flex items-center gap-2">
                   <PsychologyIcon className="w-5 h-5" />
                   Problem Statement
                 </h3>
@@ -207,7 +185,7 @@ const QuantPuzzles = () => {
               <div className="mb-6">
                 <button
                   onClick={() => toggleHint(index)}
-                  className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-3"
+                  className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors mb-3"
                 >
                   <LightbulbIcon className="w-5 h-5" />
                   <span className="font-medium">
@@ -219,9 +197,9 @@ const QuantPuzzles = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-4 mb-4"
+                    className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mb-4"
                   >
-                    <p className="text-cyan-200 italic">{puzzle.hint}</p>
+                    <p className="text-green-200 italic">{puzzle.hint}</p>
                   </motion.div>
                 )}
               </div>
@@ -230,7 +208,7 @@ const QuantPuzzles = () => {
               <div className="mb-6">
                 <button
                   onClick={() => toggleAnswer(index)}
-                  className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors mb-3"
+                  className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors mb-3"
                 >
                   <LightbulbIcon className="w-5 h-5" />
                   <span className="font-medium">
@@ -242,30 +220,14 @@ const QuantPuzzles = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4"
+                    className="bg-green-500/10 border border-green-500/30 rounded-lg p-4"
                   >
-                    <h4 className="font-semibold text-emerald-300 mb-2">Solution:</h4>
-                    <p className="text-emerald-200 leading-relaxed whitespace-pre-line">
+                    <h4 className="font-semibold text-green-300 mb-2">Solution:</h4>
+                    <p className="text-green-200 leading-relaxed whitespace-pre-line">
                       {puzzle.answer}
                     </p>
                   </motion.div>
                 )}
-              </div>
-
-              {/* Action buttons */}
-              <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-600/30">
-                <button
-                  onClick={() => toggleAnswer(index)}
-                  className="px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500 text-white shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                >
-                  {showAnswers[index] ? "Hide Solution" : "Reveal Solution"}
-                </button>
-                <button
-                  onClick={() => toggleHint(index)}
-                  className="px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  {showHints[index] ? "Hide Hint" : "Get Hint"}
-                </button>
               </div>
             </motion.article>
           ))}

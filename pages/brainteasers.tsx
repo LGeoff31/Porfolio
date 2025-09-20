@@ -232,12 +232,9 @@ const BrainTeasers = () => {
             <BackButton />
           </div>
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg mb-4">
               Brain Teasers
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              A collection of challenging logic puzzles and mathematical brain teasers to sharpen your problem-solving skills.
-            </p>
           </div>
         </div>
 
@@ -249,7 +246,7 @@ const BrainTeasers = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-gray-600/30 rounded-3xl p-8 md:p-10 shadow-xl transition-all duration-300 hover:border-yellow-400/40 hover:shadow-2xl group"
+              className="relative bg-gradient-to-br from-gray-800/60 to-gray-700/60 backdrop-blur-md border border-gray-600/30 rounded-3xl p-8 md:p-10 shadow-xl transition-all duration-300 hover:border-green-400/40 hover:shadow-2xl group"
             >
               {/* Blog post header */}
               <header className="mb-6">
@@ -257,7 +254,7 @@ const BrainTeasers = () => {
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(teaser.difficulty)}`}>
                     {teaser.difficulty}
                   </span>
-                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-400/20 text-blue-400">
+                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-green-400/20 text-green-400">
                     {teaser.category}
                   </span>
                   <div className="flex items-center gap-1 text-gray-400 text-sm">
@@ -266,34 +263,14 @@ const BrainTeasers = () => {
                   </div>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-yellow-400 group-hover:to-pink-400 transition-all duration-300">
+                <h2 className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-green-400 group-hover:to-emerald-400 transition-all duration-300">
                   {teaser.title}
                 </h2>
-                
-                <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                  <span>{formatDate(teaser.date)}</span>
-                  <div className="flex items-center gap-1">
-                    <LocalFireDepartmentIcon className="w-4 h-4" />
-                    <span>#{teaser.id}</span>
-                  </div>
-                </div>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {teaser.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 rounded-md text-xs bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 transition-colors"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
               </header>
 
               {/* Question */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-yellow-400 mb-3 flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-green-400 mb-3 flex items-center gap-2">
                   <PsychologyIcon className="w-5 h-5" />
                   Problem Statement
                 </h3>
@@ -306,7 +283,7 @@ const BrainTeasers = () => {
               <div className="mb-6">
                 <button
                   onClick={() => toggleHint(index)}
-                  className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-3"
+                  className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors mb-3"
                 >
                   <LightbulbIcon className="w-5 h-5" />
                   <span className="font-medium">
@@ -318,9 +295,9 @@ const BrainTeasers = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mb-4"
+                    className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mb-4"
                   >
-                    <p className="text-blue-200 italic">{teaser.hint}</p>
+                    <p className="text-green-200 italic">{teaser.hint}</p>
                   </motion.div>
                 )}
               </div>
@@ -329,7 +306,7 @@ const BrainTeasers = () => {
               <div className="mb-6">
                 <button
                   onClick={() => toggleAnswer(index)}
-                  className="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors mb-3"
+                  className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors mb-3"
                 >
                   <LightbulbIcon className="w-5 h-5" />
                   <span className="font-medium">
@@ -341,10 +318,10 @@ const BrainTeasers = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4"
+                    className="bg-green-500/10 border border-green-500/30 rounded-lg p-4"
                   >
-                    <h4 className="font-semibold text-yellow-300 mb-2">Solution:</h4>
-                    <p className="text-yellow-200 leading-relaxed whitespace-pre-line">
+                    <h4 className="font-semibold text-green-300 mb-2">Solution:</h4>
+                    <p className="text-green-200 leading-relaxed whitespace-pre-line">
                       {teaser.answer}
                     </p>
                   </motion.div>
@@ -352,20 +329,20 @@ const BrainTeasers = () => {
               </div>
 
               {/* Action buttons */}
-              <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-600/30">
+              {/* <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-600/30">
                 <button
                   onClick={() => toggleAnswer(index)}
-                  className="px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 text-white shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 text-white shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
                 >
                   {showAnswers[index] ? "Hide Solution" : "Reveal Solution"}
                 </button>
                 <button
                   onClick={() => toggleHint(index)}
-                  className="px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
                 >
                   {showHints[index] ? "Hide Hint" : "Get Hint"}
                 </button>
-              </div>
+              </div> */}
             </motion.article>
           ))}
         </div>

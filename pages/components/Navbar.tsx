@@ -110,9 +110,9 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 animate-pulse" />
               <div className="absolute inset-1 bg-gray-900 rounded-full flex items-center justify-center">
-                <span className="text-sm font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="text-sm font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   GL
                 </span>
               </div>
@@ -142,11 +142,11 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
                 whileTap="tap"
                 className="relative group"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <motion.div
-                  className="relative p-2 rounded-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-purple-500/50 transition-all duration-300"
+                  className="relative p-2 rounded-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-green-500/50 transition-all duration-300"
                   whileHover={{
-                    boxShadow: "0 0 20px rgba(139, 92, 246, 0.3)",
+                    boxShadow: "0 0 20px rgba(34, 197, 94, 0.3)",
                   }}
                 >
                   <SocialIcon
@@ -161,7 +161,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
               </motion.div>
             ))}
 
-            <motion.a
+            {/* <motion.a
               href="https://se-webring.xyz/"
               target="_blank"
               variants={buttonVariants}
@@ -170,10 +170,10 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
               whileTap="tap"
               className="relative group hidden sm:block"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <motion.div
-                className="relative p-2 rounded-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-purple-500/50 transition-all duration-300"
-                whileHover={{ boxShadow: "0 0 20px rgba(139, 92, 246, 0.3)" }}
+                className="relative p-2 rounded-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-green-500/50 transition-all duration-300"
+                whileHover={{ boxShadow: "0 0 20px rgba(34, 197, 94, 0.3)" }}
               >
                 <img
                   alt="SE Webring"
@@ -186,17 +186,17 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
                   }}
                 />
               </motion.div>
-            </motion.a>
+            </motion.a> */}
 
             {useScrollLinks ? (
               <ScrollLink to="contact" duration={0} containerId="container">
                 <motion.button
                   className="relative px-6 py-2 rounded-full font-medium text-white overflow-hidden group transition-all duration-300"
                   style={{
-                    background: "linear-gradient(135deg, #8b5cf6, #ec4899)",
+                    background: "linear-gradient(135deg, #22c55e, #10b981)",
                   }}
                   whileHover={{
-                    boxShadow: "0 0 30px rgba(139, 92, 246, 0.4)",
+                    boxShadow: "0 0 30px rgba(34, 197, 94, 0.4)",
                   }}
                 >
                   <span className="relative z-10">Contact</span>
@@ -213,10 +213,10 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
                 <motion.button
                   className="relative px-6 py-2 rounded-full font-medium text-white overflow-hidden group transition-all duration-300"
                   style={{
-                    background: "linear-gradient(135deg, #8b5cf6, #ec4899)",
+                    background: "linear-gradient(135deg, #22c55e, #10b981)",
                   }}
                   whileHover={{
-                    boxShadow: "0 0 30px rgba(139, 92, 246, 0.4)",
+                    boxShadow: "0 0 30px rgba(34, 197, 94, 0.4)",
                   }}
                 >
                   <span className="relative z-10">Contact</span>
@@ -234,7 +234,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
       </div>
 
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
+        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-500 to-transparent"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
@@ -244,7 +244,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-purple-400/30 rounded-full"
+            className="absolute w-1 h-1 bg-green-400/30 rounded-full"
             style={{
               left: `${20 + i * 15}%`,
               top: "50%",

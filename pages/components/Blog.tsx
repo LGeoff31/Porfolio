@@ -3,28 +3,28 @@ import { motion } from "framer-motion";
 
 const blogPosts = [
   {
-    title: "Brain Teasers",
-    date: "July 19, 2025",
-    description: "Collection of my favourite riddles and puzzles.",
-    href: "brainteasers",
-    color: "from-purple-500 to-pink-500",
-    icon: "🧩",
-  },
-  {
     title: "Zetamac",
     date: "July 23, 2025",
-    description: "Zetamac strategies and progression.",
+    description: "My strategies and progression.",
     href: "zetamac",
-    color: "from-blue-500 to-cyan-500",
+    color: "text-green-500",
     icon: "⚡",
+  },
+  {
+    title: "Brain Teasers",
+    date: "July 19, 2025",
+    description: "My favourites.",
+    href: "brainteasers",
+    color: "text-green-400",
+    icon: "🧩",
   },
   {
     title: "Quant Puzzles",
     date: "August 23, 2025",
     description:
-      "Quantitative brainteasers on probability, EV, and decision theory.",
+      "Probability, EV, and decision theory.",
     href: "quant-puzzles",
-    color: "from-emerald-500 to-cyan-500",
+    color: "text-emerald-400",
     icon: "📈",
   },
 ];
@@ -86,7 +86,7 @@ const Blog: React.FC = () => {
           </motion.h2>
 
           <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"
+            className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -114,11 +114,11 @@ const Blog: React.FC = () => {
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${post.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
               />
-              <div className="relative bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-purple-500/50 rounded-3xl p-8 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
+              <div className="relative bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-green-500/50 rounded-3xl p-8 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-green-500/20">
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-4">{post.icon}</span>
                   <div>
-                    <h3 className="text-2xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    <h3 className={`text-2xl font-bold mb-1 ${post.color}`}>
                       {post.title}
                     </h3>
                     <div className="flex items-center text-gray-400 text-sm">
@@ -133,7 +133,7 @@ const Blog: React.FC = () => {
                 <p className="text-gray-300 mb-4">{post.description}</p>
                 <a
                   href={post.href}
-                  className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold shadow-md hover:from-pink-500 hover:to-purple-500 transition-colors duration-300"
+                  className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold shadow-md hover:from-emerald-500 hover:to-green-500 transition-colors duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
