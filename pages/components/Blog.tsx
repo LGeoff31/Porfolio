@@ -25,7 +25,16 @@ const blogPosts = [
       "Probability, EV, and decision theory.",
     href: "quant-puzzles",
     color: "text-emerald-400",
-    icon: "📈",
+    icon: "🎲",
+  },
+  {
+    title: "System Design",
+    date: "October 19, 2025",
+    description:
+      "Coming soon...",
+    href: "system-design",
+    color: "text-emerald-400",
+    icon: "💻",
   },
 ];
 

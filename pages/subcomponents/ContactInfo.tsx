@@ -50,8 +50,8 @@ const ContactInfo = () => {
     {
       icon: <EnvelopeIcon className="w-6 h-6" />,
       label: "Email",
-      value: "g42lee@uwaterloo.ca",
-      href: "mailto:g42lee@uwaterloo.ca?subject=Interest%20From%20Your%20Portfolio%20Website&body=Hi%20Geoffrey,",
+      value: "lgeoff31@gmail.com",
+      href: "mailto:lgeoff31@gmail.com?subject=Interest%20From%20Your%20Portfolio%20Website&body=Hi%20Geoffrey,",
       color: "from-red-500 to-red-600",
     },
   ];

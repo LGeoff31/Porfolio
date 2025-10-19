@@ -69,7 +69,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            Love to chat about new opportunities or fresh perspectives.
+            Open to new opportunities.
           </motion.p>
         </motion.div>
 
