@@ -172,11 +172,11 @@ const Homepage = () => {
           </h1>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="mb-8">
+        {/* <motion.div variants={itemVariants} className="mb-8">
           <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wider uppercase">
-            Puzzle Solver
+             I like puzzles
           </p>
-        </motion.div>
+        </motion.div> */}
 
         <div className="flex justify-center mt-10 w-full">
           <div className="w-full overflow-x-auto touch-pan-x -mx-4 px-4 scrollbar-thin scrollbar-thumb-gray-600/50 scrollbar-track-transparent">
