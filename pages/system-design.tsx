@@ -102,6 +102,45 @@ const blogPosts: BlogPost[] = [
     The advantage comes in the decoupling, if the provider is unavailable, the consumer can still function and vice versa.
     `
   },
+  {
+    id: 11,
+    title: "Metrics",
+    content: `1KB -> 1MB -> 1GB -> 1TB -> 1PB
+    L1 cache: 0.5ns
+    L2 cache: 5ns
+    Mutex lock: 100ns
+    Main memory reference: 100ns
+    Disk seek: 10ms
+
+    Takeaways:
+    - Memory is fast, but disk is slow
+    - Perform loseless compression on data before sending it over the internet
+    - Data centers are usually in different regions, so takes time to send data between them
+    `
+  },
+  {
+    id: 12,
+    title: "Availbility",
+    content: `High availability means for the system to be continiously operational for a long period of time. 
+    Service level agreement (SLA) is an agreement between service provider and customer, defining level of uptime your service will deliver.
+    `
+  },
+  {
+    id: 13,
+    title: "Twitter Example",
+    content: `Consider twitter. 300 million monthly users. 50% use Twitter daily. Users post 2 posts / day. 10% tweets contain media. Data stored for 5 years.
+    Query per second (QPS): 
+    - Daily active users (DAU) = 300 million x 0.5 = 150 million
+    - Tweets (QPS) = 150 million x 2 tweets / 24h / 3600s = ~3500
+    - Peek QPS = 3500 x 2 = 7000
+    Average tweet size
+    - tweet_id 64 bytes
+    - text 140 bytes
+    - media 1MB
+    - Media storage: 150 million * 2 * 10% * 1MB = 30TB/day
+    - 5-year media storage = 30TB/day * 365days * 5 = 55PB
+    `
+  },
 ];
 
 const SystemDesign = () => {
