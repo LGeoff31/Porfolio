@@ -4,19 +4,16 @@ import Navbar from "./components/Navbar";
 import BackButton from "./subcomponents/BackButton";
 
 interface BlogPost {
-  id: number;
   title: string;
   content: string;
 }
 
 const blogPosts: BlogPost[] = [
   {
-    id: 1,
     title: "Introduction",
     content: `I feel like I've over extended on leetcode, and severely under extended my time on system design. Hence, I'll be documenting all the most relevant system design concepts I've come across.`
   },
   {
-    id: 2,
     title: "Typing google.com into my browser?",
     content: `Seems like such a simple question that we all should know, but what actually happens under the hood? 
 1. The browser takes the url (google.com) and sends it to the DNS server. The DNS server will do a look up and return the server's IP address.
@@ -27,7 +24,6 @@ const blogPosts: BlogPost[] = [
   `
   },
   {
-    id: 3,
     title: "Databases",
     content: ` There are two types of databases: relational and non-relational. 
     Relational databases (SQL databases) are used to store data in table and rows, which you can perform JOIN operations on via SQL. Common ones include MySQL, PostgreSQL, and SQLite.
@@ -42,7 +38,6 @@ const blogPosts: BlogPost[] = [
     `
   },
   {
-    id: 4,
     title: "Scaling",
     content: ` There are two main types of scaling, vertical and horizontal. 
     Vertical scaling ("scape up") means adding more power (CPU, RAM) to your server.
@@ -55,14 +50,12 @@ const blogPosts: BlogPost[] = [
     `
   },
   {
-    id: 5,
     title: "Load Balancer",
     content: `The app will connect to a load balancer via the server's IP address. Then the load balance will connect to each server via a private IP address.
     This allows the load balancer to identify and redirect traffic to the appropriate server.
     `
   },
   {
-    id: 6,
     title: "Database Replication",
     content: `In the same way having multiple servers prevents SPOF. We use database replication (multiple databases) to prevent data loss.
     This is modelled via the master-slave relationship. The master database (only writes) and the slave database (only reads) replicate off the master database.
@@ -71,7 +64,6 @@ const blogPosts: BlogPost[] = [
     `
   },
   {
-    id: 7,
     title: "Cache",
     content: `Cache is a temporary storage area to store the result of expensive responses or frequently accessed data in-memory.
     When the browser requests a resource, the web server checks if the cache has the resource. If it does, return it instantly. If not, the server will query the database for the response, add it to the cache, and return it.
@@ -81,14 +73,12 @@ const blogPosts: BlogPost[] = [
     `
   },
   {
-    id: 8,
     title: "CDN",
     content: `CDN (Content Delivery Network) are geographcially disposed servers used to deliver static content (images, videos, CSS, JavaScript) to users.
     There like a cache, but for static content.
     `
   },
   {
-    id: 9,
     title: "Stateful vs Stateless",
     content: `Stateful servers remember client data from 1 request to the next. 
     Stateless servers keep no information about the client between requests.
@@ -96,14 +86,12 @@ const blogPosts: BlogPost[] = [
     `
   },
   {
-    id: 10,
     title: "Message Queue",
     content: `Message queues are durable components stored in memory that support async communication (think buffer for async requests).
     The advantage comes in the decoupling, if the provider is unavailable, the consumer can still function and vice versa.
     `
   },
   {
-    id: 11,
     title: "Metrics",
     content: `1KB -> 1MB -> 1GB -> 1TB -> 1PB
     L1 cache: 0.5ns
@@ -119,14 +107,12 @@ const blogPosts: BlogPost[] = [
     `
   },
   {
-    id: 12,
     title: "Availbility",
     content: `High availability means for the system to be continiously operational for a long period of time. 
     Service level agreement (SLA) is an agreement between service provider and customer, defining level of uptime your service will deliver.
     `
   },
   {
-    id: 13,
     title: "Twitter Example",
     content: `Consider twitter. 300 million monthly users. 50% use Twitter daily. Users post 2 posts / day. 10% tweets contain media. Data stored for 5 years.
     Query per second (QPS): 
@@ -139,6 +125,47 @@ const blogPosts: BlogPost[] = [
     - media 1MB
     - Media storage: 150 million * 2 * 10% * 1MB = 30TB/day
     - 5-year media storage = 30TB/day * 365days * 5 = 55PB
+    `
+  },
+  {
+    title: "Twitter Example",
+    content: `Consider twitter. 300 million monthly users. 50% use Twitter daily. Users post 2 posts / day. 10% tweets contain media. Data stored for 5 years.
+    Query per second (QPS): 
+    - Daily active users (DAU) = 300 million x 0.5 = 150 million
+    - Tweets (QPS) = 150 million x 2 tweets / 24h / 3600s = ~3500
+    - Peek QPS = 3500 x 2 = 7000
+    Average tweet size
+    - tweet_id 64 bytes
+    - text 140 bytes
+    - media 1MB
+    - Media storage: 150 million * 2 * 10% * 1MB = 30TB/day
+    - 5-year media storage = 30TB/day * 365days * 5 = 55PB
+    `
+  },
+  {
+    title: "System Design Interview",
+    content: `Good questions to ask:
+    - What is the feature set of this application?
+    - How many users will there be?
+    - How fast will this app scale in the next 3, 6 months?
+    - What is the existing tech stack? Can leverage any of simplify the design
+
+    I.e if you are asked to design a news feed system
+    - Is this a mobile app or web app?
+    - What are the most important features for this app?
+    - Is the news feed sorted in reverse chronological order based on recency?
+    - Should the weight of your friends post be stronger than others?
+    - How many friend can a user have?
+    - What is the traffic volume?
+    - Can the feed contain images, videos, or just text?
+    Next, draw key components on the whiteboard. Things like the client (web/mobile), APIs, web servers, data stores, cache, CDN, message queue, etc.
+    Do back-of-the-envelope calculations to evaluate if your blueprint fits the scale constraints. (but this might be a bonus)
+    Then go through the flow of your design
+    Maybe also include API endpoints or database schema.
+
+    In the news feed example, there are two main components, news feed and user postings.
+    For news feed, when a user publishes a post, the corresponding data is written into cache/database, the post will be populated to friends news feed.
+    The feed is built by aggregating friend's posts in reverse chronological order.
     `
   },
 ];
@@ -230,7 +257,7 @@ const SystemDesign = () => {
         <div>
           {blogPosts.map((post, index) => (
             <motion.article
-              key={post.id}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
