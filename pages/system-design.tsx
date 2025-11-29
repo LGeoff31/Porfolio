@@ -175,17 +175,23 @@ const SystemDesign = () => {
     return content.split('\n').map((line, index) => {
       if (line.startsWith('**') && line.endsWith('**')) {
         return (
-          <h4 key={index} className="text-lg font-semibold text-yellow-300 mt-4 mb-2">
+          <h4
+            key={index}
+            className="text-xl font-semibold text-emerald-300 mt-6 mb-3 tracking-tight"
+          >
             {line.slice(2, -2)}
           </h4>
         );
       }
       if (line.trim().startsWith('- ')) {
-        const indentLevel = line.search(/\S|$/) / 4; // Count number of spaces before content, divide by 4 for indent level
         return (
-          <li key={index} className={`text-gray-200 ml-${4 + indentLevel * 4} mb-1`}>
+          <p
+            key={index}
+            className="relative pl-6 text-gray-100 mb-1 leading-relaxed text-[15px] md:text-base"
+          >
+            <span className="absolute left-0 top-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400" />
             {line.trim().slice(2)}
-          </li>
+          </p>
         );
       }
       if (line.startsWith('For ') && line.includes(':')) {
@@ -235,9 +241,9 @@ const SystemDesign = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white pb-20 relative overflow-x-hidden">
       <Navbar useScrollLinks={false} />
-      <div className="max-w-4xl mx-auto pt-24 px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-3xl mx-auto pt-24 px-5 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="relative mb-16 flex justify-center items-center">
+        <div className="relative mb-12 flex justify-center items-center">
           <div className="absolute left-4 top-1/2 -translate-y-1/2">
             <BackButton />
           </div>
@@ -246,7 +252,7 @@ const SystemDesign = () => {
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg mb-4"
+              className="text-4xl md:text-5xl font-semibold tracking-tight text-emerald-300 drop-shadow mb-3"
             >
               System Design
             </motion.h1>
@@ -254,25 +260,25 @@ const SystemDesign = () => {
         </div>
 
         {/* Blog posts */}
-        <div>
+        <div className="space-y-12">
           {blogPosts.map((post, index) => (
             <motion.article
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative group"
+              transition={{ duration: 0.45, delay: index * 0.06 }}
+              className="relative group border-t border-white/5 pt-8"
             >
               {/* Blog post header */}
               <header className="mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent group-hover:from-yellow-400 group-hover:to-pink-400 transition-all duration-300">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-50 group-hover:text-emerald-300 transition-colors duration-200">
                   {post.title}
                 </h2>
               </header>
 
               {/* Full content */}
               <div className="mb-6">
-                <div className="text-gray-200 leading-relaxed space-y-4">
+                <div className="text-gray-200 leading-relaxed space-y-3 text-[15px] md:text-base font-serif">
                   {formatContent(post.content)}
                 </div>
               </div>

@@ -10,7 +10,7 @@ const AboutBox = () => {
       heading: "Software Engineering",
       date: "Present",
       description:
-        "Software Engineering student taking interesting courses such as databases, data structures, algorithms, and object oriented programming.",
+        "I'm currently a Software Engineering student at the University of Waterloo, taking interesting courses: OS, DSA, Databases, Statistics.",
       color: "from-yellow-400 to-amber-500",
       iconBg: "from-yellow-500/20 to-amber-500/20",
     },

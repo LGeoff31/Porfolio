@@ -31,10 +31,19 @@ const blogPosts = [
     title: "System Design",
     date: "October 19, 2025",
     description:
-      "Coming soon...",
+      "Good to know concepts.",
     href: "system-design",
     color: "text-emerald-400",
     icon: "💻",
+  },
+  {
+    title: "Quantitative Finance",
+    date: "October 19, 2025",
+    description:
+      "Coming soon...",
+    href: "finance",
+    color: "text-emerald-400",
+    icon: "📈",
   },
 ];
 
