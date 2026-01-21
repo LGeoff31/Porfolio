@@ -350,6 +350,16 @@ const ProjectBox = () => {
 
   const projects = [
     {
+      title: "Bisect",
+      link: "https://bisectool.vercel.app/",
+      src: "/images/bisect.png",
+      description:
+        "Git bisect tool to help you identify and fix the first bad commit in minutes.",
+      hosted: "https://bisectool.vercel.app/",
+      code: "https://github.com/LGeoff31/Bisect",
+      skills: ["react", "graphql", "Firebase"],
+    },
+    {
       title: "Sync AI",
       link: "https://synqai.vercel.app/",
       src: "/images/sync.png",
