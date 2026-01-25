@@ -110,7 +110,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500" />
               <div className="absolute inset-1 bg-gray-900 rounded-full flex items-center justify-center">
                 <span className="text-sm font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   GL
@@ -156,6 +156,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
                     bgColor="transparent"
                     style={{ width: 32, height: 32 }}
                     className="transition-transform duration-300 group-hover:scale-110"
+                    target="_blank"
                   />
                 </motion.div>
               </motion.div>

@@ -55,7 +55,7 @@ const Contact = () => {
           </motion.h2>
 
           <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full"
+            className=""
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}

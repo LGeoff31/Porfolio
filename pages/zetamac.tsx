@@ -18,7 +18,7 @@ const blogPosts: BlogPost[] = [
     title: "Introduction",
     content: `Zetamac is widely-known website in the quant space, designed to test for mental math speed. The format, 120s to solve as many addition, subtraction, multiplication, and division problems.
     My motivation behind it, primarily because my brother challenged me but also I think it's a fun and useful skills that is applicable day-to-day. Want to prematurely calculate your groceries tax? Want to estimate your restaurant bill after tax and tip, so you can confront the waiter otherwise? Mental math is the way to go! 
-My goal on the site is to hit 100 problems in 120s. My current best, 65. 
+My goal on the site is to hit 100 problems in 120s. My current best, 77. 
 I even build my own version of zetamac! But this one tracks performance, graphs it, and has a community leaderboard! Check it out, https://datamac.vercel.app/.
 Now, I'll outline some of the strategies I've learned so far so you too can get faster :)`,
     date: "2024-01-20"

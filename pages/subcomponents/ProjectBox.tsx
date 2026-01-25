@@ -422,7 +422,7 @@ const ProjectBox = () => {
     {
       title: "Insomnia",
       link: "https://insomniahub.vercel.app/",
-      src: "/images/line_chart.png",
+      src: "/images/insomnia.png",
       description:
         "Algorithm to correlate sleep quality, duration, stress levels, exercise. Visualize your data and start change early.",
       hosted: "https://insomniahub.vercel.app/",
