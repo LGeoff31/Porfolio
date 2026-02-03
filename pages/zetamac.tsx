@@ -2,31 +2,29 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import BackButton from "./subcomponents/BackButton";
-import CalculateIcon from "@mui/icons-material/Calculate";
 
 interface BlogPost {
   id: number;
   title: string;
   content: string;
-  date: string;
-  examples?: string[];
 }
 
 const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Introduction",
-    content: `Zetamac is widely-known website in the quant space, designed to test for mental math speed. The format, 120s to solve as many addition, subtraction, multiplication, and division problems.
-    My motivation behind it, primarily because my brother challenged me but also I think it's a fun and useful skills that is applicable day-to-day. Want to prematurely calculate your groceries tax? Want to estimate your restaurant bill after tax and tip, so you can confront the waiter otherwise? Mental math is the way to go! 
-My goal on the site is to hit 100 problems in 120s. My current best, 77. 
-I even build my own version of zetamac! But this one tracks performance, graphs it, and has a community leaderboard! Check it out, https://datamac.vercel.app/.
-Now, I'll outline some of the strategies I've learned so far so you too can get faster :)`,
-    date: "2024-01-20"
+    content: `Zetamac is widely-known website in the quant space, designed as a benchmark for mental math speed. 
+    The format, 120s to solve as many addition, subtraction, multiplication, and division problems.
+    My motivation, my brother challenged me and I don't back down, but also mental math is one of the best bang for buck skills in real-life. Calculate your groceries tax? Estimate your restaurant bill?
+My goal on the site is to hit 100 problems in 120s. My current best is 86. 
+I even build my own version of zetamac! But this one records your performance and has a competitive leaderboard! I'm buying anyone who beats my score a free bbt (given you're at waterloo).
+Check it out, https://datamac.vercel.app/.
+Now, I'll outline some of the strategies I've learned so you can get faster :D`
   },
   {
     id: 2,
     title: "Addition",
-    content: `This is the easiest type of problem in Zetamac. Primarily because our brains have done so many of these, compared to others like subtraction. The key strategy is to sum digits from left to right, which is always faster than right to left. This approach allows you to start typing the answer immediately while simultaneously calculating for the next digit.
+    content: `This is the easiest type of problem in Zetamac. Primarily because our brains are so accustomed to them. The key strategy is to sum digits from left to right, which may seem counterintuitive to the typical way we were taught in school. Why? This approach allows you to start typing the answer immediately while simultaneously calculating for the next digit.
 
 **The Strategy:**
 - Start with the leftmost digits
@@ -39,17 +37,15 @@ For 38 + 55:
 2. Then I see the ones digits sum to 13 (8+5)
 3. So I quickly change my answer to 93
 
-This method is faster because you can begin typing while still processing the remaining digits.`,
-    date: "2024-01-18",
-    examples: ["38 + 55 = 93", "67 + 89 = 156", "124 + 235 = 359"]
+This method is faster because you can begin typing while still processing the remaining digits.`
   },
   {
     id: 3,
     title: "Subtraction",
-    content: `Subtraction is a bit trickier than addition but follows similar principles. For 2-digit subtract 2-digit problems, I use the same left-to-right strategy as addition, and being clever about carry overs.
+    content: `Subtraction is a bit trickier than addition but follows similar principles. For 2-digit subtraction problems, I use the same left-to-right strategy as addition, and being clever about carry overs.
 
 **Strategy 1: Direct Subtraction**
-Work from right to left, handling carry overs as they come.
+Work from left to right, handling carry overs as they come.
 
 **Strategy 2: Complement Method**
 Instead of subtracting, think about how much you need to add to the smaller number to get the larger value.
@@ -66,9 +62,7 @@ For 83 - 69:
 **Example:**
 For 132 - 79:
 1. I know I need 21 to make 79 become 100
-2. Then I add 21 + 32 = 53 to get my answer`,
-    date: "2024-01-16",
-    examples: ["83 - 69 = 14", "132 - 79 = 53", "245 - 178 = 67"]
+2. Then I add 21 + 32 = 53 to get my answer`
   },
   {
     id: 4,
@@ -83,7 +77,7 @@ For 9 × 74:
 - Round 9 to 10: 10 × 74 = 740
 - Subtract 74: 740 - 74 = 666
 
-**Strategy 2: Breaking Down**
+**Strategy 2: Breaking Down (my preference)**
 Break the problem into easier parts.
 
 **Example:**
@@ -92,7 +86,7 @@ For 9 × 74:
 - 9 × 4 = 36
 - 630 + 36 = 666
 
-This is sometimes faster since addition is less brain-intensive than subtraction.
+This is sometimes faster since addition is less brain-intensive than subtraction. But you need to know your 12x12 time table flawlessly.
 
 **The 11 Trick:**
 When multiplying by 11, add the digits of the second number and insert that value in the middle.
@@ -109,9 +103,7 @@ For 11 × 84:
 
 **Why This Works:**
 11 × 63 = 10 × 63 + 63 = 630 + 63 = 693
-The middle digit is the sum of the original digits because we're adding the number to its 10x version.`,
-    date: "2024-01-14",
-    examples: ["9 × 74 = 666", "11 × 63 = 693", "11 × 84 = 924"]
+The middle digit is the sum of the original digits because we're adding the number to its 10x version.`
   },
   {
     id: 5,
@@ -143,9 +135,7 @@ For 540 ÷ 12:
 - So the answer is 45
 
 **Important Note:**
-These strategies work because Zetamac ensures results are always integers, so these rules aren't generalizable to all values.`,
-    date: "2024-01-12",
-    examples: ["12 × 45 = 540", "15 × 67 = 1005", "23 × 56 = 1288"]
+These strategies work because Zetamac ensures results are always integers, so these rules aren't generalizable to all values.`
   },
   {
     id: 6,
@@ -177,26 +167,13 @@ For 3-digit numbers divided by 9:
 - Second digit: 10 - 2 = 8
 - Result: 38
 
-**Why This Works:**
-The first digit represents how many times 9 goes into the two most significant digits, and the second digit is 10 minus the least significant digit.
-
-**General Strategy:**
-Memorize sequences of multiples for common divisors to quickly identify patterns and solutions.`,
-    date: "2024-01-10",
-    examples: ["374 ÷ 11 = 34", "974 ÷ 11 = 84", "342 ÷ 9 = 38"]
+**Final Remarks:**
+There's absolutely no substitude for putting hours of practice, this is how your brain gets used to pattern recognition, and hence becomes faster. You'll see how useful these skills are in day-to-day life, have fun with it!
+`
   }
 ];
 
 const Zetamac = () => {
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
   const formatContent = (content: string) => {
     return content.split('\n').map((line, index) => {
       if (line.startsWith('**') && line.endsWith('**')) {
@@ -300,31 +277,8 @@ const Zetamac = () => {
               <div className="mb-6">
                 <div className="text-gray-200 leading-relaxed space-y-4">
                   {formatContent(post.content)}
-                  {post.examples && (
-                    <div className="mt-6 p-4">
-                      <h4 className="text-blue-300 font-semibold mb-3 flex items-center gap-2">
-                        <CalculateIcon className="w-5 h-5" />
-                        Examples
-                      </h4>
-                      <div className="space-y-2">
-                        {post.examples.map((example, exampleIndex) => (
-                          <div key={exampleIndex} className="text-blue-200 font-mono text-sm">
-                            {example}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
-
-              {/* Post footer */}
-              {post.examples && (
-                <div className="flex items-center gap-1 text-gray-400 text-sm pt-4 border-t border-gray-600/30">
-                  <CalculateIcon className="w-4 h-4" />
-                  <span>{post.examples.length} examples included</span>
-                </div>
-              )}
             </motion.article>
           ))}
         </div>

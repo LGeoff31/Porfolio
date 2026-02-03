@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const blogPosts = [
   {
     title: "Zetamac",
-    date: "July 23, 2025",
+    date: "Feb 2, 2026",
     description: "My strategies and progression.",
     href: "zetamac",
     color: "text-green-500",
