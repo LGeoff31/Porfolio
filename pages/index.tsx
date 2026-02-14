@@ -9,6 +9,7 @@ import Languages from "./components/Languages";
 import Contact from "./components/Contact";
 import Github from "./components/Github";
 import Blog from "./components/Blog";
+import { BackgroundElements } from "./components/background-elements";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -27,15 +28,16 @@ export default function Home() {
     return () => containerDiv.removeEventListener("scroll", updatePosition);
   }, []);
   return (
-    <div
-      id="container"
-      className="relative z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white h-screen snap-y snap-mandatory scrollbar scrollbar-thumb-rounded-[5px] scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/40 scroll-smooth overflow-y-auto"
-    >
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <title>Geoffrey&apos;s Portfolio</title> */}
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <BackgroundElements />
+      <div
+        id="container"
+        className="relative z-10 text-white h-screen snap-y snap-mandatory scrollbar scrollbar-thumb-rounded-[5px] scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/40 scroll-smooth overflow-y-auto"
+      >
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
       <section id="hero" className="snap-start">
         <Navbar useScrollLinks={true} />
@@ -67,6 +69,7 @@ export default function Home() {
       <section id="contact" className="snap-start">
         <Contact />
       </section>
-    </div>
+      </div>
+    </>
   );
 }
