@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="../public/images/c++.png" />
+        <link rel="shortcut icon" href="" />
         <title>Geoffrey Lee</title>
       </Head>
       <Component {...pageProps} />

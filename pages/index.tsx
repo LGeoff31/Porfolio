@@ -32,43 +32,43 @@ export default function Home() {
       <BackgroundElements />
       <div
         id="container"
-        className="relative z-10 text-white h-screen snap-y snap-mandatory scrollbar scrollbar-thumb-rounded-[5px] scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/40 scroll-smooth overflow-y-auto"
+        className="relative z-10 text-white h-screen scrollbar scrollbar-thumb-rounded-[5px] scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/40 overflow-y-auto"
       >
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="" />
         </Head>
 
-      <section id="hero" className="snap-start">
+      <section id="hero">
         <Navbar useScrollLinks={true} />
       </section>
 
-      <section id="homepage" className="snap-center">
+      <section id="homepage">
         <Homepage />
       </section>
 
-      <section id="about" className="snap-start">
+      <section id="about">
         <About />
       </section>
 
-      <section id="projects" className="snap-start">
+      <section id="projects">
         <Project />
       </section>
 
-      <section id="blog" className="snap-start">
+      <section id="blog">
         <Blog />
       </section>
-      {/* <section id="skills" className="snap-start">
+      {/* <section id="skills">
         <Languages />
       </section> */}
 
-      {/* <section id="github" className="snap-start">
+      {/* <section id="github">
         <Github />
       </section> */}
 
-      <section id="contact" className="snap-start">
+      {/* <section id="contact">
         <Contact />
-      </section>
+      </section> */}
       </div>
     </>
   );

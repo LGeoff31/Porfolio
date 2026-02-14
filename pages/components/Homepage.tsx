@@ -150,7 +150,6 @@ const Homepage = () => {
         <motion.div variants={itemVariants} className="flex gap-5 mb-8">
           <ScrollLink
             to="projects"
-            spy={true}
             smooth={true}
             duration={800}
             containerId="container"
@@ -168,7 +167,6 @@ const Homepage = () => {
           </ScrollLink>
           <ScrollLink
             to="blog"
-            spy={true}
             smooth={true}
             duration={800}
             containerId="container"

@@ -7,40 +7,39 @@ const AboutBox = () => {
     {
       src: "/images/waterlooLogo.png",
       name: "University of Waterloo",
-      heading: "Software Engineering",
+      heading: "Software Engineering Student",
       date: "Present",
       description:
-        "I'm currently a Software Engineering student at the University of Waterloo, taking interesting courses: OS, DSA, Databases, Statistics.",
-      color: "from-yellow-400 to-amber-500",
-      iconBg: "from-yellow-500/20 to-amber-500/20",
+        "**CS:** Advanced Algorithms, Operating Systems, Database Systems, Compilers, Software Design & Testing, User Interfaces \n **Math:** Combinatorics & Optimization, Numerical Computation, Signals & Systems, Statistics, Linear Algebra, Calculus ",
     },
     {
       src: "/images/biztrip.png",
       name: "BizTrip AI",
       heading: "Software Engineer",
       date: "2025 - 2025",
-      description: "SWE intern on AI travel",
-      color: "from-sky-400 to-blue-500",
-      iconBg: "from-sky-400/20 to-blue-500/20",
+      description: "SWE intern working on AI travel",
     },
     {
       src: "/images/shopify.png",
       name: "Shopify",
       heading: "Software Engineer",
       date: "2025 - 2025",
-      description: "SWE Intern on Monetization.",
-      color: "from-green-500 to-emerald-500",
-      iconBg: "from-green-500/20 to-emerald-500/20",
+      description: "SWE Intern on the Monetization team.",
     },
     {
       src: "/images/rideco.png",
       name: "RideCo",
       heading: "Software Engineer",
       date: "2024 - 2024",
-      description: "SWE Intern on Vehicle Tracking.",
-
-      color: "from-purple-500 to-pink-500",
-      iconBg: "from-purple-500/20 to-pink-500/20",
+      description: "SWE Intern on high performacne Vehicle Tracking.",
+    },
+    {
+      src: "/images/returnpal.ico",
+      name: "Returnpal",
+      heading: "Software Engineer",
+      date: "2024 - 2024",
+      description: "SWE Lead on building a uberized package return service (GTA).",
+      imgFilter: "brightness(0) saturate(100%) invert(50%) sepia(90%) saturate(500%) hue-rotate(190deg) brightness(100%)",
     },
     {
       src: "/images/brain.png",
@@ -48,39 +47,8 @@ const AboutBox = () => {
       heading: "Waterloo Contests",
       date: "2019 - 2024",
       description:
-        "Competitive math and programming for 100+ high school students.",
-      color: "from-cyan-400 to-blue-500",
-      iconBg: "from-cyan-400/20 to-blue-500/20",
+        "Competitive math/programming for 100+ high school students.",
     },
-    {
-      src: "/images/marathon.png",
-      name: "Competitive Runner",
-      heading: "Marathoner",
-      date: "2017 - 2025",
-      description:
-        "My PB's: 800m: 2:09, 1000m: 2:51, 5km: 18:06, 10km: 41: 56, Half-Marathon: 1:29:58, Marathon: 3:17:02.",
-      color: "from-red-500 to-orange-500",
-      iconBg: "from-red-500/20 to-orange-500/20",
-    },
-    {
-      src: "/images/magic.png",
-      name: "Magic and Cardistry",
-      heading: "Magician",
-      date: "2019 - 2023",
-      description: "Ex-president",
-      color: "from-pink-500 to-rose-500",
-      iconBg: "from-pink-500/20 to-rose-500/20",
-    },
-    // {
-    //   src: "/images/yt.png",
-    //   name: "Youtuber",
-    //   heading: "Electricochy",
-    //   date: "2023 - Present",
-    //   description:
-    //     "Channel focused on internships, skits, and reactions. Looking to pump out more upcoming videos!",
-    //   color: "from-red-500 to-pink-500",
-    //   iconBg: "from-red-500/20 to-pink-500/20",
-    // },
   ];
 
   const containerVariants = {
@@ -131,8 +99,7 @@ const AboutBox = () => {
             heading={experience.heading}
             src={experience.src}
             date={experience.date}
-            color={experience.color}
-            iconBg={experience.iconBg}
+            imgFilter={experience.imgFilter}
           />
         </motion.div>
       ))}
@@ -146,16 +113,14 @@ const AboutMeSection = ({
   heading,
   src,
   date,
-  color,
-  iconBg,
+  imgFilter,
 }: {
   name: string;
   description: string;
   heading: string;
   src: string;
   date: string;
-  color: string;
-  iconBg: string;
+  imgFilter?: string;
 }) => {
   const buttonVariants = {
     initial: { scale: 1 },
@@ -172,21 +137,15 @@ const AboutMeSection = ({
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.3 }}
     >
-      <div
-        className={`absolute inset-0 bg-gradient-to-r ${iconBg} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
-      />
-
       <div className="relative bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 hover:border-green-500/50 rounded-2xl p-6 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-green-500/20">
         <div className="flex flex-col md:flex-row gap-6 items-start">
           <div className="relative flex-shrink-0">
-            <div
-              className={`relative w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-r ${iconBg} p-4 flex items-center justify-center backdrop-blur-sm border border-white/10`}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-xl" />
+            <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-xl p-4 flex items-center justify-center">
               <img
                 src={src}
                 alt={name}
                 className="relative z-10 w-full h-full object-contain"
+                style={imgFilter ? { filter: imgFilter } : undefined}
               />
             </div>
           </div>
@@ -194,7 +153,7 @@ const AboutMeSection = ({
           <div className="flex-1 space-y-3">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
               <motion.h3
-                className={`text-xl md:text-2xl font-bold bg-gradient-to-r ${color} bg-clip-text text-transparent`}
+                className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
@@ -228,7 +187,18 @@ const AboutMeSection = ({
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              {description}
+              {description.split("\n").map((line, i) => (
+                <span key={i}>
+                  {i > 0 && <br />}
+                  {line.split(/(\*\*.*?\*\*)/).map((part, j) =>
+                    part.startsWith("**") && part.endsWith("**") ? (
+                      <strong key={j} className="text-white font-semibold">{part.slice(2, -2)}</strong>
+                    ) : (
+                      <span key={j}>{part}</span>
+                    )
+                  )}
+                </span>
+              ))}
             </motion.p>
 
             {/* Link button intentionally removed */}
