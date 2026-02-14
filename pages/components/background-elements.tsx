@@ -155,7 +155,9 @@ export function BackgroundElements() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none"
-      style={{ background: "transparent", zIndex: 9999 }}
+      style={{ background: "transparent", zIndex: 0 }}
     />
   );
 }
+
+export default BackgroundElements;

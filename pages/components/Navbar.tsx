@@ -95,30 +95,16 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
       initial="hidden"
       animate="visible"
       style={{
-        backdropFilter: `blur(${navbarBlur.get()}px)`,
-        backgroundColor: `rgba(17, 24, 39, ${navbarOpacity.get()})`,
+        backgroundColor: "transparent",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-2 sm:px-4">
         <div className="flex items-center justify-between h-16">
           <motion.div
             className="flex items-center space-x-4"
             variants={itemVariants}
           >
             <motion.div
-              className="relative w-10 h-10 rounded-full overflow-hidden"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500" />
-              <div className="absolute inset-1 bg-gray-900 rounded-full flex items-center justify-center">
-                <span className="text-sm font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                  GL
-                </span>
-              </div>
-            </motion.div>
-            <motion.div
-              className="hidden sm:block"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
@@ -162,7 +148,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
               </motion.div>
             ))}
 
-            {/* <motion.a
+            <motion.a
               href="https://se-webring.xyz/"
               target="_blank"
               variants={buttonVariants}
@@ -187,81 +173,11 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
                   }}
                 />
               </motion.div>
-            </motion.a> */}
-
-            {useScrollLinks ? (
-              <ScrollLink to="contact" duration={0} containerId="container">
-                <motion.button
-                  className="relative px-6 py-2 rounded-full font-medium text-white overflow-hidden group transition-all duration-300"
-                  style={{
-                    background: "linear-gradient(135deg, #22c55e, #10b981)",
-                  }}
-                  whileHover={{
-                    boxShadow: "0 0 30px rgba(34, 197, 94, 0.4)",
-                  }}
-                >
-                  <span className="relative z-10">Contact</span>
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: "100%" }}
-                    transition={{ duration: 0.6 }}
-                  />
-                </motion.button>
-              </ScrollLink>
-            ) : (
-              <a href="#contact" className="block">
-                <motion.button
-                  className="relative px-6 py-2 rounded-full font-medium text-white overflow-hidden group transition-all duration-300"
-                  style={{
-                    background: "linear-gradient(135deg, #22c55e, #10b981)",
-                  }}
-                  whileHover={{
-                    boxShadow: "0 0 30px rgba(34, 197, 94, 0.4)",
-                  }}
-                >
-                  <span className="relative z-10">Contact</span>
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: "100%" }}
-                    transition={{ duration: 0.6 }}
-                  />
-                </motion.button>
-              </a>
-            )}
+            </motion.a>
           </motion.div>
         </div>
       </div>
 
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-500 to-transparent"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      />
-
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-green-400/30 rounded-full"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: "50%",
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              delay: i * 0.5,
-            }}
-          />
-        ))}
-      </div>
     </motion.nav>
   );
 };

@@ -4,7 +4,7 @@ import AboutBox from "../subcomponents/AboutBox";
 
 const About = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
       {/* Background blobs removed */}
 
       <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">

@@ -6,7 +6,6 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
 import GitHubCalendar from "react-github-calendar";
 
 const Homepage = () => {
@@ -16,12 +15,6 @@ const Homepage = () => {
 
   const y = useTransform(scrollY, [0, 300], [0, -100]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
-
-  const [text, count] = useTypewriter({
-    words: ["Geoffrey Lee", "Software Engineer", "Competitive Programmer"],
-    loop: true,
-    delaySpeed: 2000,
-  });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -81,7 +74,7 @@ const Homepage = () => {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden overflow-x-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div className="relative h-screen overflow-hidden overflow-x-hidden">
       {/* <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
           <motion.div
@@ -138,45 +131,59 @@ const Homepage = () => {
         animate="visible"
         style={{ y, opacity }}
       >
-        <motion.div
-          className="relative mb-8"
-          variants={itemVariants}
-          {...floatingAnimation}
-        >
-          <div className="relative w-32 h-32 mx-auto mb-6">
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 rounded-full"
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
-            <div className="absolute inset-2 bg-gray-900 rounded-full flex items-center justify-center">
-              <span className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                GL
-              </span>
-            </div>
+        <motion.div variants={itemVariants} className="mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-3">
+            <span className="text-white">Hi, I&apos;m </span>
+            <span className="bg-gradient-to-r from-green-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+              Geoffrey
+            </span>
+          </h1>
+          <div className="flex items-center justify-center gap-3 mt-2">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-green-500/50" />
+            <p className="text-lg md:text-xl text-gray-300 font-light tracking-widest uppercase">
+              Product × Fintech
+            </p>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-green-500/50" />
           </div>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="mb-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-              {text}
-            </span>
-            <Cursor cursorColor="#22c55e" />
-          </h1>
+        <motion.div variants={itemVariants} className="flex gap-5 mb-8">
+          <ScrollLink
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={800}
+            containerId="container"
+            className="cursor-pointer"
+          >
+            <button
+              className="group relative px-10 py-3 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] hover:scale-[1.03] active:scale-[0.97]"
+              style={{ background: "linear-gradient(135deg, #22c55e, #10b981)" }}
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Projects
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+              </span>
+            </button>
+          </ScrollLink>
+          <ScrollLink
+            to="blog"
+            spy={true}
+            smooth={true}
+            duration={800}
+            containerId="container"
+            className="cursor-pointer"
+          >
+            <button
+              className="group relative px-10 py-3 rounded-lg font-semibold text-white border border-green-500/40 backdrop-blur-sm hover:border-green-400 hover:bg-green-500/10 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.2)] hover:scale-[1.03] active:scale-[0.97]"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Blog
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+              </span>
+            </button>
+          </ScrollLink>
         </motion.div>
-
-        {/* <motion.div variants={itemVariants} className="mb-8">
-          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wider uppercase">
-             I like puzzles
-          </p>
-        </motion.div> */}
 
         <div className="flex justify-center mt-10 w-full">
           <div className="w-full overflow-x-auto touch-pan-x -mx-4 px-4 scrollbar-thin scrollbar-thumb-gray-600/50 scrollbar-track-transparent">
