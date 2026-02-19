@@ -100,7 +100,7 @@ const Project = ({
                 alt={title}
                 width={1000}
                 height={550}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
                 layout="responsive"
               />
               <motion.div
@@ -360,11 +360,21 @@ const ProjectBox = () => {
       skills: ["react", "graphql", "Firebase"],
     },
     {
+      title: "Echo",
+      link: "https://bisectool.vercel.app/",
+      src: "/images/echo.png",
+      description:
+        "Distributed in-memory cache in C++ designed for scalability and fault tolerance.",
+      hosted: "https://bisectool.vercel.app/",
+      code: "https://github.com/LGeoff31/Bisect",
+      skills: ["react", "graphql", "Firebase"],
+    },
+    {
       title: "Sync AI",
       link: "https://synqai.vercel.app/",
       src: "/images/sync.png",
       description:
-        "Know when friends are free and what activity to plan. AI schedules the activity right into everyone's calender.",
+        "AI for parsing and scheduling events into you and your friends calendars.",
       hosted: "https://synqai.vercel.app/",
       code: "https://github.com/LGeoff31/Sync-AI",
       skills: ["react", "graphql", "Firebase"],
@@ -374,7 +384,7 @@ const ProjectBox = () => {
       link: "https://return-pal-preview.vercel.app/return",
       src: "/images/returnpal.png",
       description:
-        "Return packages by the door. We take care of printing return labels, packaging, and driving to the not-so-near post office.",
+        "Uber for packages, think return labels, packaging, and driving to the post office.",
       hosted: "https://return-pal-preview.vercel.app/return",
       code: "https://github.com/LGeoff31/returnPal",
       skills: ["react", "graphql", "Firebase"],
@@ -384,7 +394,7 @@ const ProjectBox = () => {
       link: "https://uwdorm-lgeoff31s-projects.vercel.app/",
       src: "/images/uwrez.png",
       description:
-        "Helping freshmens decide where to live. Features an AI algorithm suited to your preferences + map visualization.",
+        "Helping freshmens decide where to live, AI algorithm, reviews, map visualization.",
       hosted: "https://uwdorm-lgeoff31s-projects.vercel.app/",
       code: "https://github.com/LGeoff31/uwdorm",
       skills: ["sql", "Firebase", "Mapbox", "React"],
@@ -394,7 +404,7 @@ const ProjectBox = () => {
       link: "https://visugraph.vercel.app/",
       src: "/images/graph.png",
       description:
-        "Learn different graph searching algorithms visually. Understand the tradeoffs and which traversal to use when.",
+        "Graph algorithm visualizations. Understand the concepts and tradeoffs.",
       hosted: "https://visugraph.vercel.app/",
       code: "https://github.com/LGeoff31/Graphs",
       skills: ["javascript", "tailwind", "html"],
@@ -419,26 +429,26 @@ const ProjectBox = () => {
       code: "https://github.com/LGeoff31/DataMac",
       skills: ["javascript", "Material UI", "Next.js"],
     },
-    {
-      title: "Insomnia",
-      link: "https://insomniahub.vercel.app/",
-      src: "/images/insomnia.png",
-      description:
-        "Algorithm to correlate sleep quality, duration, stress levels, exercise. Visualize your data and start change early.",
-      hosted: "https://insomniahub.vercel.app/",
-      code: "https://github.com/LGeoff31/Insomnia",
-      skills: ["MongoDB", "Express", "Node.JS"],
-    },
-    {
-      title: "RPS Automation",
-      link: "https://github.com/LGeoff31/rock-paper-scissors-automater",
-      src: "/images/rps.jpeg",
-      description:
-        "Win unlimited gas station prizes by running this daily script with a list of phone numbers. Eligible for Circle K.",
-      hosted: "https://github.com/LGeoff31/rock-paper-scissors-automater",
-      code: "https://github.com/LGeoff31/rock-paper-scissors-automater",
-      skills: ["Seleinium", "python", "excel"],
-    },
+    // {
+    //   title: "Insomnia",
+    //   link: "https://insomniahub.vercel.app/",
+    //   src: "/images/insomnia.png",
+    //   description:
+    //     "Algorithm to correlate sleep quality, duration, stress levels, exercise. Visualize your data and start change early.",
+    //   hosted: "https://insomniahub.vercel.app/",
+    //   code: "https://github.com/LGeoff31/Insomnia",
+    //   skills: ["MongoDB", "Express", "Node.JS"],
+    // },
+    // {
+    //   title: "RPS Automation",
+    //   link: "https://github.com/LGeoff31/rock-paper-scissors-automater",
+    //   src: "/images/rps.jpeg",
+    //   description:
+    //     "Win unlimited gas station prizes by running this daily script with a list of phone numbers. Eligible for Circle K.",
+    //   hosted: "https://github.com/LGeoff31/rock-paper-scissors-automater",
+    //   code: "https://github.com/LGeoff31/rock-paper-scissors-automater",
+    //   skills: ["Seleinium", "python", "excel"],
+    // },
   ];
 
   return (
