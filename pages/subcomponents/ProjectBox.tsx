@@ -361,12 +361,12 @@ const ProjectBox = () => {
     },
     {
       title: "Echo",
-      link: "https://bisectool.vercel.app/",
+      link: "https://github.com/LGeoff31/Echo-Cache",
       src: "/images/echo.png",
       description:
         "Distributed in-memory cache in C++ designed for scalability and fault tolerance.",
-      hosted: "https://bisectool.vercel.app/",
-      code: "https://github.com/LGeoff31/Bisect",
+      hosted: "https://github.com/LGeoff31/Echo-Cache",
+      code: "https://github.com/LGeoff31/Echo-Cache",
       skills: ["react", "graphql", "Firebase"],
     },
     {
