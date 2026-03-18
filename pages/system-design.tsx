@@ -11,11 +11,11 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     title: "Introduction",
-    content: `I feel like I've over extended on leetcode, and severely under extended my time on system design. Hence, I'll be documenting all the most relevant system design concepts I've come across.`
+    content: `I feel like I've over extended on leetcode, and severely under extended on system design. Hence, I'll be documenting all the most relevant system design concepts I've come across.`
   },
   {
     title: "Typing google.com into my browser?",
-    content: `Seems like such a simple question that we all should know, but what actually happens under the hood? 
+    content: `What actually happens under the hood? 
 1. The browser takes the url (google.com) and sends it to the DNS server. The DNS server will do a look up and return the server's IP address.
 2. The browser establishes a TCP connection with the server through a three-way handshake (SYN, SYN-ACK, ACK).
 3. The browser sends an HTTP request to the server.
@@ -61,6 +61,7 @@ const blogPosts: BlogPost[] = [
     This is modelled via the master-slave relationship. The master database (only writes) and the slave database (only reads) replicate off the master database.
     App's typically have more reads than writes, hence # of slaves > # of masters.
     Having slave databases also allow for parallel reads, leading to better performance.
+    Sharding is another popular concept which partitions a large database into smaller independent pieces called shards, which allows you spread traffic across multiple shards so the database can handle more users / read+writes without one server being bottleneck'd. 
     `
   },
   {
@@ -70,6 +71,8 @@ const blogPosts: BlogPost[] = [
     Something to note is databases and cache's aren't always in sync i.e if the database undergoes UPDATE SQL query. One strategy is setting a expiration policy (TTL) on the cache, and resetting it.
     If you reset it to often, you'll need to query the database more often. If you reset it to rarely, you'll risk serving stale data.
     Sometimes, a cache can become full. If it does, there are a few strategies to evict and make space. Some include LFU (Least Frequently Used), and FIFO (First In First Out).
+    LRU is typically used by default. Temporal locality suggests that recently used items are likely to be used again soon. 
+    LFU is better when some items are consistently popular over time.
     `
   },
   {
@@ -128,21 +131,6 @@ const blogPosts: BlogPost[] = [
     `
   },
   {
-    title: "Twitter Example",
-    content: `Consider twitter. 300 million monthly users. 50% use Twitter daily. Users post 2 posts / day. 10% tweets contain media. Data stored for 5 years.
-    Query per second (QPS): 
-    - Daily active users (DAU) = 300 million x 0.5 = 150 million
-    - Tweets (QPS) = 150 million x 2 tweets / 24h / 3600s = ~3500
-    - Peek QPS = 3500 x 2 = 7000
-    Average tweet size
-    - tweet_id 64 bytes
-    - text 140 bytes
-    - media 1MB
-    - Media storage: 150 million * 2 * 10% * 1MB = 30TB/day
-    - 5-year media storage = 30TB/day * 365days * 5 = 55PB
-    `
-  },
-  {
     title: "System Design Interview",
     content: `Good questions to ask:
     - What is the feature set of this application?
@@ -161,7 +149,7 @@ const blogPosts: BlogPost[] = [
     Next, draw key components on the whiteboard. Things like the client (web/mobile), APIs, web servers, data stores, cache, CDN, message queue, etc.
     Do back-of-the-envelope calculations to evaluate if your blueprint fits the scale constraints. (but this might be a bonus)
     Then go through the flow of your design
-    Maybe also include API endpoints or database schema.
+    Include API endpoints or database schema.
 
     In the news feed example, there are two main components, news feed and user postings.
     For news feed, when a user publishes a post, the corresponding data is written into cache/database, the post will be populated to friends news feed.
