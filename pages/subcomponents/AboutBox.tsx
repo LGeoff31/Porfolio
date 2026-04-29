@@ -13,6 +13,13 @@ const AboutBox = () => {
         "**CS:** Advanced Algorithms, Operating Systems, Database Systems, Compilers, Software Design & Testing, User Interfaces \n **Math:** Combinatorics & Optimization, Numerical Computation, Signals & Systems, Statistics, Linear Algebra, Calculus ",
     },
     {
+      src: "/images/atoms.png",
+      name: "Atoms",
+      heading: "Member of Technical Staff",
+      date: "2026 - 2026",
+      description: "Member of Technical Staff",
+    },
+    {
       src: "/images/biztrip.png",
       name: "BizTrip AI",
       heading: "Software Engineer",
@@ -38,8 +45,10 @@ const AboutBox = () => {
       name: "Returnpal",
       heading: "Software Engineer",
       date: "2024 - 2024",
-      description: "SWE Lead on building a uberized package return service (GTA).",
-      imgFilter: "brightness(0) saturate(100%) invert(50%) sepia(90%) saturate(500%) hue-rotate(190deg) brightness(100%)",
+      description:
+        "SWE Lead on building a uberized package return service (GTA).",
+      imgFilter:
+        "brightness(0) saturate(100%) invert(50%) sepia(90%) saturate(500%) hue-rotate(190deg) brightness(100%)",
     },
     {
       src: "/images/brain.png",
@@ -192,10 +201,12 @@ const AboutMeSection = ({
                   {i > 0 && <br />}
                   {line.split(/(\*\*.*?\*\*)/).map((part, j) =>
                     part.startsWith("**") && part.endsWith("**") ? (
-                      <strong key={j} className="text-white font-semibold">{part.slice(2, -2)}</strong>
+                      <strong key={j} className="text-white font-semibold">
+                        {part.slice(2, -2)}
+                      </strong>
                     ) : (
                       <span key={j}>{part}</span>
-                    )
+                    ),
                   )}
                 </span>
               ))}

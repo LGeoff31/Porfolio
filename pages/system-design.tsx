@@ -132,28 +132,47 @@ const blogPosts: BlogPost[] = [
   },
   {
     title: "System Design Interview",
-    content: `Good questions to ask:
+    content: `The general flow of a system design interview should follow this format:
+    1. Clarify the problem at hand
     - What is the feature set of this application?
-    - How many users will there be?
-    - How fast will this app scale in the next 3, 6 months?
-    - What is the existing tech stack? Can leverage any of simplify the design
-
-    I.e if you are asked to design a news feed system
+    - What is the scope of the problem we're most interested in?
     - Is this a mobile app or web app?
-    - What are the most important features for this app?
-    - Is the news feed sorted in reverse chronological order based on recency?
-    - Should the weight of your friends post be stronger than others?
-    - How many friend can a user have?
-    - What is the traffic volume?
-    - Can the feed contain images, videos, or just text?
-    Next, draw key components on the whiteboard. Things like the client (web/mobile), APIs, web servers, data stores, cache, CDN, message queue, etc.
-    Do back-of-the-envelope calculations to evaluate if your blueprint fits the scale constraints. (but this might be a bonus)
-    Then go through the flow of your design
-    Include API endpoints or database schema.
 
-    In the news feed example, there are two main components, news feed and user postings.
-    For news feed, when a user publishes a post, the corresponding data is written into cache/database, the post will be populated to friends news feed.
-    The feed is built by aggregating friend's posts in reverse chronological order.
+   2. List functional requirements (things users should be able to do)
+   - Users should be able to post tweets
+   - Users should be able to follow other users 
+   - Users should be able to see tweets from users they follow
+
+   3. List non-functional requirements (what your system should support)
+   - System should scale to support 100M DAU's
+   - System should be highly available, prioritizing availbility over consistency (CAP THEORM mention)
+   - System should be low latency, should render <100ms
+   - System should be read heavy
+
+   4. Design your database
+   - We'll need a user, tweets, and follower table
+   - What are the fields each table will store?
+   - What are the primary and foreign keys?
+
+   5. Design your API endpoints
+   - Will you use REST (most common), GraphQL (allows clients to query for exact data, used if have diverse clients with different needs), RPC (when performance is critical)
+   - Define your endpoint names, request body, response body (these should cover your functional requirements)
+
+   6. Architecture diagrams
+   - Drawing boxes and arrows to represent the different components of system and how they interact (client, server, databases, CDN, caching, load balancer)
+   - Below is an example of an architecture diagram for designing twitter.
+   [IMAGE:/images/architecture-diagram.png]
+
+   7. Deep dive
+   - Ensure your solution satisfies your non-functional requirements (if 100M DAU, discuss horizontal scaling solutions)
+   - Make those improvements suggested by the interviewer
+   
+   Core Concepts
+  
+    Networking is how services talk to each other, and what happens when they fail or get slow.
+    In system design interviews, the typical usuage is HTTP over TCP. 
+    Websockets and server-side events (SSE uni-directional) come up when dealing with real-time updates. 
+    However, typically, HTTP with polling could work alternatively to websockets in most cases.
     `
   },
 ];
@@ -191,6 +210,20 @@ const SystemDesign = () => {
       }
       if (line.trim() === '') {
         return <br key={index} />;
+      }
+
+      // Handle image placeholders [IMAGE:path]
+      if (line.trim().startsWith('[IMAGE:') && line.trim().endsWith(']')) {
+        const src = line.trim().slice(7, -1);
+        return (
+          <div key={index} className="my-6 rounded-lg overflow-hidden border border-white/10">
+            <img
+              src={encodeURI(src)}
+              alt="Architecture diagram"
+              className="w-full h-auto"
+            />
+          </div>
+        );
       }
 
       // Handle lines with URLs
