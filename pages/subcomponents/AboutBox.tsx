@@ -17,14 +17,21 @@ const AboutBox = () => {
       name: "Atoms",
       heading: "Member of Technical Staff",
       date: "2026 - 2026",
-      description: "Member of Technical Staff",
+      description: "SWE intern working on money movements",
     },
     {
       src: "/images/biztrip.png",
       name: "BizTrip AI",
       heading: "Software Engineer",
       date: "2025 - 2025",
-      description: "SWE intern working on AI travel",
+      description: "SWE intern working on agentic systems",
+    },
+    {
+      src: "/images/playmatic.png",
+      name: "Playmatic",
+      heading: "Software Engineer",
+      date: "2025 - 2025",
+      description: "SWE intern working on ai agents",
     },
     {
       src: "/images/shopify.png",

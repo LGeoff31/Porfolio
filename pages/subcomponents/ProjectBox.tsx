@@ -18,7 +18,7 @@ const Project = ({
   src: string;
   description: string;
   hosted: string;
-  code: string;
+  code?: string;
   skills: Array<string>;
 }) => {
   const cardVariants = {
@@ -150,26 +150,28 @@ const Project = ({
             </motion.div>
           </motion.a>
 
-          <motion.a
-            href={code}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-gray-600 to-gray-700 hover:shadow-lg hover:shadow-gray-500/25 transition-all duration-300 group/btn relative z-20"
-            variants={buttonVariants}
-            initial="initial"
-            whileHover="hover"
-            whileTap="tap"
-          >
-            <span>View Code</span>
-            <motion.div
-              className="ml-2"
-              initial={{ x: 0 }}
-              whileHover={{ x: 5 }}
-              transition={{ duration: 0.2 }}
+          {code && (
+            <motion.a
+              href={code}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-gray-600 to-gray-700 hover:shadow-lg hover:shadow-gray-500/25 transition-all duration-300 group/btn relative z-20"
+              variants={buttonVariants}
+              initial="initial"
+              whileHover="hover"
+              whileTap="tap"
             >
-              <ArrowForwardIcon className="w-5 h-5" />
-            </motion.div>
-          </motion.a>
+              <span>View Code</span>
+              <motion.div
+                className="ml-2"
+                initial={{ x: 0 }}
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowForwardIcon className="w-5 h-5" />
+              </motion.div>
+            </motion.a>
+          )}
         </motion.div>
 
         <motion.div
@@ -349,6 +351,15 @@ const ProjectBox = () => {
   };
 
   const projects = [
+    {
+      title: "Outreachyr",
+      link: "https://outreachyr.com/",
+      src: "/images/outreach.png",
+      description:
+        "Helps you reach out to recruiters and land responses.",
+      hosted: "https://outreachyr.com/",
+      skills: ["react", "graphql", "Firebase"],
+    },
     {
       title: "Bisect",
       link: "https://bisectool.vercel.app/",

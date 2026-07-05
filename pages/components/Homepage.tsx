@@ -141,7 +141,7 @@ const Homepage = () => {
           <div className="flex items-center justify-center gap-3 mt-2">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-green-500/50" />
             <p className="text-lg md:text-xl text-gray-300 font-light tracking-widest uppercase">
-              Product × Fintech
+            Fintech x Product
             </p>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-green-500/50" />
           </div>
