@@ -358,6 +358,7 @@ const ProjectBox = () => {
       description:
         "Helps you reach out to recruiters and land responses.",
       hosted: "https://outreachyr.com/",
+      code: "https://github.com/LGeoff31/outreachyr",
       skills: ["react", "graphql", "Firebase"],
     },
     {
