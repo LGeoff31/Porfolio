@@ -13,13 +13,14 @@ const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Introduction",
-    content: `Zetamac is widely-known website in the quant space, designed as a benchmark for mental math speed. 
-    The format, 120s to solve as many addition, subtraction, multiplication, and division problems.
-    My motivation, my brother challenged me and I don't back down, but also mental math is one of the best bang for buck skills in real-life. Calculate your groceries tax? Estimate your restaurant bill?
-My goal on the site is to hit 100 problems in 120s. My current best is 95. 
-I even build my own version of zetamac! But this one records your performance and has a competitive leaderboard! I'm buying anyone who beats my score a free bbt (given you're at waterloo).
-Check it out, https://datamac.vercel.app/.
-Now, I'll outline some of the strategies I've learned so you can get faster :D`
+    content: `Zetamac is a popular website designed to get a benchmark for mental math speed. The format, 120s to solve as many addition, subtraction, multiplication, and division problems.
+    My motivation came from my older brother who was surprised I've never heard of the website. From that moment on, I made it my goal to embarass whatever his score was on the site.
+    I started off really poorly, in the 20ish range. But progressively, have hit a PB of 95 after 2 years of consistency. What I really enjoyed was the daily rush of intensely using my mind for 2m straight. I loved seeing progress, but I had wished there was a more competitive atmosphere around it.
+    This let me to create my own version of the application, one with progress tracking and a leaderboard system: https://datamac.vercel.app/
+    I marketed my app on Linkedin, rewarding anyone who could beat my score with a free 🧋. 
+    That's when I realized the level of my competition. I gained 40 unique players, with the highest player score of 105. 
+    I heavily enjoy competition and this is my current goal to beat, 105.
+    Now, I'll outline some of the strategies I've learned so you can get faster :D`
   },
   {
     id: 2,
