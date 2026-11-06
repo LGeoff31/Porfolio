@@ -150,7 +150,7 @@ const Homepage = () => {
           </div>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="flex gap-5 mb-5">
+        <motion.div variants={itemVariants} className="flex gap-5">
           <ScrollLink
             to="projects"
             smooth={true}
@@ -166,7 +166,7 @@ const Homepage = () => {
             </button>
           </ScrollLink>
           <a
-            href="/images/resume.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer"
@@ -181,7 +181,7 @@ const Homepage = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex items-center justify-center gap-6 mt-2"
+          className="flex items-center justify-center gap-6 my-12"
         >
           <a
             href="https://github.com/lgeoff31"
@@ -216,7 +216,7 @@ const Homepage = () => {
           </a>
         </motion.div>
 
-        <div className="flex justify-center mt-10 w-full">
+        <div className="flex justify-center w-full">
           <div className="w-full overflow-x-auto touch-pan-x -mx-4 px-4 scrollbar-thin scrollbar-thumb-gray-600/50 scrollbar-track-transparent">
             <div className="inline-block">
               <GitHubCalendar

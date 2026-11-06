@@ -135,7 +135,7 @@ const Navbar: React.FC<NavbarProps> = ({ useScrollLinks = false }) => {
                 </ScrollLink>
               ))}
               <motion.a
-                href="/images/resume.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={buttonVariants}
